@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/GroundProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/GroundProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/car.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/grass.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/ground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/wheel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/CarMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/CarMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Fuel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/ItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTriger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="28vmLzlBbUwtV8DR2B08MdcYYVg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="" />
+      <created>1652105416515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652105416515</updated>
+      <workItem from="1652105479857" duration="6638000" />
+      <workItem from="1652118644038" duration="4355000" />
+      <workItem from="1652174344146" duration="7439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

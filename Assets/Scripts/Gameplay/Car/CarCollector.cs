@@ -2,7 +2,7 @@ using System;
 using Items;
 using UnityEngine;
 
-namespace Car {
+namespace Scripts {
     
     public class CarCollector : MonoBehaviour {
 

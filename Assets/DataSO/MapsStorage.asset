@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c2fa7647304ac89721b7b69fc40415, type: 3}
+  m_Name: MapsStorage
+  m_EditorClassIdentifier: 
+  _mapDescriptors:
+  - _carName: Countryside
+    _carImage: {fileID: -5009351098657890752, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _carCost: 0
+  - _carName: Desert
+    _carImage: {fileID: -7039947406740904716, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _carCost: 30000
+  - _carName: Road
+    _carImage: {fileID: -3113062988822636135, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _carCost: 50000
+  - _carName: Moon
+    _carImage: {fileID: -7043653978151897446, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _carCost: 75000

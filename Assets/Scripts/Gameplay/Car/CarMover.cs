@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Car {
+namespace Scripts {
     
     public class CarMover : MonoBehaviour {
         

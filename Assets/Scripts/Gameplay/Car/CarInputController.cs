@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Car {
+namespace Scripts {
     
     public class CarInputController : MonoBehaviour {
 

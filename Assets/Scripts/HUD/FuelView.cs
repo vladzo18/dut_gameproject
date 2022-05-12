@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Car;
+using Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 

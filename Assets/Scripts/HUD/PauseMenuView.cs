@@ -1,3 +1,4 @@
+using Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,13 +22,18 @@ namespace HUD {
                 _pauseWindow.enabled = false;
                 Time.timeScale = 1f;
             });
+            _exitButton.onClick.AddListener(() => {
+                Time.timeScale = 1f;
+                SceneSwitcher.LoadScene(SceneSwitcher.MENU_SCENE_KEY);
+            });
         }
 
         private void OnDestroy() {
             _pauseButton.onClick.RemoveAllListeners();
             _resumeButton.onClick.RemoveAllListeners();
+            _exitButton.onClick.RemoveAllListeners();
         }
-        
+
     }
 
 }

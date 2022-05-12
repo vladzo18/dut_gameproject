@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac530dc9e8e142de9b9848752efe22b2, type: 3}
+  m_Name: CarsStorage
+  m_EditorClassIdentifier: 
+  _carDescriptors:
+  - _carName: Red Car
+    _carImage: {fileID: 21300000, guid: ff0ff698a0b146748ae54fe8c278dce2, type: 3}
+    _carCost: 0
+    _carPrefab: {fileID: 0}
+  - _carName: Unicycle
+    _carImage: {fileID: -7129193313747078309, guid: a0d75ee0e8d39084089a55378d8c7302, type: 3}
+    _carCost: 40000
+    _carPrefab: {fileID: 0}
+  - _carName: Blue Bike
+    _carImage: {fileID: -2702072281820981717, guid: a0d75ee0e8d39084089a55378d8c7302, type: 3}
+    _carCost: 65000
+    _carPrefab: {fileID: 0}
+  - _carName: ' Hippie Car'
+    _carImage: {fileID: 4431927800892870794, guid: a0d75ee0e8d39084089a55378d8c7302, type: 3}
+    _carCost: 90000
+    _carPrefab: {fileID: 0}
+  - _carName: Racing car
+    _carImage: {fileID: -3536856601619204738, guid: cf85424be233b0641965c99c3b9a37d1, type: 3}
+    _carCost: 120000
+    _carPrefab: {fileID: 0}
+  - _carName: Tractor
+    _carImage: {fileID: 9208675618982753536, guid: cf85424be233b0641965c99c3b9a37d1, type: 3}
+    _carCost: 115000
+    _carPrefab: {fileID: 0}

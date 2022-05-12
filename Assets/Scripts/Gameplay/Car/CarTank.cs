@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Car {
+namespace Scripts {
     
     public class CarTank : MonoBehaviour {
 

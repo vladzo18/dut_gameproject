@@ -20,25 +20,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerSwichButtonType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerSwichButtonType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChangerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChangerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/GroundProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/GroundProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/car.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/car.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/grass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/grass.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/ground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/wheel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/wheel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/GroundProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Ground/GroundProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/grass.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/ground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/ground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/HUD/CoinItem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/HUD/CoinItem.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/BrakeButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/BrakeButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/BrakeButtonPuted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/BrakeButtonPuted.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/GasButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/GasButton.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/GasButtonPuted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pedals/GasButtonPuted.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bridge.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bridge.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-100.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-100.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-50.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-50.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-500.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin-500.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Diamont.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Diamont.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fuel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fuel.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/CarMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Car/CarMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/InputTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/InputTester.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/PedalButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/PedalButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +101,36 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SnapScrolling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScrollerPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SnapScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangerItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerSwichButtonType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerSwichButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/LevelChanger/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ScrollerPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/LevelChanger/LevelChangerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/CarChangerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/LevelChangerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger - Copy/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/LevelChangerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChangerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
       </list>
     </option>
   </component>
@@ -76,8 +141,31 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30016583" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,9 +178,16 @@
       <workItem from="1652105479857" duration="6638000" />
       <workItem from="1652118644038" duration="4355000" />
       <workItem from="1652174344146" duration="7439000" />
+      <workItem from="1652192579066" duration="1054000" />
+      <workItem from="1652193924074" duration="14691000" />
+      <workItem from="1652259155744" duration="6978000" />
+      <workItem from="1652295829974" duration="13328000" />
+      <workItem from="1652346812428" duration="8405000" />
     </task>
     <servers />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -107,5 +202,87 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="402" height="464" key="DebuggerActiveHint" timestamp="1652261131185">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="402" height="464" key="DebuggerActiveHint/0.0.1280.984@0.0.1280.984" timestamp="1652261131185" />
+    <state width="1237" height="352" key="GridCell.Tab.0.bottom" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.0.center" timestamp="1652266170952">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1652266170952" />
+    <state width="1237" height="352" key="GridCell.Tab.0.left" timestamp="1652266170952">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1652266170952" />
+    <state width="1237" height="352" key="GridCell.Tab.0.right" timestamp="1652266170952">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1652266170952" />
+    <state width="1237" height="352" key="GridCell.Tab.1.bottom" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.1.center" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.1.left" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.1.right" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.2.bottom" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.2.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.2.center" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.2.center/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.2.left" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.2.left/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.2.right" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.2.right/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.3.bottom" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.3.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.3.center" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.3.center/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.3.left" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.3.left/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state width="1237" height="352" key="GridCell.Tab.3.right" timestamp="1652266170953">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="352" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1652266170953" />
+    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1652353087089">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1652353087089" />
+    <state x="141" y="136" key="SettingsEditor" timestamp="1652193835065">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="141" y="136" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1652193835065" />
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1652350161949">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1652350161949" />
   </component>
 </project>

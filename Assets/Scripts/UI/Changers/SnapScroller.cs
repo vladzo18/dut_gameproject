@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,16 +18,16 @@ namespace UI {
         private ScrollRect _scrollRect;
         private RectTransform _contentContainer;
         private List<ScrollerPanel> _scrollerPanels;
-        private bool _isScrollibg;
         private int _selectedItemIndex;
-        private float _lastContentPossitionX ;
+        private float _lastContentPossitionX;
+        private int _activeItemIndex;
         
         private Vector2 _contentPossition;
         private Vector2 _contentScale;
 
+        public bool IsScrolling { get; private set; }
         public IEnumerable<ScrollerPanel> ScrollerPanels => _scrollerPanels;
-
-        public event Action OnContentChanged;
+        public ScrollerPanel ActivePanel => _scrollerPanels[_activeItemIndex];
 
         public void AddPanels(int count) {
             for (int i = 0; i < count; i++) {
@@ -64,7 +63,7 @@ namespace UI {
         }
 
         private void OnPanelClick(ScrollerPanel scrollerPanel) {
-            if (!_isScrollibg) {
+            if (!IsScrolling) {
                 _selectedItemIndex = _scrollerPanels.IndexOf(scrollerPanel);
             }
         }
@@ -84,6 +83,8 @@ namespace UI {
                 _scrollRect.inertia = false;
                 _selectedItemIndex = CurentCenterPanelIndex();
             }
+
+            _activeItemIndex = _selectedItemIndex;
         }
         
         private void Update() {
@@ -98,19 +99,19 @@ namespace UI {
             
             UpdateScales();
             
-            if (_isScrollibg || _scrollRect.inertia) return;
+            if (IsScrolling || _scrollRect.inertia) return;
 
             _contentPossition.x = Mathf.SmoothStep( _contentContainer.anchoredPosition.x, -_scrollerPanels[_selectedItemIndex].GetPanelPossition().x, 25f * Time.deltaTime);
             _contentContainer.anchoredPosition = _contentPossition;
         }
         
         public void OnBeginDrag(PointerEventData eventData) {
-            _isScrollibg = true;
+            IsScrolling = true;
             _scrollRect.inertia = true;
         }
         
         public void OnEndDrag(PointerEventData eventData) {
-            _isScrollibg = false;
+            IsScrolling = false;
         }
 
         private void UpdateScales() {

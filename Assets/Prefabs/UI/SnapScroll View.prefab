@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683f51ae2a18c4946bb225bcf28ce930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 23
-  _scaleOffset: 1.081
+  _moveSpeed: 19
+  _scaleOffset: 1.422
   _defaultSize: 0.536
   _panelsOfset: 30
   _scrollerPanelPrefsb: {fileID: 4449487081802957669, guid: 24f58197b3541b149a49e6287f8c97ae, type: 3}

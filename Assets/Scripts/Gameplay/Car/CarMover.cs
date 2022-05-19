@@ -10,6 +10,7 @@ namespace Scripts {
         [SerializeField, Range(25, 50)] private float _maxSpeed;
 
         private const float SPEED_DIVIDER = 2.5f;
+        private const float TORQUE_DIVIDER = 8;
         
         private float _targetSpeed;
         private bool _canMove = true;
@@ -22,7 +23,9 @@ namespace Scripts {
                     rigidbody.AddTorque(_targetSpeed, ForceMode2D.Force);
                 }
                 _carRigidbody.AddForce(transform.right.normalized * -_targetSpeed / SPEED_DIVIDER, ForceMode2D.Force);
+                _carRigidbody.AddTorque(-_targetSpeed / TORQUE_DIVIDER, ForceMode2D.Impulse);
             }
+            
         }
         
         public void MoveRight() {
@@ -42,7 +45,7 @@ namespace Scripts {
         }
 
         public void ToggleMovement() => _canMove = !_canMove;
-
+        
     }
 
 }

@@ -10,8 +10,9 @@ namespace UI.Changers.CarChanger {
         [SerializeField] private List<CarStorageDescriptor> _carDescriptors;
 
         public IEnumerable<CarStorageDescriptor> CarDescriptors => _carDescriptors;
+        public CarStorageDescriptor ElementByIndex(int index) => _carDescriptors[index];
         public int CarCount => _carDescriptors.Count;
-
+        
     }
 
     [Serializable]
@@ -20,11 +21,13 @@ namespace UI.Changers.CarChanger {
         [SerializeField] private string _carName;
         [SerializeField] private Sprite _carImage;
         [SerializeField] private int _carCost;
+        [SerializeField, TextArea] private string _description;
         [SerializeField] private GameObject _carPrefab;
         
         public string CarName => _carName;
         public Sprite CarImage => _carImage;
         public int CarCost => _carCost;
+        public string Description => _description;
         public GameObject CarPrefab => _carPrefab;
         
     }

@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: MapsStorage
   m_EditorClassIdentifier: 
   _mapDescriptors:
-  - _carName: Countryside
-    _carImage: {fileID: -5009351098657890752, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _carCost: 0
-  - _carName: Desert
-    _carImage: {fileID: -7039947406740904716, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _carCost: 30000
-  - _carName: Road
-    _carImage: {fileID: -3113062988822636135, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _carCost: 50000
-  - _carName: Moon
-    _carImage: {fileID: -7043653978151897446, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _carCost: 75000
+  - _mapName: 
+    _mapImage: {fileID: -5009351098657890752, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _mapCost: 0
+    _description: The land and scenery of a rural area.
+  - _mapName: Desert
+    _mapImage: {fileID: -7039947406740904716, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _mapCost: 45000
+    _description: The dry condition of deserts helps promote the formation and concentration
+      of important minerals.
+  - _mapName: Road
+    _mapImage: {fileID: -3113062988822636135, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _mapCost: 65000
+    _description: A wide way leading from one place to another, especially one with
+      a specially prepared surface which vehicles can use.
+  - _mapName: Moon
+    _mapImage: {fileID: -7043653978151897446, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _mapCost: 75000
+    _description: Natural satellite of the earth, visible by reflected light from
+      the sun.

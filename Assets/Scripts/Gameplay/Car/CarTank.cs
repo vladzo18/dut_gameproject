@@ -30,7 +30,7 @@ namespace Scripts {
         
         private IEnumerator FuelСonsumptionRoutine() {
             while (true) {
-                yield return new WaitUntil(() => _carMover.IsMoveing == true);
+                yield return new WaitUntil(() => _carMover.IsMoveing);
                 
                 if (CurrentFuelAmount > 0) {
                     CurrentFuelAmount -= _fuelDecreaseStep;

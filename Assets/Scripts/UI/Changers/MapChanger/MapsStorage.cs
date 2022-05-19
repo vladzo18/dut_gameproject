@@ -10,6 +10,7 @@ namespace UI.Changers.LevelChanger {
         [SerializeField] private List<MapStorageDescriptor> _mapDescriptors;
 
         public IEnumerable<MapStorageDescriptor> CarDescriptors => _mapDescriptors;
+        public MapStorageDescriptor ElementByIndex(int index) => _mapDescriptors[index];
         public int CarCount => _mapDescriptors.Count;
 
     }
@@ -17,14 +18,16 @@ namespace UI.Changers.LevelChanger {
     [Serializable]
     public class MapStorageDescriptor {
       
-        [SerializeField] private string _carName;
-        [SerializeField] private Sprite _carImage;
-        [SerializeField] private int _carCost;
+        [SerializeField] private string _mapName;
+        [SerializeField] private Sprite _mapImage;
+        [SerializeField] private int _mapCost;
+        [SerializeField, TextArea] private string _description;
 
-        public string CarName => _carName;
-        public Sprite CarImage => _carImage;
-        public int CarCost => _carCost;
-
+        public string MapName => _mapName;
+        public Sprite MapImage => _mapImage;
+        public int MapCost => _mapCost;
+        public string Description => _description;
+        
     }
     
 }

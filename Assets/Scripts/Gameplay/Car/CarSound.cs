@@ -11,6 +11,8 @@ namespace Gameplay.Car {
         [SerializeField] private AudioClip _itemCollectSound;
         [SerializeField] private AudioClip _fuelCollectSound;
 
+        public void SetAudioSource(AudioSource source) => _audioSource = source;
+        
         private void Start() {
             _carCollector.OnItemColect += ItemCollectHandler;
         }

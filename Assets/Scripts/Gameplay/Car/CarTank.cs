@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Gameplay.Car;
 using UnityEngine;
 
 namespace Scripts {
@@ -7,10 +8,12 @@ namespace Scripts {
     public class CarTank : MonoBehaviour {
 
         [SerializeField] private CarCollector _carCollector;
-        [SerializeField] private CarMover _carMover;
+        [SerializeField] private MonoBehaviour _carMover;
         [SerializeField] private float _fuelMaxAmount;
         [SerializeField, Range(0.5f, 2f)] private float _fuelDecreaseStep;
         [SerializeField, Range(0.005f, 0.05f)] private float _fuelDecreaseingSpeed;
+
+        private IMover _mover;
         
         public float CurrentFuelAmount { get; private set; }
         public float FuelMaxAmount => _fuelMaxAmount;
@@ -19,6 +22,9 @@ namespace Scripts {
         public event Action<float> OnFuelAmountChanged;
 
         private void Start() {
+            if (_carMover) {
+                _mover = _carMover as IMover;
+            }
             _carCollector.OnFuelCollect += OnFuelTake;
             CurrentFuelAmount = FuelMaxAmount;
             StartCoroutine(FuelСonsumptionRoutine());
@@ -30,13 +36,13 @@ namespace Scripts {
         
         private IEnumerator FuelСonsumptionRoutine() {
             while (true) {
-                yield return new WaitUntil(() => _carMover.IsMoveing);
+                yield return new WaitUntil(() => _mover.IsMoveing);
                 
                 if (CurrentFuelAmount > 0) {
                     CurrentFuelAmount -= _fuelDecreaseStep;
                     OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
                 } else {
-                    _carMover.ToggleMovement();
+                    _mover.ToggleMovement();
                     OnEmptyFuelTank?.Invoke();
                 }
                 
@@ -51,6 +57,12 @@ namespace Scripts {
                 CurrentFuelAmount += amount;
             }
             OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
+        }
+        
+        private void OnValidate() {
+            if (!(_carMover is IMover)) {
+                _carMover = null;
+            }
         }
         
     }

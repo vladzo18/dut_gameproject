@@ -10,11 +10,15 @@
               <e p="CarCollector.cs" t="Include" />
               <e p="CarDeath.cs" t="Include" />
               <e p="CarDistanceCounter.cs" t="Include" />
+              <e p="CarEntity.cs" t="Include" />
               <e p="CarInputController.cs" t="Include" />
               <e p="CarMover.cs" t="Include" />
               <e p="CarSound.cs" t="Include" />
               <e p="CarTank.cs" t="Include" />
+              <e p="IMover.cs" t="Include" />
+              <e p="UnicycleMover.cs" t="Include" />
             </e>
+            <e p="GemeConfigurator.cs" t="Include" />
             <e p="Items" t="Include">
               <e p="Item.cs" t="Include" />
               <e p="ItemType.cs" t="Include" />
@@ -25,15 +29,16 @@
             </e>
           </e>
           <e p="HUD" t="Include">
-            <e p="CoinsPresenter.cs" t="Include" />
+            <e p="CurrencyPresenter.cs" t="Include" />
             <e p="FuelPresenter.cs" t="Include" />
             <e p="GameEndPresenter.cs" t="Include" />
-            <e p="MeterCounterView.cs" t="Include" />
+            <e p="MeterCounterPresenter.cs" t="Include" />
             <e p="PauseMenuView.cs" t="Include" />
             <e p="PedalButton.cs" t="Include" />
           </e>
           <e p="InputTester.cs" t="Include" />
           <e p="Save" t="Include">
+            <e p="BinarySaveSystem.cs" t="Include" />
             <e p="ISaveSystem.cs" t="Include" />
             <e p="LevelPlayerPrefsSystem.cs" t="Include" />
             <e p="LevelSaveData.cs" t="Include" />
@@ -46,17 +51,28 @@
             <e p="Changers" t="Include">
               <e p="CarChanger" t="Include">
                 <e p="CarChanger.cs" t="Include" />
+                <e p="CarsModel.cs" t="Include" />
                 <e p="CarsStorage.cs" t="Include" />
+                <e p="CarStorageDescriptor.cs" t="Include" />
+                <e p="CarType.cs" t="Include" />
+              </e>
+              <e p="CarPropertyTuner" t="Include">
+                <e p="CarTunerView.cs" t="Include" />
               </e>
               <e p="ChangerItemView.cs" t="Include" />
               <e p="ChangerSwichButton.cs" t="Include" />
               <e p="ChangerSwichButtonType.cs" t="Include" />
               <e p="MapChanger" t="Include">
-                <e p="LevelChanger.cs" t="Include" />
+                <e p="MapsChanger.cs" t="Include" />
+                <e p="MapsModel.cs" t="Include" />
                 <e p="MapsStorage.cs" t="Include" />
+                <e p="MapStorageDescriptor.cs" t="Include" />
+                <e p="MapType.cs" t="Include" />
               </e>
-              <e p="ScrollerPanel.cs" t="Include" />
-              <e p="SnapScroller.cs" t="Include" />
+              <e p="SnapScroller" t="Include">
+                <e p="ScrollerPanel.cs" t="Include" />
+                <e p="SnapScroller.cs" t="Include" />
+              </e>
             </e>
             <e p="CurrencyBox.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />

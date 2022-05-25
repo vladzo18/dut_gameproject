@@ -20,91 +20,139 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/ISaveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/ISaveSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelPlayerPrefsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelPlayerPrefsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelSaveData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelSaveData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuPlayerPrefsSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuPlayerPrefsSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuSaveData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuSaveData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyBox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/car-hippievan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/car-hippievan.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/vehicles-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/vehicles-0.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/vehicles-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/CarParts/vehicles-1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/MarsProfile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/MarsProfile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/mars-ground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/mars-ground.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/terrain-mars-surface.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Mars/terrain-mars-surface.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/MoonGroundProfile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/MoonGroundProfile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/moon-ground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/moon-ground.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/moon-surface.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Moon/moon-surface.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/RoadProfile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/RoadProfile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/highway-ground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/highway-ground.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/highway-surface.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Road/highway-surface.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/VulcanoProfile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/VulcanoProfile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/terrain-volcano-surface.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/terrain-volcano-surface.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/terrain-volcano.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/Ground/Vulcano/terrain-volcano.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/Cars/GreenBus.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/Cars/GreenBus.PNG.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-down.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-down_max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-down_max.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-up.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-up_max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-arrow-up_max.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-bar-empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-bar-empty.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Images/UI/upgrade-bar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/GreenBus.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/GreenBus.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/RedCar.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/RedCar.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Unicycle.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Unicycle.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/ItemChanks/ItemsChank-3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/ItemChanks/ItemsChank-3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarStorageDescriptor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarStorageDescriptor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapStorageDescriptor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapStorageDescriptor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Take.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Take.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataSO/CarsStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataSO/CarsStorage.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DataSO/MapsStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataSO/MapsStorage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Coins.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/10-coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/10-coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/100-coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/100-coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/5-coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/5-coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/50-coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/50-coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/500-coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/500-coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/coins.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/diamont.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins/diamont.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/GroundProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/GroundProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/terrain-ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/terrain-ground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/terrain-surface.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/terrain-surface.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Bridge.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Bridge.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-10.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-10.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-100.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-100.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-5.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-5.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-50.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-50.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-500.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Coin-500.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Diamont.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Diamont.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Fuel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Fuel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/SnapScroll View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/SnapScroll View.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Coins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/Gesert/desert-surface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Ground/Gesert/desert-surface.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/RedCar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts/RedCar.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/RedCar/car.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts/RedCar/car.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/RedCar/car.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts/RedCar/car.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/RedCar/wheel.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts/RedCar/wheel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/RedCar/wheel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/CarParts/RedCar/wheel.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Diamont.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Diamont.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/TuneBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/TuneBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChangerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChangerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChangerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChangerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ScrollerPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/ScrollerPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ScrollerPanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/ScrollerPanel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,57 +172,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/LevelChanger/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ScrollerPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/LevelChanger/LevelChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/CarChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertisChanger/LevelChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger - Copy/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/LevelChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Images/Ground/GraundGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemChank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Bridge.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/IMessageBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChangerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Save/PlayerPrefsStorer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Save/IStorer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Save/PlayerPrefsSaveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyBoxView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyBoxController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/SaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/ISaveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/LevelSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/MenuSaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/MenuPlayerPrefsSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CurrencyBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save/LevelPlayerPrefsSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemVhangerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemChangerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/MapsModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarStorageDescriptor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapStorageDescriptor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/Unicycle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" />
       </list>
     </option>
   </component>
@@ -236,7 +284,15 @@
       <workItem from="1652732096025" duration="5601000" />
       <workItem from="1652819153611" duration="1851000" />
       <workItem from="1652899247557" duration="7982000" />
-      <workItem from="1652961944176" duration="4194000" />
+      <workItem from="1652961944176" duration="4794000" />
+      <workItem from="1652986881966" duration="1927000" />
+      <workItem from="1653058269483" duration="9845000" />
+      <workItem from="1653077447828" duration="4852000" />
+      <workItem from="1653163568463" duration="10063000" />
+      <workItem from="1653341561596" duration="6810000" />
+      <workItem from="1653402866117" duration="7515000" />
+      <workItem from="1653415763600" duration="12728000" />
+      <workItem from="1653485636791" duration="4299000" />
     </task>
     <servers />
   </component>
@@ -258,78 +314,82 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="383" y="293" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1653001851018">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="383" y="293" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.984@0.0.1280.984" timestamp="1653001851018" />
     <state width="441" height="464" key="DebuggerActiveHint" timestamp="1652735946354">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state width="441" height="464" key="DebuggerActiveHint/0.0.1280.984@0.0.1280.984" timestamp="1652735946354" />
-    <state width="1237" height="255" key="GridCell.Tab.0.bottom" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.0.center" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.0.center" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.0.left" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.0.left" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.0.right" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.0.right" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.1.bottom" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.1.bottom" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.1.center" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.1.center" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.1.left" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.1.left" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.1.right" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.1.right" timestamp="1653083157669">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.2.bottom" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1653083157669" />
+    <state width="1237" height="139" key="GridCell.Tab.2.bottom" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.2.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.2.center" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.2.bottom/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.2.center" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.2.center/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.2.left" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.2.center/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.2.left" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.2.left/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.2.right" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.2.left/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.2.right" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.2.right/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.3.bottom" timestamp="1652908136460">
+    <state width="1237" height="139" key="GridCell.Tab.2.right/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.3.bottom" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.3.bottom/0.0.1280.984@0.0.1280.984" timestamp="1652908136460" />
-    <state width="1237" height="255" key="GridCell.Tab.3.center" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.3.bottom/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.3.center" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.3.center/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.3.left" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.3.center/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.3.left" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.3.left/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state width="1237" height="255" key="GridCell.Tab.3.right" timestamp="1652908136459">
+    <state width="1237" height="139" key="GridCell.Tab.3.left/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state width="1237" height="139" key="GridCell.Tab.3.right" timestamp="1653083157670">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="255" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1652908136459" />
-    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1652966572616">
+    <state width="1237" height="139" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
+    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1653489749900">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1652966572616" />
+    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1653489749900" />
     <state x="141" y="136" key="SettingsEditor" timestamp="1652193835065">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -338,5 +398,12 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="303" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1652561429866" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#Ui.MenuController.Start" memberName="mapsModel" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -1,11 +1,12 @@
-using System.Collections.Generic;
+using Gameplay.Car;
 using UnityEngine;
 
 namespace Scripts {
     
-    public class CarMover : MonoBehaviour {
+    public class CarMover : MonoBehaviour, IMover {
         
-        [SerializeField] private List<Rigidbody2D> _wheelRigidbodys;
+        [SerializeField] private Rigidbody2D _firstWheel;
+        [SerializeField] private Rigidbody2D _secondeWheel;
         [SerializeField] private Rigidbody2D _carRigidbody;
         [SerializeField, Range(25, 50)] private float _maxSpeed;
 
@@ -19,9 +20,9 @@ namespace Scripts {
         
         private void FixedUpdate() {
             if (_canMove && IsMoveing) {
-                foreach (var rigidbody in _wheelRigidbodys) {
-                    rigidbody.AddTorque(_targetSpeed, ForceMode2D.Force);
-                }
+                _firstWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
+                _secondeWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
+                
                 _carRigidbody.AddForce(transform.right.normalized * -_targetSpeed / SPEED_DIVIDER, ForceMode2D.Force);
                 _carRigidbody.AddTorque(-_targetSpeed / TORQUE_DIVIDER, ForceMode2D.Impulse);
             }

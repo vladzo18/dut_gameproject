@@ -13,22 +13,48 @@ MonoBehaviour:
   m_Name: MapsStorage
   m_EditorClassIdentifier: 
   _mapDescriptors:
-  - _mapName: 
+  - _type: 1
+    _mapName: Countryside
     _mapImage: {fileID: -5009351098657890752, guid: b283292134e3d934182978e247f4a8ed, type: 3}
     _mapCost: 0
     _description: The land and scenery of a rural area.
-  - _mapName: Desert
+    _spriteShape: {fileID: 11400000, guid: 0e3fa397474bcf7409876a08b6627307, type: 2}
+    _skyColor: {r: 0.54509807, g: 0.9215687, b: 1, a: 0}
+  - _type: 2
+    _mapName: Desert
     _mapImage: {fileID: -7039947406740904716, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _mapCost: 45000
+    _mapCost: 1000
     _description: The dry condition of deserts helps promote the formation and concentration
       of important minerals.
-  - _mapName: Road
+    _spriteShape: {fileID: 11400000, guid: 8871b62b027d35b439b16842ed42ff1e, type: 2}
+    _skyColor: {r: 0.59607846, g: 0.9215687, b: 1, a: 0}
+  - _type: 3
+    _mapName: Road
     _mapImage: {fileID: -3113062988822636135, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _mapCost: 65000
+    _mapCost: 2000
     _description: A wide way leading from one place to another, especially one with
       a specially prepared surface which vehicles can use.
-  - _mapName: Moon
+    _spriteShape: {fileID: 11400000, guid: be231d0fe9cf3794abbd8fc1b9e94bc9, type: 2}
+    _skyColor: {r: 0.49411768, g: 0.6745098, b: 0.7372549, a: 0}
+  - _type: 4
+    _mapName: Moon
     _mapImage: {fileID: -7043653978151897446, guid: b283292134e3d934182978e247f4a8ed, type: 3}
-    _mapCost: 75000
+    _mapCost: 3000
     _description: Natural satellite of the earth, visible by reflected light from
       the sun.
+    _spriteShape: {fileID: 11400000, guid: 81a7f1816b735ba4c98149d4fedd34de, type: 2}
+    _skyColor: {r: 0.011764706, g: 0.047058824, b: 0.25882354, a: 0}
+  - _type: 5
+    _mapName: Mars
+    _mapImage: {fileID: -7788903976304276980, guid: b283292134e3d934182978e247f4a8ed, type: 3}
+    _mapCost: 3000
+    _description: Natural satellite .
+    _spriteShape: {fileID: 11400000, guid: 2e4d8769e1c857444af3add10fe9913a, type: 2}
+    _skyColor: {r: 0.8588236, g: 0.654902, b: 0.654902, a: 0}
+  - _type: 6
+    _mapName: Vulcano
+    _mapImage: {fileID: -6899039576973957437, guid: 690f777e00b9c1f41af5ae72144649fd, type: 3}
+    _mapCost: 3000
+    _description: 
+    _spriteShape: {fileID: 11400000, guid: 513ab64dd4ecf9c438195339aec617de, type: 2}
+    _skyColor: {r: 0.909804, g: 0.37254903, b: 0.09019608, a: 0}

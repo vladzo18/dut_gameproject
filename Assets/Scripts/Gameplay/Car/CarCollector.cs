@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Scripts {
     
+    [RequireComponent(typeof(Collider2D))]
     public class CarCollector : MonoBehaviour {
 
         public event Action<float> OnFuelCollect;

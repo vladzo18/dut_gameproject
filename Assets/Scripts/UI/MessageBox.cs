@@ -15,7 +15,7 @@ namespace UI {
         [SerializeField] private Button _submitButtonn;
         [SerializeField] private TMP_Text _priceText;
         
-        public event Action OnButtonClick;
+        public event Action<int> OnTryBuyClick;
 
         private void Start() {
             _submitButtonn.onClick.AddListener(OnClick);
@@ -25,7 +25,7 @@ namespace UI {
             _submitButtonn.onClick.RemoveListener(OnClick);
         }
 
-        private void OnClick() => OnButtonClick?.Invoke();
+        private void OnClick() => OnTryBuyClick?.Invoke(Int32.Parse(_priceText.text));
 
         public void SetTitle(string text) => _title.text = text;
         

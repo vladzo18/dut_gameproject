@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace HUD {
     
-    public class MeterCounterView : MonoBehaviour {
+    public class MeterCounterPresenter : MonoBehaviour {
 
         [SerializeField] private CarDistanceCounter _distanceCounter;
         [SerializeField] private TMP_Text _text;
+        
+        public void SetCarDistanceCounter(CarDistanceCounter counter) => _distanceCounter = counter;
 
         private void Start() {
             _distanceCounter.OnMeterCountChanged += UpdateCounter;

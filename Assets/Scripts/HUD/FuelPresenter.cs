@@ -11,6 +11,8 @@ namespace HUD {
         [SerializeField] private Image _fill;
         [SerializeField] private CarTank _carTank;
 
+        public void SetCarTank(CarTank carTank) => _carTank = carTank;
+        
         private void Start() {
             _carTank.OnFuelAmountChanged += UpdateFuelBar;
             _slider.maxValue = _carTank.FuelMaxAmount;

@@ -20,6 +20,8 @@ namespace Gameplay.LevelGeneration {
         private int _groundDeep = 10;
         private List<ItemsChank> _generatedItemsChanks;
 
+        public void SetObjectOfObservation(GameObject o) => _objectOfObservation = o;
+        
         private Vector3 GetPossitionAtEnd(int index) => _spline.GetPosition(_spline.GetPointCount() - (index + 1));
 
         private void Start() {
@@ -33,6 +35,8 @@ namespace Gameplay.LevelGeneration {
         }
 
         private void Update() {
+            if (_objectOfObservation == null)  return;
+            
             if (_objectOfObservation.transform.position.x > GetPossitionAtEnd(0).x - _ObservationObjectDistanceToRegeneration) {
                 if (_generationCounter == 2) {
                     Clear();

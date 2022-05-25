@@ -7,11 +7,12 @@ namespace Gameplay.Car {
     public class CarDeath : MonoBehaviour {
 
         [SerializeField] private CarTank _carTank;
+        [SerializeField] private bool _canChechGroundTouchDeth = true;
         [SerializeField] private Transform _groundChecker;
         [SerializeField] private LayerMask _groungLayer;
         
         private bool _canDeath;
-        
+
         public event Action OnCatDeath;
 
         private void Start() {
@@ -26,6 +27,7 @@ namespace Gameplay.Car {
             if (_canDeath) {
                 OnCatDeath?.Invoke();
             }
+            if (!_canChechGroundTouchDeth) return;
             _canDeath = Physics2D.OverlapCircle(_groundChecker.position, 0.5f, _groungLayer);
         }
 

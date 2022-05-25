@@ -15,7 +15,7 @@ namespace UI.Changers {
         public void SetItemPrice(string text) => _price.text = text;
         public void SetBodyImage(Sprite sprite) => _body.sprite = sprite;
         public void SetLockedBoxActivity(bool isActive) => _lockedBox.SetActive(isActive);
-        
+
     }
     
 }

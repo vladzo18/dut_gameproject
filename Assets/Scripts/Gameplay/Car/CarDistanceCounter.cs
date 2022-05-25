@@ -4,6 +4,8 @@ using UnityEngine;
 namespace Car {
     
     public class CarDistanceCounter : MonoBehaviour {
+
+        [SerializeField] private Transform _moveingObjectTransform;
         
         private const int METERS_DIVIDER = 2;
         
@@ -11,11 +13,11 @@ namespace Car {
         public event Action OnMeterCountChanged;
         
         private void Update() {
-            if (this.transform.position.x < METERS_DIVIDER && this.transform.position.x % METERS_DIVIDER != 0) {
+            if (_moveingObjectTransform.position.x < METERS_DIVIDER && _moveingObjectTransform.position.x % METERS_DIVIDER != 0) {
                 return;
             }
             
-            int newCount = (int) (this.transform.position.x / METERS_DIVIDER);
+            int newCount = (int) (_moveingObjectTransform.position.x / METERS_DIVIDER);
             
             MeterCount = newCount;
             OnMeterCountChanged?.Invoke();

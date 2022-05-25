@@ -8,9 +8,11 @@ namespace HUD {
     
     public class GameEndPresenter : MonoBehaviour, IPointerDownHandler {
 
-        [SerializeField] private CoinsPresenter _coinsPresenter;
+        [SerializeField] private CurrencyPresenter currencyPresenter;
         [SerializeField] private Canvas _gameEndCanvas;
         [SerializeField] private CarDeath _carDeath;
+        
+        public void SetCarDeath(CarDeath carDeath) => _carDeath = carDeath;
 
         private void Start() {
             _carDeath.OnCatDeath += DeathHandler;
@@ -21,21 +23,22 @@ namespace HUD {
         }
 
         private void DeathHandler() {
-            _gameEndCanvas.enabled = true;
-        }
-
-        private void SaveLevelProgres() {
-            LevelSaveData saveData = new LevelSaveData();
-            saveData.CoinsAmount = _coinsPresenter.CoinsAmount;
-            saveData.DiamontsAmount = 0;
-            (new LevelPlayerPrefsSystem()).SaveData(saveData);
-        }
-        
-        public void OnPointerDown(PointerEventData eventData) {
-            SaveLevelProgres();
-            SceneSwitcher.LoadScene(SceneSwitcher.MENU_SCENE_KEY);
-        }
-        
-    }
-    
-}
+          _gameEndCanvas.enabled = true;
+             }
+     
+             private void SaveLevelProgres() {
+                 LevelSaveData saveData = new LevelSaveData();
+                 saveData.CoinsAmount = currencyPresenter.CoinsAmount;
+                 saveData.DiamontsAmount = currencyPresenter.DiamontsAmount;
+                 saveData.DrivenMeters = 0;
+                 (new LevelPlayerPrefsSystem()).SaveData(saveData);
+             }
+             
+             public void OnPointerDown(PointerEventData eventData) {
+                 SaveLevelProgres();
+                 SceneSwitcher.LoadScene(SceneSwitcher.MENU_SCENE_KEY);
+             }
+             
+         }
+         
+     }  

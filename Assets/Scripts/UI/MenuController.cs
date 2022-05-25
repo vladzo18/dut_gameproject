@@ -1,4 +1,3 @@
-using System;
 using Scripts;
 using Scripts.Save;
 using UI;
@@ -15,10 +14,16 @@ namespace Ui {
         
         private Canvas _activeCanvas;
 
-        private LevelChanger _levelChanger;
+        private MapsChanger _mapsChanger;
         private CarChanger _carChanger;
 
+        private MapsModel _mapsModel;
+        private CarsModel _carsModel;
+
         private ISaveSystem<MenuSaveData> _saveSystem;
+
+        private int _currentMapIndex;
+        private int _currentCarIndex;
         
         private void Start() {
             _saveSystem = new MenuPlayerPrefsSystem();
@@ -30,29 +35,42 @@ namespace Ui {
             LoadState();
             TryToLoadLeverProgresData();
             
-            _levelChanger = new LevelChanger(
+            _mapsModel = new MapsModel(_menuView.MapsStorage);
+            _mapsModel.LoadModel();
+            _carsModel = new CarsModel(_menuView.CarsStorage);
+            _carsModel.LoadModel();
+            
+            _mapsChanger = new MapsChanger(
                 _menuView.ChangerItemPrefab,
-                _menuView.MapsStorage,
+                _mapsModel,
                 _menuView.LevelsScroller,
-                _menuView.MessageBox);
+                _menuView.MessageBox, 
+                _menuView.CurrencyBox);
+            _mapsChanger.Init(_currentMapIndex);
             
             _carChanger = new CarChanger(
                 _menuView.ChangerItemPrefab,
-                _menuView.CarsStorage,
+                _carsModel,
                 _menuView.CarsScroller, 
-                _menuView.MessageBox);
+                _menuView.MessageBox,
+                _menuView.CurrencyBox);
+            _carChanger.Init(_currentCarIndex);
             
+            _mapsChanger.OnMapChanged += MapChangedHandler;
+            _carChanger.OnCarChanged += CarChangedHandler;
             _activeCanvas = _menuView.LevelsCanvas;
             _activeCanvas.enabled = true;
         }
-        
+
         private void OnDestroy() {
             SaveState();
             _menuView.OnPlayClick -= OnPlayClicked;
+            _mapsChanger.OnMapChanged -= MapChangedHandler;
+            _carChanger.OnCarChanged -= CarChangedHandler;
             foreach (var button in _menuView.SwichButtons) {
-                button.OnButtonClick += OnChangerButtonClick;
+                button.OnButtonClick -= OnChangerButtonClick;
             }
-            _levelChanger.Dispose();
+            _mapsChanger.Dispose();
             _carChanger.Dispose();
         }
 
@@ -75,20 +93,35 @@ namespace Ui {
             }
         }
 
+        
+        private void MapChangedHandler(int index) {
+            _currentMapIndex = index;
+        }
+        
+        private void CarChangedHandler(int index) {
+            _currentCarIndex = index;
+        }
+        
         private void SaveState() {
             MenuSaveData saveData = new MenuSaveData();
             saveData.CoinsAmount = _menuView.CurrencyBox.CurrentCoins;
             saveData.DiamantsAmount = _menuView.CurrencyBox.CurrentDiamonts;
+            saveData.ChosenMapIndex = _currentMapIndex;
+            saveData.ChosenCarIndex = _currentCarIndex;
             _saveSystem.SaveData(saveData);
+            _mapsModel.SaveModel();
+            _carsModel.SaveModel();
         }
 
         private void LoadState() {
             MenuSaveData saveData = _saveSystem.LoadData();
             _menuView.CurrencyBox.AddCoins(saveData.CoinsAmount);
             _menuView.CurrencyBox.AddDiamonts(saveData.DiamantsAmount);
+            _currentMapIndex = saveData.ChosenMapIndex;
+            _currentCarIndex = saveData.ChosenCarIndex;
         }
         
-        private void OnPlayClicked() { 
+        private void OnPlayClicked() {
             SaveState();
             SceneSwitcher.LoadScene(SceneSwitcher.GAME_SCENE_KEY);
         }

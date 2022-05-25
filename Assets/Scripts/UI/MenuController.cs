@@ -3,6 +3,7 @@ using Scripts.Save;
 using UI;
 using UI.Changers;
 using UI.Changers.CarChanger;
+using UI.Changers.CarPropertyTuner;
 using UI.Changers.LevelChanger;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ namespace Ui {
 
         private MapsModel _mapsModel;
         private CarsModel _carsModel;
+
+        private CarPropertiesChanger _propertiesChanger;
 
         private ISaveSystem<MenuSaveData> _saveSystem;
 
@@ -56,6 +59,9 @@ namespace Ui {
                 _menuView.CurrencyBox);
             _carChanger.Init(_currentCarIndex);
             
+            _propertiesChanger = new CarPropertiesChanger(_menuView.CarTunerBoxViews);
+            _propertiesChanger.Init();
+            
             _mapsChanger.OnMapChanged += MapChangedHandler;
             _carChanger.OnCarChanged += CarChangedHandler;
             _activeCanvas = _menuView.LevelsCanvas;
@@ -72,6 +78,7 @@ namespace Ui {
             }
             _mapsChanger.Dispose();
             _carChanger.Dispose();
+            _propertiesChanger.Dispose();
         }
 
         private void OnChangerButtonClick(ChangerSwichButtonType type) {

@@ -57,7 +57,11 @@
                 <e p="CarType.cs" t="Include" />
               </e>
               <e p="CarPropertyTuner" t="Include">
-                <e p="CarTunerView.cs" t="Include" />
+                <e p="BoxItem.cs" t="Include" />
+                <e p="CarPropertiesChanger.cs" t="Include" />
+                <e p="CarTunerBoxController.cs" t="Include" />
+                <e p="CarTunerBoxView.cs" t="Include" />
+                <e p="UpgradeButton.cs" t="Include" />
               </e>
               <e p="ChangerItemView.cs" t="Include" />
               <e p="ChangerSwichButton.cs" t="Include" />

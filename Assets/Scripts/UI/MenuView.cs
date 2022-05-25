@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UI.Changers;
 using UI.Changers.CarChanger;
+using UI.Changers.CarPropertyTuner;
 using UI.Changers.LevelChanger;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,7 @@ namespace UI {
         [SerializeField] private CarsStorage _carsStorage;
         [Header("Car Tuner")]
         [SerializeField] private Canvas _tuneCanvas;
+        [SerializeField] private List<CarTunerBoxView> _carTunerBoxViews;
         [Header("Other")]
         [SerializeField] private ChangerItemView _changerItemPrefab;
         [SerializeField] private MessageBox _messageBox;
@@ -32,6 +34,7 @@ namespace UI {
         public event Action OnPlayClick;
         
         public IEnumerable<ChangerSwichButton> SwichButtons => _swichButtons;
+        public IEnumerable<CarTunerBoxView> CarTunerBoxViews => _carTunerBoxViews;
         public Canvas LevelsCanvas => _levelsCanvas;
         public Canvas CarsCanvas => _carsCanvas;
         public Canvas TuneCanvas => _tuneCanvas;

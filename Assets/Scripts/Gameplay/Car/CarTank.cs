@@ -3,7 +3,7 @@ using System.Collections;
 using Gameplay.Car;
 using UnityEngine;
 
-namespace Scripts {
+namespace Items {
     
     public class CarTank : MonoBehaviour {
 

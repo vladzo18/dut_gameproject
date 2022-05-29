@@ -8,6 +8,7 @@ namespace Item {
         [SerializeField] private ItemType _itemType;
         [SerializeField] private float _itemAmount;
         [SerializeField] private Animator _animator;
+        [SerializeField] private Collider2D _collider;
 
         private const string TAKE_ANIMATION_KEY = "Take";
 
@@ -15,6 +16,7 @@ namespace Item {
         public float ItemAmount => _itemAmount;
 
         public void Take() {
+            _collider.enabled = false;
             _animator.Play(TAKE_ANIMATION_KEY);
             Invoke(nameof(Determinate), 0.5f);
         }

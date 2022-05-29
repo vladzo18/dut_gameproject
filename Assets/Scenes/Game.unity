@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24806871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8489232, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8488917, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 329240754}
@@ -445,7 +445,7 @@ MonoBehaviour:
   _camera: {fileID: 24806872}
   _graundGenerator: {fileID: 1978950952}
   _carInputController: {fileID: 1805571648}
-  _hudMediator: {fileID: 670508298}
+  carHudProvider: {fileID: 670508298}
   _audioSource: {fileID: 637764512}
   _mainCamera: {fileID: 519420031}
 --- !u!4 &384066622
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9747fea9575e4cbb9f19e97ce8ab9e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyPresenter: {fileID: 1794706760}
+  currencyBox: {fileID: 1794706760}
   _gameEndCanvas: {fileID: 402607483}
 --- !u!1 &413194069
 GameObject:
@@ -1013,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8489232, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8488917, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1406,10 +1406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2ff521905d4d1080c9c7508cad9b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currencyPresenter: {fileID: 1794706760}
-  _fuelPresenter: {fileID: 1794706759}
-  _gameEndPresenter: {fileID: 402607486}
-  _meterCounterPresenter: {fileID: 1567761209}
+  currencyBox: {fileID: 1794706760}
+  fuelBar: {fileID: 1794706759}
+  gameEndPerformance: {fileID: 402607486}
+  meterCountBar: {fileID: 1567761209}
   _carEntity: {fileID: 0}
 --- !u!1 &814091704
 GameObject:
@@ -3021,7 +3021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038494505, y: 0}
   m_AnchorMax: {x: 0.2584945, y: 0.97}
-  m_AnchoredPosition: {x: -0.23046875, y: 1.5}
+  m_AnchoredPosition: {x: -0.23043823, y: 1.5}
   m_SizeDelta: {x: 1.7400055, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794706759

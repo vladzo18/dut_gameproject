@@ -2,7 +2,7 @@
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace Scripts.Save {
+namespace Items.Save {
     
     public class BinarySaveSystem {
         

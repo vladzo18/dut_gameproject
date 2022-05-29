@@ -1,5 +1,5 @@
-﻿using Scripts;
-using Scripts.Save;
+﻿using Items;
+using Items.Save;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

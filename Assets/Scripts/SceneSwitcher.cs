@@ -1,6 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 
-namespace Scripts {
+namespace Items {
     
     public static class SceneSwitcher {
 

@@ -1,4 +1,4 @@
-using Scripts;
+using Items;
 using UnityEngine;
 using UnityEngine.UI;
 

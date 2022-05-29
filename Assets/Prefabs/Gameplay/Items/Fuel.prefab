@@ -126,6 +126,7 @@ MonoBehaviour:
   _itemType: 1
   _itemAmount: 75
   _animator: {fileID: 1997736832952209293}
+  _collider: {fileID: 1997736832952209295}
 --- !u!95 &1997736832952209293
 Animator:
   serializedVersion: 3

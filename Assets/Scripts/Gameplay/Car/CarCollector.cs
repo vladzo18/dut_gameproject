@@ -1,8 +1,7 @@
 using System;
-using Items;
 using UnityEngine;
 
-namespace Scripts {
+namespace Items {
     
     [RequireComponent(typeof(Collider2D))]
     public class CarCollector : MonoBehaviour {
@@ -30,7 +29,6 @@ namespace Scripts {
                 
                 OnItemColect?.Invoke(item.ItemType);
                 item.Take();
-                collider.enabled = false;
             }
         }
 

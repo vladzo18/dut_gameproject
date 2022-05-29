@@ -12,13 +12,16 @@ namespace HUD {
 
         [SerializeField] private CarEntity _carEntity;
 
+        private bool _carEntityWasSetted;
+        
         public void SetCarEntity(CarEntity entity) {
             _carEntity = entity;
+            _carEntityWasSetted = true;
             BindWitnCarEntity();
         }
         
         private void Start() {
-            if (_carEntity) {
+            if (!_carEntityWasSetted) {
                 BindWitnCarEntity();
             }
         }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Scripts;
+using Items;
 using UnityEngine;
 
 namespace Gameplay.Car {

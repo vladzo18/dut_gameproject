@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scripts.Save {
+namespace Items.Save {
     
     public class MenuPlayerPrefsSystem : ISaveSystem<MenuSaveData> {
         

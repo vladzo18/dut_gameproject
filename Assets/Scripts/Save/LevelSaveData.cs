@@ -1,4 +1,4 @@
-﻿namespace Scripts.Save {
+﻿namespace Items.Save {
 
     public class LevelSaveData : SaveData {
 

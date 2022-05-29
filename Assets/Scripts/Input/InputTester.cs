@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Scripts {
+namespace Items {
     
     public class InputTester : MonoBehaviour  {
         

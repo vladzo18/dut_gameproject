@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemType: 2
-  _itemAmount: 100
+  _itemAmount: 500
   _animator: {fileID: 1682413039284175029}
+  _collider: {fileID: 1919168435042711365}
 --- !u!95 &1682413039284175029
 Animator:
   serializedVersion: 3

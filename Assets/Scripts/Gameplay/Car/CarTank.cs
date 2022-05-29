@@ -25,7 +25,9 @@ namespace Scripts {
             if (_carMover) {
                 _mover = _carMover as IMover;
             }
+            
             _carCollector.OnFuelCollect += OnFuelTake;
+            
             CurrentFuelAmount = FuelMaxAmount;
             StartCoroutine(FuelСonsumptionRoutine());
         }
@@ -35,11 +37,14 @@ namespace Scripts {
         }
         
         private IEnumerator FuelСonsumptionRoutine() {
+            OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
+            
             while (true) {
                 yield return new WaitUntil(() => _mover.IsMoveing);
                 
                 if (CurrentFuelAmount > 0) {
-                    CurrentFuelAmount -= _fuelDecreaseStep;
+                    float nextFuelAmount = CurrentFuelAmount - _fuelDecreaseStep;
+                    CurrentFuelAmount = nextFuelAmount >= 0 ? nextFuelAmount : 0;
                     OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
                 } else {
                     _mover.ToggleMovement();

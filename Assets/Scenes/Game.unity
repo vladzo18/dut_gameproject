@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24806871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8488722, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8489232, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 329240754}
@@ -445,10 +445,7 @@ MonoBehaviour:
   _camera: {fileID: 24806872}
   _graundGenerator: {fileID: 1978950952}
   _carInputController: {fileID: 1805571648}
-  _fuelPresenter: {fileID: 1794706759}
-  currencyPresenter: {fileID: 1794706760}
-  _gameEndPresenter: {fileID: 402607486}
-  meterCounterPresenter: {fileID: 1567761209}
+  _hudMediator: {fileID: 670508298}
   _audioSource: {fileID: 637764512}
   _mainCamera: {fileID: 519420031}
 --- !u!4 &384066622
@@ -717,7 +714,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyPresenter: {fileID: 1794706760}
   _gameEndCanvas: {fileID: 402607483}
-  _carDeath: {fileID: 0}
 --- !u!1 &413194069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8488722, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8489232, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1368,6 +1364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670508297}
+  - component: {fileID: 670508298}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -1397,6 +1394,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &670508298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670508296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2ff521905d4d1080c9c7508cad9b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currencyPresenter: {fileID: 1794706760}
+  _fuelPresenter: {fileID: 1794706759}
+  _gameEndPresenter: {fileID: 402607486}
+  _meterCounterPresenter: {fileID: 1567761209}
+  _carEntity: {fileID: 0}
 --- !u!1 &814091704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 907841012}
-  _pedal: {fileID: 21300000, guid: 418ec92dba73a7946b6d76aafdd6a106, type: 3}
   _putedPedal: {fileID: 21300000, guid: 4f52b69219c110241835b1087b0fa1b3, type: 3}
 --- !u!114 &907841012
 MonoBehaviour:
@@ -2880,7 +2893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7817fec8fbd1d1c4f9c2470ac2764521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceCounter: {fileID: 0}
   _text: {fileID: 1467557531}
 --- !u!1 &1664496322
 GameObject:
@@ -2933,7 +2945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 1664496325}
-  _pedal: {fileID: 21300000, guid: caf2250668201e94b97714f2eb22a2a6, type: 3}
   _putedPedal: {fileID: 21300000, guid: 5adc0fc97dfc20c48bc0168b044884cb, type: 3}
 --- !u!114 &1664496325
 MonoBehaviour:
@@ -3056,7 +3067,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 3
   _slider: {fileID: 1945712898}
   _fill: {fileID: 992391757}
-  _carTank: {fileID: 0}
 --- !u!114 &1794706760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,7 +3081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coinsText: {fileID: 1391377839}
   _diamontsText: {fileID: 1319776405}
-  _carCollector: {fileID: 0}
 --- !u!1 &1805571647
 GameObject:
   m_ObjectHideFlags: 0

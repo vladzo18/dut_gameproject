@@ -11,7 +11,6 @@
               <e p="CarDeath.cs" t="Include" />
               <e p="CarDistanceCounter.cs" t="Include" />
               <e p="CarEntity.cs" t="Include" />
-              <e p="CarInputController.cs" t="Include" />
               <e p="CarMover.cs" t="Include" />
               <e p="CarSound.cs" t="Include" />
               <e p="CarTank.cs" t="Include" />
@@ -29,14 +28,18 @@
             </e>
           </e>
           <e p="HUD" t="Include">
-            <e p="CurrencyPresenter.cs" t="Include" />
-            <e p="FuelPresenter.cs" t="Include" />
-            <e p="GameEndPresenter.cs" t="Include" />
-            <e p="MeterCounterPresenter.cs" t="Include" />
+            <e p="CarHUDProvider.cs" t="Include" />
+            <e p="CurrencyBox.cs" t="Include" />
+            <e p="FuelBar.cs" t="Include" />
+            <e p="GameEndPerformance.cs" t="Include" />
+            <e p="MeterCountBar.cs" t="Include" />
             <e p="PauseMenuView.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="CarInputController.cs" t="Include" />
+            <e p="InputTester.cs" t="Include" />
             <e p="PedalButton.cs" t="Include" />
           </e>
-          <e p="InputTester.cs" t="Include" />
           <e p="Save" t="Include">
             <e p="BinarySaveSystem.cs" t="Include" />
             <e p="ISaveSystem.cs" t="Include" />

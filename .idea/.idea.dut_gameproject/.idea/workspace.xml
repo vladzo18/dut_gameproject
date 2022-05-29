@@ -20,22 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/BoxItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/BoxItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/UpgradeButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/UpgradeButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/TuneBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/TuneBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground/Countryside/terrain-ground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Ground/Countryside/terrain-ground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/CarInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/CarInputController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/FuelBar.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PedalButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PedalButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PedalButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PedalButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputTester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputTester.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputTester.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputTester.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,39 +68,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/LevelChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemVhangerModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ItemChangerModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/MapsModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarStorageDescriptor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapStorageDescriptor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/Unicycle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
@@ -102,9 +100,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertysChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PedalButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/HUDMediator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +188,9 @@
       <workItem from="1653341561596" duration="6810000" />
       <workItem from="1653402866117" duration="7515000" />
       <workItem from="1653415763600" duration="12728000" />
-      <workItem from="1653485636791" duration="10145000" />
+      <workItem from="1653485636791" duration="10767000" />
+      <workItem from="1653782958051" duration="5413000" />
+      <workItem from="1653832322600" duration="2445000" />
     </task>
     <servers />
   </component>

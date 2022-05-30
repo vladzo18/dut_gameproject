@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using HUD;
+using UnityEngine;
 
 namespace Gameplay.Car {
     
-    public class UnicycleMover : MonoBehaviour, IMover {
+    public class UnicycleMover : MonoBehaviour, IMover, IResetable {
         
         [SerializeField] private Rigidbody2D _wheel;
         [SerializeField] private Rigidbody2D _carRigidbody;
@@ -12,6 +13,9 @@ namespace Gameplay.Car {
         private bool _canMove = true;
 
         public bool IsMoveing { get; private set; }
+        
+        private void Start() => GameReset.Register(this);
+        private void OnDestroy() => GameReset.Unregister(this);
         
         private void FixedUpdate() {
             if (!_canMove) return;
@@ -44,7 +48,16 @@ namespace Gameplay.Car {
             IsMoveing = false;
         }
 
-        public void ToggleMovement() => _canMove = !_canMove;
+        public void SetMovementAbility(bool isAble) => _canMove = isAble;
+        
+        public void Reset() {
+            _carRigidbody.velocity = Vector2.zero;
+            _carRigidbody.rotation = 0;
+            _wheel.angularVelocity = 0;
+            _targetSpeed = 0;
+            _canMove = true;
+            IsMoveing = false;
+        }
         
     }
     

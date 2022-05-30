@@ -1,10 +1,11 @@
+using System;
 using Items;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace HUD {
     
-    public class PauseMenuView : MonoBehaviour {
+    public class PauseMenu : MonoBehaviour {
 
         [SerializeField] private Button _pauseButton;
         [SerializeField] private Canvas _pauseWindow;
@@ -14,21 +15,29 @@ namespace HUD {
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _clickSound;
 
-        //Temporary Realization
+        public event Action OnGameExit;
+        
         private void Start() {
             _pauseButton.onClick.AddListener(() => {
                 _pauseWindow.enabled = true;
-                Time.timeScale = 0f;
+                PauseProvider.ApplyPause();
                 _audioSource.PlayOneShot(_clickSound);
             });
             _resumeButton.onClick.AddListener(() => {
                 _pauseWindow.enabled = false;
-                Time.timeScale = 1f;
+                PauseProvider.RevokePause();
                 _audioSource.PlayOneShot(_clickSound);
             });
-            _exitButton.onClick.AddListener(() => {
-                Time.timeScale = 1f;
+            _restartButton.onClick.AddListener(() => {
+                PauseProvider.RevokePause();
                 _audioSource.PlayOneShot(_clickSound);
+                GameReset.Reset();
+                _pauseWindow.enabled = false;
+            });
+            _exitButton.onClick.AddListener(() => {
+                _audioSource.PlayOneShot(_clickSound);
+                PauseProvider.RevokePause();
+                OnGameExit?.Invoke();
                 SceneSwitcher.LoadScene(SceneSwitcher.MENU_SCENE_KEY);
             });
         }
@@ -36,6 +45,7 @@ namespace HUD {
         private void OnDestroy() {
             _pauseButton.onClick.RemoveAllListeners();
             _resumeButton.onClick.RemoveAllListeners();
+            _restartButton.onClick.RemoveAllListeners();
             _exitButton.onClick.RemoveAllListeners();
         }
 

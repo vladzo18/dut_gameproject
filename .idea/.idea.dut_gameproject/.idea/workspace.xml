@@ -20,39 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameReset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameReset.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PerformBox.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PerformBox.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IResetable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/IResetable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/ItemChanks/ItemsChank-3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/ItemChanks/ItemsChank-3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-100.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-100.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-25.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-25.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-500.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Coin-500.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Diamont.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Diamont.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Fuel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Items/Fuel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Take.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Take.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/BlueBike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/CarInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/CarInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputTester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputTester.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PedalButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PedalButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/BinarySaveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/ISaveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/ISaveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/LevelPlayerPrefsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelPlayerPrefsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/LevelSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/LevelSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/MenuPlayerPrefsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuPlayerPrefsSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/MenuSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/MenuSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Save/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Save/SaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,33 +61,20 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CoinsPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarStorageDescriptor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapStorageDescriptor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/Unicycle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarInputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsStorage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/ChangerItemView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarsModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/UpgradeButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/BoxItem.cs" />
@@ -108,20 +91,33 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCounterPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/HUDMediator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/IResetable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameReset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/FuelBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CarHUDProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PerformBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IResetable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
       </list>
     </option>
   </component>
@@ -193,7 +189,8 @@
       <workItem from="1653415763600" duration="12728000" />
       <workItem from="1653485636791" duration="10767000" />
       <workItem from="1653782958051" duration="5413000" />
-      <workItem from="1653832322600" duration="4742000" />
+      <workItem from="1653832322600" duration="20898000" />
+      <workItem from="1653918770113" duration="2237000" />
     </task>
     <servers />
   </component>
@@ -287,18 +284,18 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state width="1237" height="139" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1653083157670" />
-    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1653502424449">
+    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1653853864963">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1653502424449" />
+    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1653853864963" />
     <state x="141" y="136" key="SettingsEditor" timestamp="1652193835065">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="141" y="136" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1652193835065" />
-    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1653503857113">
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1653847742359">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1653503857113" />
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1653847742359" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

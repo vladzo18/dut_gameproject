@@ -27,19 +27,23 @@
               <e p="ItemsChank.cs" t="Include" />
             </e>
           </e>
+          <e p="GameReset.cs" t="Include" />
           <e p="HUD" t="Include">
             <e p="CarHUDProvider.cs" t="Include" />
             <e p="CurrencyBox.cs" t="Include" />
             <e p="FuelBar.cs" t="Include" />
             <e p="GameEndPerformance.cs" t="Include" />
             <e p="MeterCountBar.cs" t="Include" />
-            <e p="PauseMenuView.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
+            <e p="PerformBox.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="CarInputController.cs" t="Include" />
             <e p="InputTester.cs" t="Include" />
             <e p="PedalButton.cs" t="Include" />
           </e>
+          <e p="IResetable.cs" t="Include" />
+          <e p="PauseProvider.cs" t="Include" />
           <e p="Save" t="Include">
             <e p="BinarySaveSystem.cs" t="Include" />
             <e p="ISaveSystem.cs" t="Include" />

@@ -20,7 +20,8 @@ namespace Gameplay.LevelGeneration {
         }
 
         private void Update() {
-            if (_collider == null) return;
+            if (!_collider) return;
+            
             foreach (var item in _items) {
                 Vector2 closestPoint = _collider.ClosestPoint(item.transform.position);
                 item.transform.position = new Vector3(item.transform.position.x,closestPoint.y + _heightAboveGround);

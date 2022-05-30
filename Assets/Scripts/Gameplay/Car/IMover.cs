@@ -6,7 +6,7 @@
         public void MoveRight();
         public void MoveLeft();
         public void StopMoveing();
-        public void ToggleMovement();
+        public void SetMovementAbility(bool isAble);
 
     }
     

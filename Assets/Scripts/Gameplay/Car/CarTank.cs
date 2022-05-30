@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using Gameplay.Car;
+using HUD;
 using UnityEngine;
 
 namespace Items {
     
-    public class CarTank : MonoBehaviour {
+    public class CarTank : MonoBehaviour, IResetable {
 
         [SerializeField] private CarCollector _carCollector;
         [SerializeField] private MonoBehaviour _carMover;
@@ -14,7 +15,8 @@ namespace Items {
         [SerializeField, Range(0.005f, 0.05f)] private float _fuelDecreaseingSpeed;
 
         private IMover _mover;
-        
+        private bool isFuelEmpty;
+
         public float CurrentFuelAmount { get; private set; }
         public float FuelMaxAmount => _fuelMaxAmount;
 
@@ -22,6 +24,8 @@ namespace Items {
         public event Action<float> OnFuelAmountChanged;
 
         private void Start() {
+            GameReset.Register(this);
+                
             if (_carMover) {
                 _mover = _carMover as IMover;
             }
@@ -34,6 +38,7 @@ namespace Items {
 
         private void OnDestroy() {
             _carCollector.OnFuelCollect -= OnFuelTake;
+            GameReset.Unregister(this);
         }
         
         private IEnumerator FuelСonsumptionRoutine() {
@@ -47,8 +52,11 @@ namespace Items {
                     CurrentFuelAmount = nextFuelAmount >= 0 ? nextFuelAmount : 0;
                     OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
                 } else {
-                    _mover.ToggleMovement();
-                    OnEmptyFuelTank?.Invoke();
+                    if (!isFuelEmpty) {
+                        _mover.SetMovementAbility(false);
+                        OnEmptyFuelTank?.Invoke();
+                        isFuelEmpty = true;
+                    }
                 }
                 
                 yield return new WaitForSeconds(_fuelDecreaseingSpeed);
@@ -61,6 +69,8 @@ namespace Items {
             } else {
                 CurrentFuelAmount += amount;
             }
+            _mover.SetMovementAbility(true);
+            isFuelEmpty = false;
             OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
         }
         
@@ -68,6 +78,11 @@ namespace Items {
             if (!(_carMover is IMover)) {
                 _carMover = null;
             }
+        }
+
+        public void Reset() {
+            CurrentFuelAmount = FuelMaxAmount;
+            OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
         }
         
     }

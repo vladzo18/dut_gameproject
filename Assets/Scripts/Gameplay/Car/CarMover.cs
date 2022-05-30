@@ -1,9 +1,10 @@
 using Gameplay.Car;
+using HUD;
 using UnityEngine;
 
 namespace Items {
     
-    public class CarMover : MonoBehaviour, IMover {
+    public class CarMover : MonoBehaviour, IMover, IResetable {
         
         [SerializeField] private Rigidbody2D _firstWheel;
         [SerializeField] private Rigidbody2D _secondeWheel;
@@ -17,7 +18,10 @@ namespace Items {
         private bool _canMove = true;
 
         public bool IsMoveing { get; private set; }
-        
+
+        private void Start() => GameReset.Register(this);
+        private void OnDestroy() => GameReset.Unregister(this);
+
         private void FixedUpdate() {
             if (_canMove && IsMoveing) {
                 _firstWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
@@ -45,7 +49,17 @@ namespace Items {
             IsMoveing = false;
         }
 
-        public void ToggleMovement() => _canMove = !_canMove;
+        public void SetMovementAbility(bool isAble) => _canMove = isAble;
+
+        public void Reset() {
+            _carRigidbody.velocity = Vector2.zero;
+            _carRigidbody.rotation = 0;
+            _firstWheel.angularVelocity = 0;
+            _secondeWheel.angularVelocity = 0;
+            _targetSpeed = 0;
+            _canMove = true;
+            IsMoveing = false;
+        }
         
     }
 

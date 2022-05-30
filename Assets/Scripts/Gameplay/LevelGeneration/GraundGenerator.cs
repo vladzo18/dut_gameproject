@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using HUD;
 using UnityEngine;
 using UnityEngine.U2D;
 using Random = UnityEngine.Random;
 
 namespace Gameplay.LevelGeneration {
     
-    public class GraundGenerator : MonoBehaviour {
+    public class GraundGenerator : MonoBehaviour, IResetable {
 
         [SerializeField] private SpriteShapeController _spriteShape;
         [SerializeField] private EdgeCollider2D _groundCollider;
@@ -14,6 +15,9 @@ namespace Gameplay.LevelGeneration {
         [SerializeField] private float _ObservationObjectDistanceToRegeneration = 20;
         [SerializeField] private List<ItemsChank> _itemsChanks;
 
+        private Vector2 _startPoss;
+        private bool _wasShifted;
+        
         private Spline _spline;
         private int _pointsAmount = 50;
         private int _generationCounter;
@@ -25,8 +29,11 @@ namespace Gameplay.LevelGeneration {
         private Vector3 GetPossitionAtEnd(int index) => _spline.GetPosition(_spline.GetPointCount() - (index + 1));
 
         private void Start() {
+            GameReset.Register(this);
+            
             _generatedItemsChanks = new List<ItemsChank>();
             _spline = _spriteShape.spline;
+            _startPoss = _spline.GetPosition(0);
 
             _spline.SetPosition(0, _spline.GetPosition(0) + Vector3.down * _groundDeep);
             _spline.SetPosition(_spline.GetPointCount() - 1, GetPossitionAtEnd(0) + Vector3.down * _groundDeep);
@@ -35,7 +42,7 @@ namespace Gameplay.LevelGeneration {
         }
 
         private void Update() {
-            if (_objectOfObservation == null)  return;
+            if (!_objectOfObservation)  return;
             
             if (_objectOfObservation.transform.position.x > GetPossitionAtEnd(0).x - _ObservationObjectDistanceToRegeneration) {
                 if (_generationCounter == 2) {
@@ -73,6 +80,7 @@ namespace Gameplay.LevelGeneration {
         
         [ContextMenu("Clear")]
         private void Clear() {
+            _wasShifted = true;
             int amount = _spline.GetPointCount() / 2;
         
             for (int i = 0; i < amount; i++) {
@@ -118,6 +126,32 @@ namespace Gameplay.LevelGeneration {
                 _generatedItemsChanks.Remove(chank);
             }
             
+        }
+
+        private void ClearAllItems() {
+            for (int i = 0; i < _generatedItemsChanks.Count; i++) {
+                _generatedItemsChanks[i].Clear();
+                _generatedItemsChanks.Remove(_generatedItemsChanks[i]);
+            }
+        }
+        
+        private void OnDestroy() => GameReset.Unregister(this);
+        
+        [ContextMenu("Reset")]
+        public void Reset() {
+            ClearAllItems();
+            
+            if (_wasShifted) {
+                float offset = Mathf.Abs(_startPoss.x - _spline.GetPosition(0).x);
+                
+                for (int i = 0; i < _spline.GetPointCount(); i++) {
+                    _spline.SetPosition(i, new Vector3(_spline.GetPosition(i).x - offset, _spline.GetPosition(i).y));
+                }
+
+                _wasShifted = false;
+            }
+            
+            PraceItems();
         }
         
     }

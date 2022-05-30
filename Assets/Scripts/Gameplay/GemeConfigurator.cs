@@ -11,7 +11,7 @@ using UnityEngine.U2D;
 
 namespace Gameplay {
     
-    public class GemeConfigurator : MonoBehaviour {
+    public class GemeConfigurator : MonoBehaviour, IResetable {
 
         [SerializeField] private SpriteShapeController _spriteShapeController;
         [SerializeField] private MapsStorage _mapsStorage;
@@ -23,8 +23,12 @@ namespace Gameplay {
         [SerializeField] private CarHUDProvider carHudProvider;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private Camera _mainCamera;
-    
+
+        private CarEntity _carEntity;
+        
         private void Start() {
+            GameReset.Register(this);
+            
             MenuSaveData data = (new MenuPlayerPrefsSystem()).LoadData();
 
             MapStorageDescriptor descriptor = _mapsStorage.ElementByIndex(data.ChosenMapIndex);
@@ -33,16 +37,24 @@ namespace Gameplay {
             _mainCamera.backgroundColor = descriptor.SkyColor;
 
             CarEntity carPrefab = _carsStorage.ElementByIndex(data.ChosenCarIndex).CarEntity;
-            CarEntity carEntity = Instantiate(carPrefab, _startPoint.position, Quaternion.identity);
+            _carEntity = Instantiate(carPrefab, _startPoint.position, Quaternion.identity);
         
-            _graundGenerator.SetObjectOfObservation(carEntity.CarBodyTransform.gameObject);
-            _camera.Follow = carEntity.CarBodyTransform;
-            _carInputController.SetCarMover(carEntity.CarMover);
-            carEntity.CarSound.SetAudioSource(_audioSource);
+            _graundGenerator.SetObjectOfObservation(_carEntity.CarBodyTransform.gameObject);
+            _camera.Follow = _carEntity.CarBodyTransform;
+            _carInputController.SetCarMover(_carEntity.CarMover);
+            _carEntity.CarSound.SetAudioSource(_audioSource);
         
-            carHudProvider.SetCarEntity(carEntity);
+            carHudProvider.SetCarEntity(_carEntity);
         }
-    
+
+        private void OnDestroy() {
+            GameReset.Unregister(this);
+        }
+
+        public void Reset() {
+            _carEntity.CarBodyTransform.position = _startPoint.position;
+        }
+        
     }
     
 }

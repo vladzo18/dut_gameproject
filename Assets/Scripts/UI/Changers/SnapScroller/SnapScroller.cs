@@ -21,6 +21,7 @@ namespace UI {
         private int _selectedItemIndex;
         private float _lastContentPossitionX;
         private int _activeItemIndex;
+        private bool _contentWasChanged;
         
         private Vector2 _contentPossition;
         private Vector2 _contentScale;
@@ -70,6 +71,7 @@ namespace UI {
 
         private void OnPanelClick(ScrollerPanel scrollerPanel) {
             if (!IsScrolling) {
+                _contentWasChanged = false;
                 _selectedItemIndex = _scrollerPanels.IndexOf(scrollerPanel);
             }
         }
@@ -88,7 +90,11 @@ namespace UI {
             if (deltaContentPossitionX < 0.5f) {
                 _scrollRect.inertia = false;
                 _selectedItemIndex = CurentCenterPanelIndex();
-                OnContentChanged?.Invoke();
+                if (!_contentWasChanged) {
+                    _contentWasChanged = true;
+                    OnContentChanged?.Invoke();
+                }
+                
             }
 
             _activeItemIndex = _selectedItemIndex;
@@ -109,6 +115,7 @@ namespace UI {
         public void OnBeginDrag(PointerEventData eventData) {
             IsScrolling = true;
             _scrollRect.inertia = true;
+            _contentWasChanged = false;
         }
         
         public void OnEndDrag(PointerEventData eventData) {

@@ -9,10 +9,14 @@ namespace Gameplay.Car {
         [SerializeField] private Rigidbody2D _carRigidbody;
         [SerializeField, Range(10, 40)] private float _maxSpeed;
         
+        private const float SPEEDUP_STEP = 0.35f;
+        
         private float _targetSpeed;
         private bool _canMove = true;
 
         public bool IsMoveing { get; private set; }
+        public float CurrentEgineSpeed { get; private set; }
+        public float MaxSpeed => _maxSpeed;
         
         private void Start() => GameReset.Register(this);
         private void OnDestroy() => GameReset.Unregister(this);
@@ -22,6 +26,10 @@ namespace Gameplay.Car {
             
             if (IsMoveing) {
                 _wheel.AddTorque(-_targetSpeed, ForceMode2D.Force);
+                if (CurrentEgineSpeed <= _maxSpeed) {
+                    CurrentEgineSpeed += SPEEDUP_STEP;
+                }
+
             }
             
             if (Mathf.Abs(_carRigidbody.rotation) > 2) {

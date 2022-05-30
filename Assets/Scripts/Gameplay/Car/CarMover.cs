@@ -13,11 +13,14 @@ namespace Items {
 
         private const float SPEED_DIVIDER = 2.5f;
         private const float TORQUE_DIVIDER = 8;
+        private const float SPEEDUP_STEP = 0.35f;
         
         private float _targetSpeed;
         private bool _canMove = true;
 
         public bool IsMoveing { get; private set; }
+        public float CurrentEgineSpeed { get; private set; }
+        public float MaxSpeed => _maxSpeed;
 
         private void Start() => GameReset.Register(this);
         private void OnDestroy() => GameReset.Unregister(this);
@@ -27,10 +30,13 @@ namespace Items {
                 _firstWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
                 _secondeWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
                 
+                if (CurrentEgineSpeed <= _maxSpeed) {
+                    CurrentEgineSpeed += SPEEDUP_STEP;
+                }
+                
                 _carRigidbody.AddForce(transform.right.normalized * -_targetSpeed / SPEED_DIVIDER, ForceMode2D.Force);
                 _carRigidbody.AddTorque(-_targetSpeed / TORQUE_DIVIDER, ForceMode2D.Impulse);
             }
-            
         }
         
         public void MoveRight() {
@@ -47,6 +53,7 @@ namespace Items {
 
         public void StopMoveing() {
             IsMoveing = false;
+            CurrentEgineSpeed = 0;
         }
 
         public void SetMovementAbility(bool isAble) => _canMove = isAble;
@@ -59,6 +66,7 @@ namespace Items {
             _targetSpeed = 0;
             _canMove = true;
             IsMoveing = false;
+            CurrentEgineSpeed = 0;
         }
         
     }

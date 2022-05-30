@@ -17,11 +17,10 @@ namespace Ui {
 
         private MapsChanger _mapsChanger;
         private CarChanger _carChanger;
+        private CarPropertiesChanger _propertiesChanger;
 
         private MapsModel _mapsModel;
         private CarsModel _carsModel;
-
-        private CarPropertiesChanger _propertiesChanger;
 
         private ISaveSystem<MenuSaveData> _saveSystem;
 
@@ -66,6 +65,17 @@ namespace Ui {
             _carChanger.OnCarChanged += CarChangedHandler;
             _activeCanvas = _menuView.LevelsCanvas;
             _activeCanvas.enabled = true;
+            _propertiesChanger.OnPointsChanged += PointsChangedHandler;
+            _carChanger.OnCarBuy += BuyCamOrMapChanger;
+            _mapsChanger.OnMapBuy += BuyCamOrMapChanger;
+        }
+
+        private void BuyCamOrMapChanger() {
+            _menuView.UIAudioSource.PlayOneShot(_menuView.BuySound);
+        }
+
+        private void PointsChangedHandler() {
+            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
         }
 
         private void OnDestroy() {
@@ -73,6 +83,9 @@ namespace Ui {
             _menuView.OnPlayClick -= OnPlayClicked;
             _mapsChanger.OnMapChanged -= MapChangedHandler;
             _carChanger.OnCarChanged -= CarChangedHandler;
+            _propertiesChanger.OnPointsChanged -= PointsChangedHandler;
+            _carChanger.OnCarBuy -= BuyCamOrMapChanger;
+            _mapsChanger.OnMapBuy -= BuyCamOrMapChanger;
             foreach (var button in _menuView.SwichButtons) {
                 button.OnButtonClick -= OnChangerButtonClick;
             }
@@ -83,6 +96,7 @@ namespace Ui {
 
         private void OnChangerButtonClick(ChangerSwichButtonType type) {
             _activeCanvas.enabled = false;
+            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             
             switch (type) {
                 case ChangerSwichButtonType.Levels:
@@ -99,13 +113,14 @@ namespace Ui {
                     break;
             }
         }
-
         
         private void MapChangedHandler(int index) {
+            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             _currentMapIndex = index;
         }
         
         private void CarChangedHandler(int index) {
+            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             _currentCarIndex = index;
         }
         
@@ -129,6 +144,7 @@ namespace Ui {
         }
         
         private void OnPlayClicked() {
+            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             SaveState();
             SceneSwitcher.LoadScene(SceneSwitcher.GAME_SCENE_KEY);
         }

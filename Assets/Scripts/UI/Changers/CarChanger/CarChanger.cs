@@ -18,6 +18,7 @@ namespace UI.Changers.CarChanger {
         private int _messageBoxCarIndex;
         
         public event Action<int> OnCarChanged;
+        public event Action OnCarBuy;
 
         public CarChanger(ChangerItemView view, CarsModel model, SnapScroller scroller, MessageBox messageBox, CurrencyBox currencyBox) {
             _changerDataIndexes = new Dictionary<ScrollerPanel, int>();
@@ -81,6 +82,7 @@ namespace UI.Changers.CarChanger {
                 _model.SetAvaliabilityStatusAt(_messageBoxCarIndex, true);
                 _messageBox.HideMessageBox();
                 OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.GetPanelAt(_messageBoxCarIndex)]);
+                OnCarBuy?.Invoke();
             }
         }
 

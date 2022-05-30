@@ -30,6 +30,10 @@ namespace UI {
         [Header("Other")]
         [SerializeField] private ChangerItemView _changerItemPrefab;
         [SerializeField] private MessageBox _messageBox;
+        [Header("Audio")]
+        [SerializeField] private AudioSource _uiAudioSource;
+        [SerializeField] private AudioClip _clickSound;
+        [SerializeField] private AudioClip _buySound;
 
         public event Action OnPlayClick;
         
@@ -45,6 +49,9 @@ namespace UI {
         public ChangerItemView ChangerItemPrefab => _changerItemPrefab;
         public MessageBox MessageBox => _messageBox;
         public CurrencyBox CurrencyBox => _currencyBox;
+        public AudioSource UIAudioSource => _uiAudioSource;
+        public AudioClip ClickSound => _clickSound;
+        public AudioClip BuySound => _buySound;
 
         private void Start() {
             _playButton.onClick.AddListener(PlayButtonClicked);

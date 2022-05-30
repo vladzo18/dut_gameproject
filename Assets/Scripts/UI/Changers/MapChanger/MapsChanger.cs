@@ -17,6 +17,7 @@ namespace UI.Changers.LevelChanger {
         private int _messageBoxMapIndex;
 
         public event Action<int> OnMapChanged;
+        public event Action OnMapBuy;
         
         public MapsChanger(ChangerItemView view, MapsModel model, SnapScroller scroller, MessageBox messageBox, CurrencyBox currencyBox) {
             _changerDataIndexes = new Dictionary<ScrollerPanel, int>();
@@ -80,6 +81,7 @@ namespace UI.Changers.LevelChanger {
                _model.SetAvaliabilityStatusAt(_messageBoxMapIndex, true);
                _messageBox.HideMessageBox();
                OnMapChanged.Invoke(_changerDataIndexes[_levelsScroller.GetPanelAt(_messageBoxMapIndex)]);
+               OnMapBuy?.Invoke();
             }
         }
 

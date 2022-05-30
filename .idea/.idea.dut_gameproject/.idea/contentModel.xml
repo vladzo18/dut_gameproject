@@ -13,6 +13,7 @@
               <e p="CarEntity.cs" t="Include" />
               <e p="CarMover.cs" t="Include" />
               <e p="CarSound.cs" t="Include" />
+              <e p="CarSoundEfect.cs" t="Include" />
               <e p="CarTank.cs" t="Include" />
               <e p="IMover.cs" t="Include" />
               <e p="UnicycleMover.cs" t="Include" />

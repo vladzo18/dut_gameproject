@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataSO/CarPropertiesStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataSO/CarPropertiesStorage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataSO/CarsStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataSO/CarsStorage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DataSO/MapsStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DataSO/MapsStorage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Racing Car.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Cars/Tractor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3B66F0A-D4E3-4A55-B6EF-91AB84878193/ad/e6e4d693/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PerformBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/SnapScroller/SnapScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSoundEfect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarDistanceCounter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Items/ItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarSound.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/ItemsChank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input/InputTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input/PedalButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input/CarInputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameReset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IResetable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/LevelGeneration/GraundGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/CurrencyBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/GameEndPerformance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/MeterCountBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUD/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarProrerty.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarProrertyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/CarPropertiesStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarTank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/IMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/CarMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertySettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/CarPropertiesConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/Car/UnicycleMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertySetting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.uxml" />
+        <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.uss" />
+        <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.uxml" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/BuyMessageBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" />
+        <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BackMusicConfigurator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/GemeConfigurator.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="28vmLzlBbUwtV8DR2B08MdcYYVg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30016583" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11920">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="11920" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="" />
+      <created>1652105416515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652105416515</updated>
+      <workItem from="1652105479857" duration="6638000" />
+      <workItem from="1652118644038" duration="4355000" />
+      <workItem from="1652174344146" duration="7439000" />
+      <workItem from="1652192579066" duration="1054000" />
+      <workItem from="1652193924074" duration="14691000" />
+      <workItem from="1652259155744" duration="6978000" />
+      <workItem from="1652295829974" duration="13328000" />
+      <workItem from="1652346812428" duration="11835000" />
+      <workItem from="1652373192102" duration="27000" />
+      <workItem from="1652373318953" duration="1255000" />
+      <workItem from="1652376426658" duration="12304000" />
+      <workItem from="1652435717031" duration="14156000" />
+      <workItem from="1652558053121" duration="5340000" />
+      <workItem from="1652636692425" duration="10822000" />
+      <workItem from="1652732096025" duration="5601000" />
+      <workItem from="1652819153611" duration="1851000" />
+      <workItem from="1652899247557" duration="7982000" />
+      <workItem from="1652961944176" duration="4794000" />
+      <workItem from="1652986881966" duration="1927000" />
+      <workItem from="1653058269483" duration="9845000" />
+      <workItem from="1653077447828" duration="4852000" />
+      <workItem from="1653163568463" duration="10063000" />
+      <workItem from="1653341561596" duration="6810000" />
+      <workItem from="1653402866117" duration="7515000" />
+      <workItem from="1653415763600" duration="12728000" />
+      <workItem from="1653485636791" duration="10767000" />
+      <workItem from="1653782958051" duration="5413000" />
+      <workItem from="1653832322600" duration="20898000" />
+      <workItem from="1653918770113" duration="9277000" />
+      <workItem from="1654176135996" duration="17182000" />
+      <workItem from="1654278083715" duration="10977000" />
+      <workItem from="1654290836883" duration="182000" />
+      <workItem from="1654363352324" duration="11751000" />
+      <workItem from="1654430997861" duration="219000" />
+      <workItem from="1654431263911" duration="1584000" />
+      <workItem from="1654432982709" duration="12718000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="383" y="293" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1653001851018">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="383" y="293" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.984@0.0.1280.984" timestamp="1653001851018" />
+    <state width="604" height="464" key="DebuggerActiveHint" timestamp="1654438983311">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="604" height="464" key="DebuggerActiveHint/0.0.1280.984@0.0.1280.984" timestamp="1654438983311" />
+    <state width="1237" height="307" key="GridCell.Tab.0.bottom" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.0.center" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.0.left" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.0.right" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.1.bottom" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.1.center" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.1.left" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.1.right" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.2.bottom" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.2.bottom/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.2.center" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.2.center/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.2.left" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.2.left/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.2.right" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.2.right/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.3.bottom" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.3.bottom/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.3.center" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.3.center/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.3.left" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.3.left/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state width="1237" height="307" key="GridCell.Tab.3.right" timestamp="1654440462641">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="307" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1654440462641" />
+    <state x="449" y="193" key="RiderGenerateDialog" timestamp="1654189372707">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="449" y="193" key="RiderGenerateDialog/0.0.1280.984@0.0.1280.984" timestamp="1654189372707" />
+    <state x="141" y="136" key="SettingsEditor" timestamp="1652193835065">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="141" y="136" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1652193835065" />
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1654187064064">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="303" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1654187064064" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#UI.Changers.CarPropertyTuner.CarPropertySettings" memberName="_propertySettings" />
+        <PinnedItemInfo parentTag="Frame#Ui.MenuController.Start" memberName="mapsModel" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

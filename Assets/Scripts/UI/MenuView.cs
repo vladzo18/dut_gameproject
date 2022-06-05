@@ -29,7 +29,7 @@ namespace UI {
         [SerializeField] private List<CarTunerBoxView> _carTunerBoxViews;
         [Header("Other")]
         [SerializeField] private ChangerItemView _changerItemPrefab;
-        [SerializeField] private MessageBox _messageBox;
+        [SerializeField] private BuyMessageBox buyMessageBox;
         [Header("Audio")]
         [SerializeField] private AudioSource _uiAudioSource;
         [SerializeField] private AudioClip _clickSound;
@@ -47,7 +47,7 @@ namespace UI {
         public SnapScroller CarsScroller => _carsScroller;
         public CarsStorage CarsStorage => _carsStorage;
         public ChangerItemView ChangerItemPrefab => _changerItemPrefab;
-        public MessageBox MessageBox => _messageBox;
+        public BuyMessageBox BuyMessageBox => buyMessageBox;
         public CurrencyBox CurrencyBox => _currencyBox;
         public AudioSource UIAudioSource => _uiAudioSource;
         public AudioClip ClickSound => _clickSound;

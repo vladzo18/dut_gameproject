@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI {
     
-    public class MessageBox : MonoBehaviour, IPointerDownHandler {
+    public class BuyMessageBox : MonoBehaviour, IPointerDownHandler {
 
         [SerializeField] private Canvas _messageBoxCanvas;
         [SerializeField] private TMP_Text _title;
@@ -17,7 +17,7 @@ namespace UI {
 
         public event Action OnShow;
         public event Action OnClose;
-        public event Action<int> OnTryBuyClick;
+        public event Action<int> OnBuyButtonClick;
 
         private void Start() {
             _submitButtonn.onClick.AddListener(OnClick);
@@ -27,7 +27,7 @@ namespace UI {
             _submitButtonn.onClick.RemoveListener(OnClick);
         }
 
-        private void OnClick() => OnTryBuyClick?.Invoke(Int32.Parse(_priceText.text));
+        private void OnClick() => OnBuyButtonClick?.Invoke(Int32.Parse(_priceText.text));
 
         public void SetTitle(string text) => _title.text = text;
         
@@ -42,10 +42,12 @@ namespace UI {
 
         public void ShowMessageBox() {
             _messageBoxCanvas.enabled = true;
+            OnShow?.Invoke();
         }
 
         public void HideMessageBox() {
             _messageBoxCanvas.enabled = false;
+            OnClose?.Invoke();
         }
 
         public void Clear() {

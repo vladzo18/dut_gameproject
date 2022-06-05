@@ -10,7 +10,7 @@ namespace UI.Changers.CarChanger {
         private readonly ChangerItemView _view;
         private readonly CarsModel _model;
         private readonly SnapScroller _carsScroller;
-        private readonly MessageBox _messageBox;
+        private readonly BuyMessageBox _buyMessageBox;
         private readonly CurrencyBox _currencyBox;
         
         private List<ChangerItemView> _changerItemViews;
@@ -20,13 +20,13 @@ namespace UI.Changers.CarChanger {
         public event Action<int> OnCarChanged;
         public event Action OnCarBuy;
 
-        public CarChanger(ChangerItemView view, CarsModel model, SnapScroller scroller, MessageBox messageBox, CurrencyBox currencyBox) {
+        public CarChanger(ChangerItemView view, CarsModel model, SnapScroller scroller, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
             _changerDataIndexes = new Dictionary<ScrollerPanel, int>();
             _changerItemViews = new List<ChangerItemView>();
             _view = view;
             _model = model;
             _carsScroller = scroller;
-            _messageBox = messageBox;
+            _buyMessageBox = buyMessageBox;
             _currencyBox = currencyBox;
         }
 
@@ -47,20 +47,20 @@ namespace UI.Changers.CarChanger {
             
             _carsScroller.SetFocusAtPanel(focusPanelIndex);
 
-            _messageBox.OnClose += OnCloseMessageBoxHandler;
+            _buyMessageBox.OnClose += OnCloseBuyMessageBoxHandler;
             _model.OnModelChanged += UpdateView;
             _carsScroller.OnContentChanged += SelectCar;
         }
 
-        private void OnCloseMessageBoxHandler() {
-            _messageBox.OnTryBuyClick -= OnBuyCar;
+        private void OnCloseBuyMessageBoxHandler() {
+            _buyMessageBox.OnBuyButtonClick -= OnBuyButtonCar;
         }
         
         public void Dispose() {
             for (int i = 0; i < _model.ItemsCount; i++) {
                 _carsScroller.GetPanelAt(i).OnPanelClick -= OnCarClick;
             }
-            _messageBox.OnClose -= OnCloseMessageBoxHandler;
+            _buyMessageBox.OnClose -= OnCloseBuyMessageBoxHandler;
             _model.OnModelChanged -= UpdateView;
             _carsScroller.OnContentChanged -= SelectCar;
         }
@@ -73,22 +73,22 @@ namespace UI.Changers.CarChanger {
             CarStorageDescriptor descr = _model.GetDescriptorAt(_changerDataIndexes[panel]);
             _messageBoxCarIndex = _changerDataIndexes[panel];
            
-            _messageBox.SetImage(descr.CarImage);
-            _messageBox.SetPrice(descr.CarCost.ToString());
-            _messageBox.SetTitle(descr.CarName);
-            _messageBox.SetContent(descr.Description);
+            _buyMessageBox.SetImage(descr.CarImage);
+            _buyMessageBox.SetPrice(descr.CarCost.ToString());
+            _buyMessageBox.SetTitle(descr.CarName);
+            _buyMessageBox.SetContent(descr.Description);
                 
-            _messageBox.ShowMessageBox();
-            _messageBox.OnTryBuyClick += OnBuyCar;
+            _buyMessageBox.ShowMessageBox();
+            _buyMessageBox.OnBuyButtonClick += OnBuyButtonCar;
         }
 
-        private void OnBuyCar(int price) {
+        private void OnBuyButtonCar(int price) {
             if (_currencyBox.TryTakeCoins(price)) {
                 _model.SetAvaliabilityStatusAt(_messageBoxCarIndex, true);
-                _messageBox.HideMessageBox();
+                _buyMessageBox.HideMessageBox();
                 OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.GetPanelAt(_messageBoxCarIndex)]);
                 OnCarBuy?.Invoke();
-                _messageBox.OnTryBuyClick -= OnBuyCar;
+                _buyMessageBox.OnBuyButtonClick -= OnBuyButtonCar;
             }
         }
 

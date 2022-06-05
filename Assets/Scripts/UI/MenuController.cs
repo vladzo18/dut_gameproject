@@ -49,7 +49,7 @@ namespace UI {
                 _menuView.ChangerItemPrefab,
                 _mapsModel,
                 _menuView.LevelsScroller,
-                _menuView.MessageBox, 
+                _menuView.BuyMessageBox, 
                 _menuView.CurrencyBox);
             _mapsChanger.Init(_currentMapIndex);
             
@@ -57,7 +57,7 @@ namespace UI {
                 _menuView.ChangerItemPrefab,
                 _carsModel,
                 _menuView.CarsScroller, 
-                _menuView.MessageBox,
+                _menuView.BuyMessageBox,
                 _menuView.CurrencyBox);
             _carChanger.Init(_currentCarIndex);
             
@@ -67,7 +67,7 @@ namespace UI {
             _propertiesChanger = new CarPropertiesChanger(
                 _menuView.CarTunerBoxViews, 
                 _currentPropertySettings,
-                _menuView.MessageBox,
+                _menuView.BuyMessageBox,
                 _menuView.CurrencyBox);
             _propertiesChanger.Init((int)CarTypeByIndex(_currentCarIndex));
             

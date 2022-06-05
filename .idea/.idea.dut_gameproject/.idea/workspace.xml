@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5812ded8-aed8-4ef8-b47c-923a8117478e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dut_gameproject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CheatWindow.uxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,16 +89,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarTunerBoxController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.uxml" />
         <option value="$PROJECT_DIR$/Assets/Editor/SomeWindow.uss" />
         <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.uss" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.uxml" />
         <option value="$PROJECT_DIR$/Assets/Editor/CheatWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarChanger/CarChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/MapChanger/MapsChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Changers/CarPropertyTuner/CarPropertiesChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +178,7 @@
       <workItem from="1654363352324" duration="11751000" />
       <workItem from="1654430997861" duration="219000" />
       <workItem from="1654431263911" duration="1584000" />
-      <workItem from="1654432982709" duration="7583000" />
+      <workItem from="1654432982709" duration="8773000" />
     </task>
     <servers />
   </component>

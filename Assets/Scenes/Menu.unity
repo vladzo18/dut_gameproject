@@ -3916,7 +3916,7 @@ MonoBehaviour:
   - {fileID: 759804663}
   - {fileID: 335943757}
   _changerItemPrefab: {fileID: 8382442920544976130, guid: 96caed6d727767c46a655163990e029c, type: 3}
-  _messageBox: {fileID: 1330753851}
+  buyMessageBox: {fileID: 1330753851}
   _uiAudioSource: {fileID: 2104063444}
   _clickSound: {fileID: 8300000, guid: 36fbc09aa96560344be5f6ad09b0946c, type: 3}
   _buySound: {fileID: 8300000, guid: fbdb92192b75a4242808eb503e749ea6, type: 3}
@@ -4953,20 +4953,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 982c7bfc276b7044e985cb393b5bfd18, type: 3}
---- !u!114 &8928189084405822952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8928189084405822957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5598f9a95fec6041812888a8bd4a05b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 8928189084405822959}
-  _type: 1
 --- !u!222 &8928189084405822953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5007,7 +4993,6 @@ GameObject:
   - component: {fileID: 8928189084405822953}
   - component: {fileID: 8928189084405822958}
   - component: {fileID: 8928189084405822959}
-  - component: {fileID: 8928189084405822952}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged

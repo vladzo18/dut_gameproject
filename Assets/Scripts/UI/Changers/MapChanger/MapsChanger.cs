@@ -9,7 +9,7 @@ namespace UI.Changers.LevelChanger {
         private readonly ChangerItemView _view;
         private readonly MapsModel _model;
         private readonly SnapScroller _levelsScroller;
-        private readonly MessageBox _messageBox;
+        private readonly BuyMessageBox _buyMessageBox;
         private readonly CurrencyBox _currencyBox;
         
         private List<ChangerItemView> _changerItemViews;
@@ -19,13 +19,13 @@ namespace UI.Changers.LevelChanger {
         public event Action<int> OnMapChanged;
         public event Action OnMapBuy;
         
-        public MapsChanger(ChangerItemView view, MapsModel model, SnapScroller scroller, MessageBox messageBox, CurrencyBox currencyBox) {
+        public MapsChanger(ChangerItemView view, MapsModel model, SnapScroller scroller, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
             _changerDataIndexes = new Dictionary<ScrollerPanel, int>();
             _changerItemViews = new List<ChangerItemView>();
             _view = view;
             _model = model;
             _levelsScroller = scroller;
-            _messageBox = messageBox;
+            _buyMessageBox = buyMessageBox;
             _currencyBox = currencyBox;
         }
 
@@ -47,20 +47,20 @@ namespace UI.Changers.LevelChanger {
 
             _levelsScroller.SetFocusAtPanel(focusPanelIndex);
             
-            _messageBox.OnClose += OnCloseMessageBoxHandler;
+            _buyMessageBox.OnClose += OnCloseBuyMessageBoxHandler;
             _model.OnModelChanged += UpdateView;
             _levelsScroller.OnContentChanged += SelectMap;
         }
 
-        private void OnCloseMessageBoxHandler() {
-            _messageBox.OnTryBuyClick -= OnBuyMap;
+        private void OnCloseBuyMessageBoxHandler() {
+            _buyMessageBox.OnBuyButtonClick -= OnBuyButtonMap;
         }
 
         public void Dispose() {
             for (int i = 0; i < _model.ItemsCount; i++) {
                 _levelsScroller.GetPanelAt(i).OnPanelClick -= OnMapClick;
             }
-            _messageBox.OnClose -= OnCloseMessageBoxHandler;
+            _buyMessageBox.OnClose -= OnCloseBuyMessageBoxHandler;
             _model.OnModelChanged -= UpdateView;
             _levelsScroller.OnContentChanged -= SelectMap;
         }
@@ -72,22 +72,22 @@ namespace UI.Changers.LevelChanger {
             MapStorageDescriptor descr = _model.GetDescriptorAt(_changerDataIndexes[panel]);
             _messageBoxMapIndex = _changerDataIndexes[panel];
             
-            _messageBox.SetImage(descr.MapImage);
-            _messageBox.SetPrice(descr.MapCost.ToString());
-            _messageBox.SetTitle(descr.MapName);
-            _messageBox.SetContent(descr.Description);
+            _buyMessageBox.SetImage(descr.MapImage);
+            _buyMessageBox.SetPrice(descr.MapCost.ToString());
+            _buyMessageBox.SetTitle(descr.MapName);
+            _buyMessageBox.SetContent(descr.Description);
                 
-            _messageBox.ShowMessageBox();
-            _messageBox.OnTryBuyClick += OnBuyMap;
+            _buyMessageBox.ShowMessageBox();
+            _buyMessageBox.OnBuyButtonClick += OnBuyButtonMap;
         }
 
-        private void OnBuyMap(int price) {
+        private void OnBuyButtonMap(int price) {
             if (_currencyBox.TryTakeCoins(price)) {
                _model.SetAvaliabilityStatusAt(_messageBoxMapIndex, true);
-               _messageBox.HideMessageBox();
+               _buyMessageBox.HideMessageBox();
                OnMapChanged.Invoke(_changerDataIndexes[_levelsScroller.GetPanelAt(_messageBoxMapIndex)]);
                OnMapBuy?.Invoke();
-               _messageBox.OnTryBuyClick -= OnBuyMap;
+               _buyMessageBox.OnBuyButtonClick -= OnBuyButtonMap;
             }
         }
 

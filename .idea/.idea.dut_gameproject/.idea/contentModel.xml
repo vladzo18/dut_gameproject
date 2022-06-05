@@ -64,6 +64,7 @@
           </e>
           <e p="SceneSwitcher.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="BuyMessageBox.cs" t="Include" />
             <e p="Changers" t="Include">
               <e p="CarChanger" t="Include">
                 <e p="CarChanger.cs" t="Include" />
@@ -100,7 +101,6 @@
             <e p="CurrencyBox.cs" t="Include" />
             <e p="MenuController.cs" t="Include" />
             <e p="MenuView.cs" t="Include" />
-            <e p="MessageBox.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

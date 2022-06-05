@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace UI.Changers.CarPropertyTuner {
     
     public class CarPropertiesChanger {
 
         private readonly IEnumerable<CarTunerBoxView> _carTunerBoxViews;
-        private readonly MessageBox _messageBox;
+        private readonly BuyMessageBox _buyMessageBox;
         private readonly CurrencyBox _currencyBox;
         
         private CarPropertySettings _propertySettings;
@@ -15,11 +16,11 @@ namespace UI.Changers.CarPropertyTuner {
 
         public event Action OnPointsChanged;
         
-        public CarPropertiesChanger(IEnumerable<CarTunerBoxView> carTunerBoxViews, CarPropertySettings settings, MessageBox messageBox, CurrencyBox currencyBox) {
+        public CarPropertiesChanger(IEnumerable<CarTunerBoxView> carTunerBoxViews, CarPropertySettings settings, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
             _tunerBoxControllers = new List<CarTunerBoxController>();
             _carTunerBoxViews = carTunerBoxViews;
             _propertySettings = settings;
-            _messageBox = messageBox;
+            _buyMessageBox = buyMessageBox;
             _currencyBox = currencyBox;
         }
 
@@ -58,27 +59,27 @@ namespace UI.Changers.CarPropertyTuner {
                 _tunerBoxControllers.Add(controller);
                 boxView.OnUpgradeDownCick += PointsChangedClickHandler;
                 boxView.OnUpgradeUpCick += PointsChangedClickHandler;
-                _messageBox.OnClose += OnClloceHandler;
+                _buyMessageBox.OnClose += OnClloceHandler;
             }
         }
 
         private void OnBuyUpgradeHandler(CarTunerBoxController controller) {
             _buyOperableController = controller;
-            _messageBox.ShowMessageBox();
-            _messageBox.Clear();
-            _messageBox.SetTitle("Upgrade Car Property");
-            _messageBox.SetPrice(controller.UpgradePrice.ToString());
-            _messageBox.OnTryBuyClick += OnTryBuyClicHandler;
+            _buyMessageBox.ShowMessageBox();
+            _buyMessageBox.Clear();
+            _buyMessageBox.SetTitle("Upgrade Car Property");
+            _buyMessageBox.SetPrice(controller.UpgradePrice.ToString());
+            _buyMessageBox.OnBuyButtonClick += OnBuyButtonClicHandler;
         }
 
         private void OnClloceHandler() {
-            _messageBox.OnTryBuyClick -= OnTryBuyClicHandler;
+            _buyMessageBox.OnBuyButtonClick -= OnBuyButtonClicHandler;
         }
 
-        private void OnTryBuyClicHandler(int price) {
+        private void OnBuyButtonClicHandler(int price) {
             if (_currencyBox.TryTakeCoins(price)) {
                 _buyOperableController.IncreaseUpgradeAbility();
-                _messageBox.HideMessageBox();
+                _buyMessageBox.HideMessageBox();
             }
         }
 
@@ -91,7 +92,7 @@ namespace UI.Changers.CarPropertyTuner {
                 boxView.OnUpgradeDownCick -= PointsChangedClickHandler;
                 boxView.OnUpgradeUpCick -= PointsChangedClickHandler;
             }
-            _messageBox.OnClose -= OnClloceHandler;
+            _buyMessageBox.OnClose -= OnClloceHandler;
         }
 
         private void PointsChangedClickHandler() => OnPointsChanged?.Invoke();

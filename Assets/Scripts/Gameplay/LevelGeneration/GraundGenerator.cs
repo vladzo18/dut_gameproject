@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using HUD;
+using General;
 using UnityEngine;
 using UnityEngine.U2D;
 using Random = UnityEngine.Random;

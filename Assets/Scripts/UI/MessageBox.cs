@@ -14,7 +14,9 @@ namespace UI {
         [SerializeField] private Image _image;
         [SerializeField] private Button _submitButtonn;
         [SerializeField] private TMP_Text _priceText;
-        
+
+        public event Action OnShow;
+        public event Action OnClose;
         public event Action<int> OnTryBuyClick;
 
         private void Start() {
@@ -33,11 +35,25 @@ namespace UI {
         
         public void SetPrice(string text) => _priceText.text = text;
 
-        public void SetImage(Sprite sprite) => _image.sprite = sprite;
+        public void SetImage(Sprite sprite) {
+            _image.sprite = sprite;
+            _image.color = Color.white;
+        }
 
-        public void ShowMessageBox() => _messageBoxCanvas.enabled = true;
-        
-        public void HideMessageBox() => _messageBoxCanvas.enabled = false;
+        public void ShowMessageBox() {
+            _messageBoxCanvas.enabled = true;
+        }
+
+        public void HideMessageBox() {
+            _messageBoxCanvas.enabled = false;
+        }
+
+        public void Clear() {
+            _title.text = "";
+            _content.text = "";
+            _priceText.text = "";
+            _image.color = new Color(0, 0, 0, 0);
+        }
         
         public void OnPointerDown(PointerEventData eventData) {
             HideMessageBox();

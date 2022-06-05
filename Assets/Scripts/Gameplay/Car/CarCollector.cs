@@ -1,7 +1,8 @@
 using System;
+using Gameplay.Items;
 using UnityEngine;
 
-namespace Items {
+namespace Gameplay.Car {
     
     [RequireComponent(typeof(Collider2D))]
     public class CarCollector : MonoBehaviour {
@@ -12,7 +13,7 @@ namespace Items {
         public event Action<ItemType> OnItemColect;
         
         private void OnTriggerEnter2D(Collider2D collider) {
-            var item = collider.GetComponent<Item.Item>();
+            var item = collider.GetComponent<Item>();
 
             if (item != null) {
                 switch (item.ItemType) {

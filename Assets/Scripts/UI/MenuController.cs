@@ -1,13 +1,13 @@
-using Items;
+using System.Collections.Generic;
+using General;
 using Items.Save;
-using UI;
 using UI.Changers;
 using UI.Changers.CarChanger;
 using UI.Changers.CarPropertyTuner;
 using UI.Changers.LevelChanger;
 using UnityEngine;
 
-namespace Ui {
+namespace UI {
     
     public class MenuController : MonoBehaviour {
 
@@ -21,6 +21,8 @@ namespace Ui {
 
         private MapsModel _mapsModel;
         private CarsModel _carsModel;
+        private Dictionary<CarType, CarPropertySettings> _propertySettingses;
+        private CarPropertySettings _currentPropertySettings;
 
         private ISaveSystem<MenuSaveData> _saveSystem;
 
@@ -29,11 +31,12 @@ namespace Ui {
         
         private void Start() {
             _saveSystem = new MenuPlayerPrefsSystem();
+            _propertySettingses = new Dictionary<CarType, CarPropertySettings>();
             _menuView.OnPlayClick += OnPlayClicked;
             foreach (var button in _menuView.SwichButtons) {
                 button.OnButtonClick += OnChangerButtonClick;
             }
-
+            
             LoadState();
             TryToLoadLeverProgresData();
             
@@ -58,8 +61,15 @@ namespace Ui {
                 _menuView.CurrencyBox);
             _carChanger.Init(_currentCarIndex);
             
-            _propertiesChanger = new CarPropertiesChanger(_menuView.CarTunerBoxViews);
-            _propertiesChanger.Init();
+            _currentPropertySettings = new CarPropertySettings(CarTypeByIndex(_currentCarIndex));
+            _propertySettingses.Add(CarTypeByIndex(_currentCarIndex), _currentPropertySettings);
+            
+            _propertiesChanger = new CarPropertiesChanger(
+                _menuView.CarTunerBoxViews, 
+                _currentPropertySettings,
+                _menuView.MessageBox,
+                _menuView.CurrencyBox);
+            _propertiesChanger.Init((int)CarTypeByIndex(_currentCarIndex));
             
             _mapsChanger.OnMapChanged += MapChangedHandler;
             _carChanger.OnCarChanged += CarChangedHandler;
@@ -122,6 +132,21 @@ namespace Ui {
         private void CarChangedHandler(int index) {
             _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             _currentCarIndex = index;
+            
+            _currentPropertySettings.SaveState();
+            if (_propertySettingses.TryGetValue(CarTypeByIndex(index), out var sett)) {
+                _currentPropertySettings = sett;
+            } else {
+                CarPropertySettings settings = new CarPropertySettings(CarTypeByIndex(index));
+                _propertySettingses.Add(CarTypeByIndex(index), settings);
+                _currentPropertySettings = settings;
+            }
+            
+            _propertiesChanger.ChangeCarPropertySettings(_currentPropertySettings);
+        }
+
+        private CarType CarTypeByIndex(int index) {
+            return _carsModel.GetDescriptorAt(index).CarType;
         }
         
         private void SaveState() {
@@ -131,8 +156,10 @@ namespace Ui {
             saveData.ChosenMapIndex = _currentMapIndex;
             saveData.ChosenCarIndex = _currentCarIndex;
             _saveSystem.SaveData(saveData);
+            
             _mapsModel.SaveModel();
             _carsModel.SaveModel();
+            _currentPropertySettings.SaveState();
         }
 
         private void LoadState() {

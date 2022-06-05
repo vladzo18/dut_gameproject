@@ -39,30 +39,34 @@ namespace UI.Changers.CarChanger {
                 view.SetHeadText(_model.GetDescriptorAt(i).CarName);
                 view.SetItemPrice(_model.GetDescriptorAt(i).CarCost.ToString());
                 view.SetLockedBoxActivity(!_model.GetAvaliabilityStatusAt(i));
-                _carsScroller.GetPanelAt(i).OnPanelClick += OnMapClick;
+                _carsScroller.GetPanelAt(i).OnPanelClick += OnCarClick;
                 
                 _changerDataIndexes.Add(_carsScroller.GetPanelAt(i), i);
                 _changerItemViews.Add(view);
             }
             
             _carsScroller.SetFocusAtPanel(focusPanelIndex);
-            
-            _messageBox.OnTryBuyClick += OnBuyMap;
+
+            _messageBox.OnClose += OnCloseMessageBoxHandler;
             _model.OnModelChanged += UpdateView;
-            _carsScroller.OnContentChanged += SelectMap;
+            _carsScroller.OnContentChanged += SelectCar;
         }
 
+        private void OnCloseMessageBoxHandler() {
+            _messageBox.OnTryBuyClick -= OnBuyCar;
+        }
+        
         public void Dispose() {
             for (int i = 0; i < _model.ItemsCount; i++) {
-                _carsScroller.GetPanelAt(i).OnPanelClick -= OnMapClick;
+                _carsScroller.GetPanelAt(i).OnPanelClick -= OnCarClick;
             }
-            _messageBox.OnTryBuyClick -= OnBuyMap;
+            _messageBox.OnClose -= OnCloseMessageBoxHandler;
             _model.OnModelChanged -= UpdateView;
-            _carsScroller.OnContentChanged -= SelectMap;
+            _carsScroller.OnContentChanged -= SelectCar;
         }
         
         
-        private void OnMapClick(ScrollerPanel panel) {
+        private void OnCarClick(ScrollerPanel panel) {
             if (_carsScroller.IsScrolling || _carsScroller.ActivePanel != panel) return;
             if (_model.GetAvaliabilityStatusAt(_changerDataIndexes[panel])) return;
             
@@ -75,14 +79,16 @@ namespace UI.Changers.CarChanger {
             _messageBox.SetContent(descr.Description);
                 
             _messageBox.ShowMessageBox();
+            _messageBox.OnTryBuyClick += OnBuyCar;
         }
 
-        private void OnBuyMap(int price) {
+        private void OnBuyCar(int price) {
             if (_currencyBox.TryTakeCoins(price)) {
                 _model.SetAvaliabilityStatusAt(_messageBoxCarIndex, true);
                 _messageBox.HideMessageBox();
                 OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.GetPanelAt(_messageBoxCarIndex)]);
                 OnCarBuy?.Invoke();
+                _messageBox.OnTryBuyClick -= OnBuyCar;
             }
         }
 
@@ -92,7 +98,7 @@ namespace UI.Changers.CarChanger {
             }
         }
         
-        private void SelectMap() {
+        private void SelectCar() {
             if (!_model.GetAvaliabilityStatusAt(_changerDataIndexes[_carsScroller.ActivePanel])) return;
             OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.ActivePanel]);
         }

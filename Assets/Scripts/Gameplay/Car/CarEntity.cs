@@ -1,11 +1,11 @@
-﻿using Car;
-using Items;
+﻿using UI.Changers.CarChanger;
 using UnityEngine;
 
 namespace Gameplay.Car {
     
     public class CarEntity : MonoBehaviour {
 
+        [SerializeField] private CarType _type;
         [SerializeField] private Transform _carBodyTransform;
         [SerializeField] private MonoBehaviour _carMover;
         [SerializeField] private CarCollector _carCollector;
@@ -13,7 +13,8 @@ namespace Gameplay.Car {
         [SerializeField] private CarDistanceCounter _carDistanceCounter;
         [SerializeField] private CarDeath _carDeath;
         [SerializeField] private CarSound _carSound;
-        
+
+        public CarType Type => _type;
         public Transform CarBodyTransform => _carBodyTransform;
         public IMover CarMover => _carMover as IMover;
         public CarCollector CarCollector => _carCollector;

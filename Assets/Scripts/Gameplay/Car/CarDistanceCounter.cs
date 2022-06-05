@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Car {
+namespace Gameplay.Car {
     
     public class CarDistanceCounter : MonoBehaviour {
 

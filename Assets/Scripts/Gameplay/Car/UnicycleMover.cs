@@ -1,4 +1,4 @@
-﻿using HUD;
+﻿using General;
 using UnityEngine;
 
 namespace Gameplay.Car {
@@ -7,7 +7,7 @@ namespace Gameplay.Car {
         
         [SerializeField] private Rigidbody2D _wheel;
         [SerializeField] private Rigidbody2D _carRigidbody;
-        [SerializeField, Range(10, 40)] private float _maxSpeed;
+        [SerializeField] private float _edgineForce;
         
         private const float SPEEDUP_STEP = 0.35f;
         
@@ -16,7 +16,7 @@ namespace Gameplay.Car {
 
         public bool IsMoveing { get; private set; }
         public float CurrentEgineSpeed { get; private set; }
-        public float MaxSpeed => _maxSpeed;
+        public float MaxSpeed => _edgineForce;
         
         private void Start() => GameReset.Register(this);
         private void OnDestroy() => GameReset.Unregister(this);
@@ -26,10 +26,10 @@ namespace Gameplay.Car {
             
             if (IsMoveing) {
                 _wheel.AddTorque(-_targetSpeed, ForceMode2D.Force);
-                if (CurrentEgineSpeed <= _maxSpeed) {
+                
+                if (CurrentEgineSpeed <= _edgineForce) {
                     CurrentEgineSpeed += SPEEDUP_STEP;
                 }
-
             }
             
             if (Mathf.Abs(_carRigidbody.rotation) > 2) {
@@ -43,13 +43,13 @@ namespace Gameplay.Car {
         public void MoveRight() {
             if (!_canMove) return;
             IsMoveing = true;
-            _targetSpeed = (_maxSpeed);
+            _targetSpeed = (_edgineForce);
         }
 
         public void MoveLeft() {
             if (!_canMove) return;
             IsMoveing = true;
-            _targetSpeed = -(_maxSpeed);
+            _targetSpeed = -(_edgineForce);
         }
 
         public void StopMoveing() {
@@ -58,6 +58,10 @@ namespace Gameplay.Car {
 
         public void SetMovementAbility(bool isAble) => _canMove = isAble;
         
+        public void SetEdgineForce(float value) {
+            _edgineForce = value;
+        }
+
         public void Reset() {
             _carRigidbody.velocity = Vector2.zero;
             _carRigidbody.rotation = 0;

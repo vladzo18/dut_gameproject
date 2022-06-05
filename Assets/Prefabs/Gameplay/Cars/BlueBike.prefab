@@ -421,7 +421,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8397707364108293116}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4aa56f759a65bc5409381127a3c4b069, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -444,7 +444,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4aa56f759a65bc5409381127a3c4b069, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -512,7 +512,8 @@ MonoBehaviour:
   _firstWheel: {fileID: 8397707364571870337}
   _secondeWheel: {fileID: 8397707364108293119}
   _carRigidbody: {fileID: 1521051933013940392}
-  _maxSpeed: 34.5
+  _tarqueForce: 3.69
+  _eggineForce: 72
 --- !u!114 &9034028096169611221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,6 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508e8034478b43da9939f0835ce9f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 3
   _carBodyTransform: {fileID: 8397707364448700666}
   _carMover: {fileID: 773225241221634001}
   _carCollector: {fileID: 4588872777523754669}
@@ -624,7 +626,7 @@ Rigidbody2D:
   m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -927,7 +929,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8397707364571870342}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4aa56f759a65bc5409381127a3c4b069, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

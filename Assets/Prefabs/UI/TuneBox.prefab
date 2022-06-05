@@ -632,8 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201c5c2b1b414a45b1888c14d95921cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 0
   _priceText: {fileID: 8731910022167080005}
-  _tunePropertyImage: {fileID: 429398448721670455}
+  _priceBox: {fileID: 419509511597293456}
   _boxItems:
   - {fileID: 2450350900440533344}
   - {fileID: 6724238078607370944}

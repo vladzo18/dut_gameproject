@@ -1,4 +1,4 @@
-using Items;
+using Gameplay.Items;
 using UnityEngine;
 
 namespace Gameplay.Car {

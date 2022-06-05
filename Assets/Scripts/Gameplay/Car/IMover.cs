@@ -9,6 +9,7 @@
         public void MoveLeft();
         public void StopMoveing();
         public void SetMovementAbility(bool isAble);
+        public void SetEdgineForce(float value);
 
     }
     

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e7524ecef342a5a1f4a9d07a06d8f7, type: 3}
+  m_Name: CarPropertiesStorage
+  m_EditorClassIdentifier: 
+  _descriptors:
+  - _type: 1
+    _minEdgineForce: 80
+    _maxEdgineForce: 200
+    _minFuelCapasity: 200
+    _maxFuelCapasity: 650
+  - _type: 3
+    _minEdgineForce: 30
+    _maxEdgineForce: 75
+    _minFuelCapasity: 150
+    _maxFuelCapasity: 400
+  - _type: 2
+    _minEdgineForce: 10
+    _maxEdgineForce: 45
+    _minFuelCapasity: 50
+    _maxFuelCapasity: 500
+  - _type: 4
+    _minEdgineForce: 150
+    _maxEdgineForce: 430
+    _minFuelCapasity: 170
+    _maxFuelCapasity: 800
+  - _type: 5
+    _minEdgineForce: 100
+    _maxEdgineForce: 260
+    _minFuelCapasity: 155
+    _maxFuelCapasity: 800
+  - _type: 6
+    _minEdgineForce: 90
+    _maxEdgineForce: 195
+    _minFuelCapasity: 210
+    _maxFuelCapasity: 700

@@ -1,0 +1,13 @@
+Style:root {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+Button {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: white;
+    background-color: dimgrey;
+}
+

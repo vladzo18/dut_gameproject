@@ -47,16 +47,20 @@ namespace UI.Changers.LevelChanger {
 
             _levelsScroller.SetFocusAtPanel(focusPanelIndex);
             
-            _messageBox.OnTryBuyClick += OnBuyMap;
+            _messageBox.OnClose += OnCloseMessageBoxHandler;
             _model.OnModelChanged += UpdateView;
             _levelsScroller.OnContentChanged += SelectMap;
         }
-        
+
+        private void OnCloseMessageBoxHandler() {
+            _messageBox.OnTryBuyClick -= OnBuyMap;
+        }
+
         public void Dispose() {
             for (int i = 0; i < _model.ItemsCount; i++) {
                 _levelsScroller.GetPanelAt(i).OnPanelClick -= OnMapClick;
             }
-            _messageBox.OnTryBuyClick -= OnBuyMap;
+            _messageBox.OnClose -= OnCloseMessageBoxHandler;
             _model.OnModelChanged -= UpdateView;
             _levelsScroller.OnContentChanged -= SelectMap;
         }
@@ -74,6 +78,7 @@ namespace UI.Changers.LevelChanger {
             _messageBox.SetContent(descr.Description);
                 
             _messageBox.ShowMessageBox();
+            _messageBox.OnTryBuyClick += OnBuyMap;
         }
 
         private void OnBuyMap(int price) {
@@ -82,6 +87,7 @@ namespace UI.Changers.LevelChanger {
                _messageBox.HideMessageBox();
                OnMapChanged.Invoke(_changerDataIndexes[_levelsScroller.GetPanelAt(_messageBoxMapIndex)]);
                OnMapBuy?.Invoke();
+               _messageBox.OnTryBuyClick -= OnBuyMap;
             }
         }
 

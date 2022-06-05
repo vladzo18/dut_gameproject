@@ -1,26 +1,26 @@
-using Gameplay.Car;
-using HUD;
+using General;
 using UnityEngine;
 
-namespace Items {
+namespace Gameplay.Car {
     
     public class CarMover : MonoBehaviour, IMover, IResetable {
         
         [SerializeField] private Rigidbody2D _firstWheel;
         [SerializeField] private Rigidbody2D _secondeWheel;
         [SerializeField] private Rigidbody2D _carRigidbody;
-        [SerializeField, Range(25, 50)] private float _maxSpeed;
-
-        private const float SPEED_DIVIDER = 2.5f;
-        private const float TORQUE_DIVIDER = 8;
+        [Header("Сharacteristics")]
+        [SerializeField, Range(0, 10)] private float _tarqueForce = 5;
+        [SerializeField] private float _eggineForce = 50;
+        
         private const float SPEEDUP_STEP = 0.35f;
         
         private float _targetSpeed;
+        private float _wheelSpeed;
         private bool _canMove = true;
 
         public bool IsMoveing { get; private set; }
         public float CurrentEgineSpeed { get; private set; }
-        public float MaxSpeed => _maxSpeed;
+        public float MaxSpeed => _wheelSpeed;
 
         private void Start() => GameReset.Register(this);
         private void OnDestroy() => GameReset.Unregister(this);
@@ -30,25 +30,26 @@ namespace Items {
                 _firstWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
                 _secondeWheel.AddTorque(_targetSpeed, ForceMode2D.Force);
                 
-                if (CurrentEgineSpeed <= _maxSpeed) {
+                if (CurrentEgineSpeed <= _wheelSpeed) {
                     CurrentEgineSpeed += SPEEDUP_STEP;
                 }
-                
-                _carRigidbody.AddForce(transform.right.normalized * -_targetSpeed / SPEED_DIVIDER, ForceMode2D.Force);
-                _carRigidbody.AddTorque(-_targetSpeed / TORQUE_DIVIDER, ForceMode2D.Impulse);
+
+                float dir = Mathf.Clamp01(-_targetSpeed);
+                _carRigidbody.AddForce(transform.right.normalized * (dir * _eggineForce), ForceMode2D.Force);
+                _carRigidbody.AddTorque(_tarqueForce * dir, ForceMode2D.Impulse);
             }
         }
         
         public void MoveRight() {
             if (!_canMove) return;
             IsMoveing = true;
-            _targetSpeed = -(_maxSpeed);
+            _targetSpeed = -(_wheelSpeed);
         }
 
         public void MoveLeft() {
             if (!_canMove) return;
             IsMoveing = true;
-           _targetSpeed = (_maxSpeed);
+           _targetSpeed = (_wheelSpeed);
         }
 
         public void StopMoveing() {
@@ -57,6 +58,11 @@ namespace Items {
         }
 
         public void SetMovementAbility(bool isAble) => _canMove = isAble;
+        
+        public void SetEdgineForce(float value) {
+            _eggineForce = value;
+            _wheelSpeed = _eggineForce / 3f;
+        }
 
         public void Reset() {
             _carRigidbody.velocity = Vector2.zero;

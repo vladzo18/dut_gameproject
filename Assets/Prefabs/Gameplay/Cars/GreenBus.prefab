@@ -93,7 +93,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 972515520114004944}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4aa56f759a65bc5409381127a3c4b069, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -214,7 +214,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 972515521251400622}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4aa56f759a65bc5409381127a3c4b069, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -285,6 +285,7 @@ Transform:
   m_Children:
   - {fileID: 972515521251400618}
   - {fileID: 972515520114004956}
+  - {fileID: 4805586541673268514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -354,7 +355,7 @@ Rigidbody2D:
   m_Mass: 200
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -449,7 +450,8 @@ MonoBehaviour:
   _firstWheel: {fileID: 972515521251400623}
   _secondeWheel: {fileID: 972515520114004945}
   _carRigidbody: {fileID: 972515521975327474}
-  _maxSpeed: 44.7
+  _tarqueForce: 5
+  _eggineForce: 191
 --- !u!114 &2317326799446481245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,11 +508,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carTank: {fileID: 1534149797500800025}
   _fuelEndDelayToDeath: 4
-  _canChechGroundTouchDeth: 0
-  _groundChecker: {fileID: 0}
+  _canChechGroundTouchDeth: 1
+  _groundChecker: {fileID: 4805586541673268514}
   _groungLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &1405081727191546128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,6 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508e8034478b43da9939f0835ce9f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 4
   _carBodyTransform: {fileID: 972515521975327484}
   _carMover: {fileID: 5271712691224233763}
   _carCollector: {fileID: 2317326799446481245}
@@ -658,3 +661,33 @@ MonoBehaviour:
   _maxEgineSoundVolume: 0.35
   _audioSource: {fileID: 6194172239421563028}
   _egineSound: {fileID: 8300000, guid: 7312ad01ae78e804aaf525be4900165a, type: 3}
+--- !u!1 &9161661390872529498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4805586541673268514}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4805586541673268514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161661390872529498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 1.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 972515521975327484}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

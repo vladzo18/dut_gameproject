@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Projects\Unity\dut_gameproject" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="CheatWindow.cs" t="Include" />
+          <e p="CheatWindow.uss" t="Include" />
+          <e p="CheatWindow.uxml" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Gameplay" t="Include">
             <e p="Car" t="Include">
@@ -18,6 +24,8 @@
               <e p="IMover.cs" t="Include" />
               <e p="UnicycleMover.cs" t="Include" />
             </e>
+            <e p="CarPropertiesConfigurator.cs" t="Include" />
+            <e p="CarPropertiesStorage.cs" t="Include" />
             <e p="GemeConfigurator.cs" t="Include" />
             <e p="Items" t="Include">
               <e p="Item.cs" t="Include" />
@@ -67,6 +75,9 @@
               <e p="CarPropertyTuner" t="Include">
                 <e p="BoxItem.cs" t="Include" />
                 <e p="CarPropertiesChanger.cs" t="Include" />
+                <e p="CarPropertySetting.cs" t="Include" />
+                <e p="CarPropertySettings.cs" t="Include" />
+                <e p="CarProrertyType.cs" t="Include" />
                 <e p="CarTunerBoxController.cs" t="Include" />
                 <e p="CarTunerBoxView.cs" t="Include" />
                 <e p="UpgradeButton.cs" t="Include" />

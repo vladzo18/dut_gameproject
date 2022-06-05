@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
-using Gameplay.Car;
-using HUD;
+using General;
 using UnityEngine;
 
-namespace Items {
+namespace Gameplay.Car {
     
     public class CarTank : MonoBehaviour, IResetable {
 
@@ -83,6 +82,10 @@ namespace Items {
         public void Reset() {
             CurrentFuelAmount = FuelMaxAmount;
             OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
+        }
+
+        public void SetFuelMaxAmount(float value) {
+            _fuelMaxAmount = value;
         }
         
     }

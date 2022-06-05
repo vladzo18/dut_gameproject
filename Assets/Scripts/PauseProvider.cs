@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Items {
+namespace General {
     public static class PauseProvider {
 
         public static bool IsPaused { get; private set; }

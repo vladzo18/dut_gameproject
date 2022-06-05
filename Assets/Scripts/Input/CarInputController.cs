@@ -1,7 +1,7 @@
 using Gameplay.Car;
 using UnityEngine;
 
-namespace Items {
+namespace GameInput {
     
     public class CarInputController : MonoBehaviour {
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Gameplay.Items;
 using UnityEngine;
 
 namespace Gameplay.LevelGeneration {
@@ -8,11 +9,11 @@ namespace Gameplay.LevelGeneration {
 
         [SerializeField] private float _heightAboveGround = 1;
         
-        private List<Item.Item> _items;
+        private List<Item> _items;
         private Collider2D _collider;
 
         private void OnEnable() {
-            _items = this.GetComponentsInChildren<Item.Item>().ToList();
+            _items = this.GetComponentsInChildren<Item>().ToList();
         }
 
         public void SetObservableColider(Collider2D collider) {

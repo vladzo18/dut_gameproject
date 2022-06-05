@@ -1,7 +1,7 @@
 using Items;
 using UnityEngine;
 
-namespace Item {
+namespace Gameplay.Items {
     
     public class Item : MonoBehaviour {
 

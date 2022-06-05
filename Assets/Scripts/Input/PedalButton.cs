@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Items {
+namespace GameInput {
     
     public class PedalButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 

@@ -1,8 +1,9 @@
 using Cinemachine;
+using GameInput;
 using Gameplay.Car;
 using Gameplay.LevelGeneration;
+using General;
 using HUD;
-using Items;
 using Items.Save;
 using UI.Changers.CarChanger;
 using UI.Changers.LevelChanger;
@@ -23,6 +24,7 @@ namespace Gameplay {
         [SerializeField] private CarHUDProvider carHudProvider;
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private Camera _mainCamera;
+        [SerializeField] private CarPropertiesStorage _propertiesStorage;
 
         private CarEntity _carEntity;
         
@@ -43,6 +45,9 @@ namespace Gameplay {
             _camera.Follow = _carEntity.CarBodyTransform;
             _carInputController.SetCarMover(_carEntity.CarMover);
             _carEntity.CarSound.SetAudioSource(_audioSource);
+            
+            CarPropertiesConfigurator carPropConfigurator = new CarPropertiesConfigurator(_carEntity, _propertiesStorage);
+            carPropConfigurator.Configure();
         
             carHudProvider.SetCarEntity(_carEntity);
         }

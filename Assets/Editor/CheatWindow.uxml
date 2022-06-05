@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<UXML xmlns = "UnityEngine.UIElements">
+<UXML xmlns = "UnityEngine.UIElements" >
     <Style src="CheatWindow.uss" />
-    <Button class="coins_add_btn" text="Add 10 000 Coins" />
+    <Box class="root">
+        <Button class="coins_add_btn" text="Add 10 000 Coins" />
+        <Button class="maps_reset_btn" text="Clear Maps Model" />
+        <Button class="cars_reset_btn" text="Clear Cars Model" />
+    </Box>
 </UXML>

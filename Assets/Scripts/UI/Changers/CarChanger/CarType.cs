@@ -7,7 +7,8 @@
         BlueBike = 3,
         GreenBus = 4,
         RacingCar = 5,
-        Tractor = 6
+        Tractor = 6,
+        BanderaCar = 7
     }
     
 }

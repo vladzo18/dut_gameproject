@@ -18,6 +18,11 @@ MonoBehaviour:
     _maxEdgineForce: 200
     _minFuelCapasity: 200
     _maxFuelCapasity: 650
+  - _type: 7
+    _minEdgineForce: 150
+    _maxEdgineForce: 400
+    _minFuelCapasity: 210
+    _maxFuelCapasity: 700
   - _type: 3
     _minEdgineForce: 30
     _maxEdgineForce: 75

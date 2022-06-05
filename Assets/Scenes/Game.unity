@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24806871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.848878, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8509932, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 329240754}
@@ -551,7 +551,9 @@ MonoBehaviour:
   _graundGenerator: {fileID: 1978950952}
   _carInputController: {fileID: 1805571648}
   carHudProvider: {fileID: 670508298}
-  _audioSource: {fileID: 637764512}
+  _soundsAudioSource: {fileID: 637764512}
+  _bgMusicAudioSource: {fileID: 637764510}
+  _banderaCarBGMusic: {fileID: 8300000, guid: 44e8c234340c8fa47a7b225c03bab628, type: 3}
   _mainCamera: {fileID: 519420031}
   _propertiesStorage: {fileID: 11400000, guid: ad4cdd5b3b35cd745b3071b81dabe2c6, type: 2}
 --- !u!4 &384066622
@@ -1127,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.848878, y: 6.3722687, z: -19.22079}
+  m_LocalPosition: {x: 2.8509932, y: 6.3722687, z: -19.22079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

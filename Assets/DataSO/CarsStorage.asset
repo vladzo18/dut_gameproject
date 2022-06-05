@@ -19,33 +19,39 @@ MonoBehaviour:
     _carCost: 0
     _description: 
     _carPrefab: {fileID: 3794260282069527941, guid: 95dc4aa95808bec41a77b367995c87a1, type: 3}
+  - _carType: 7
+    _carName: Bandera Car
+    _carImage: {fileID: 21300000, guid: bd5be848a6189a54fb919d634696ae99, type: 3}
+    _carCost: 15000
+    _description: 
+    _carPrefab: {fileID: 7050473227715088644, guid: 36e5779ec855ee542b04efb4999a18e0, type: 3}
   - _carType: 2
     _carName: Unicycle
     _carImage: {fileID: -7129193313747078309, guid: a0d75ee0e8d39084089a55378d8c7302, type: 3}
-    _carCost: 1000
+    _carCost: 20000
     _description: 
     _carPrefab: {fileID: 3127688195488161149, guid: 7a336e0611a42744eb1b5f08292d84d6, type: 3}
   - _carType: 3
     _carName: Blue Bike
     _carImage: {fileID: -2702072281820981717, guid: a0d75ee0e8d39084089a55378d8c7302, type: 3}
-    _carCost: 1000
+    _carCost: 20000
     _description: 
     _carPrefab: {fileID: 7877620598544903529, guid: c79b1473d021d0f409fb1cbbbe8a6ba3, type: 3}
   - _carType: 4
     _carName: GreenBus
     _carImage: {fileID: 21300000, guid: 8d6995a9967dfc04080b2a6f215a7fd3, type: 3}
-    _carCost: 1000
+    _carCost: 200000
     _description: 
     _carPrefab: {fileID: 4752180144492182768, guid: 35780bddc4fb1944ca360bfcef8f8d6f, type: 3}
   - _carType: 5
     _carName: Racing Car
     _carImage: {fileID: -3536856601619204738, guid: cf85424be233b0641965c99c3b9a37d1, type: 3}
-    _carCost: 1000
+    _carCost: 75000
     _description: 
     _carPrefab: {fileID: 5713353778098968472, guid: 814b0b4e2ad7c1848b9c302baf53ccc5, type: 3}
   - _carType: 6
     _carName: Tractor
     _carImage: {fileID: 9208675618982753536, guid: cf85424be233b0641965c99c3b9a37d1, type: 3}
-    _carCost: 1000
+    _carCost: 150000
     _description: 
     _carPrefab: {fileID: 3966555944558173149, guid: f5036f6dea4075645947597ff857a56e, type: 3}

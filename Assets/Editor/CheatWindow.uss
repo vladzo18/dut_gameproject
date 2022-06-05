@@ -7,7 +7,7 @@
 Button {
     font-size: 15px;
     -unity-font-style: bold;
-    color: white;
-    background-color: dimgrey;
+    color: #04c6db;
+    background-color: rgb(59, 59, 59);
 }
 

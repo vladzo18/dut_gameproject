@@ -22,7 +22,9 @@ namespace Gameplay {
         [SerializeField] private GraundGenerator _graundGenerator;
         [SerializeField] private CarInputController _carInputController;
         [SerializeField] private CarHUDProvider carHudProvider;
-        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioSource _soundsAudioSource;
+        [SerializeField] private AudioSource _bgMusicAudioSource;
+        [SerializeField] private AudioClip _banderaCarBGMusic;
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private CarPropertiesStorage _propertiesStorage;
 
@@ -44,12 +46,17 @@ namespace Gameplay {
             _graundGenerator.SetObjectOfObservation(_carEntity.CarBodyTransform.gameObject);
             _camera.Follow = _carEntity.CarBodyTransform;
             _carInputController.SetCarMover(_carEntity.CarMover);
-            _carEntity.CarSound.SetAudioSource(_audioSource);
+            _carEntity.CarSound.SetAudioSource(_soundsAudioSource);
             
             CarPropertiesConfigurator carPropConfigurator = new CarPropertiesConfigurator(_carEntity, _propertiesStorage);
             carPropConfigurator.Configure();
         
             carHudProvider.SetCarEntity(_carEntity);
+
+            if (_carEntity.Type == CarType.BanderaCar) {
+                _bgMusicAudioSource.clip = _banderaCarBGMusic;
+                _bgMusicAudioSource.Play();
+            }
         }
 
         private void OnDestroy() {

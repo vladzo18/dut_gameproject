@@ -52,6 +52,7 @@ namespace Editor {
         
         private void OnCoinsAddBtnClick() {
             if (!Application.isPlaying || SceneManager.GetActiveScene().name != SceneSwitcher.MENU_SCENE_KEY) {
+                this.ShowNotification(new GUIContent("You need to be in plaing mode and in Menu scene"), 2.5f);
                 return;
             }
             
@@ -61,7 +62,8 @@ namespace Editor {
         }
 
         private void OnMapsResetBtnClick() {
-            if (Application.isPlaying || SceneManager.GetActiveScene().name != SceneSwitcher.MENU_SCENE_KEY) {
+            if (Application.isPlaying) {
+                this.ShowNotification(new GUIContent("You need to be in editor mode"));
                 return;
             }
             
@@ -69,11 +71,13 @@ namespace Editor {
            
            if (File.Exists(MapsModelPath)) {
               File.Delete(MapsModelPath);
+              this.ShowNotification(new GUIContent("Finished!"));
            }
         }
         
         private void OnCarsResetBtnClick() {
-            if (Application.isPlaying || SceneManager.GetActiveScene().name != SceneSwitcher.MENU_SCENE_KEY) {
+            if (Application.isPlaying) {
+                this.ShowNotification(new GUIContent("You need to be in editor mode"));
                 return;
             }
             
@@ -81,6 +85,7 @@ namespace Editor {
            
             if (File.Exists(CarsModelPath)) {
                 File.Delete(CarsModelPath);
+                this.ShowNotification(new GUIContent("Finished!"));
             }
         }
         

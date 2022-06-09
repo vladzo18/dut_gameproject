@@ -1,4 +1,4 @@
-﻿namespace UI.Changers.LevelChanger {
+﻿namespace UI.Changers.MapChanger {
     
     public enum MapType {
         None = 0,
@@ -7,7 +7,7 @@
         Road = 3,
         Moon = 4,
         Mars = 5,
-        Vulcano = 6
+        Volcano = 6
     }
     
 }

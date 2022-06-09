@@ -1,9 +1,9 @@
-﻿namespace Items.Save {
+﻿namespace Save {
 
-    public class LevelSaveData : SaveData {
+    public class LevelSaveData {
 
         public int CoinsAmount { get; set; }
-        public int DiamontsAmount { get; set; }
+        public int DiamondsAmount { get; set; }
         public int DrivenMeters { get; set; }
 
     }

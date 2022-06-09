@@ -294,9 +294,8 @@ GameObject:
   - component: {fileID: 6277271959628823371}
   - component: {fileID: 6277271959628823381}
   - component: {fileID: 6277271959628823383}
-  - component: {fileID: 6277271959628823376}
-  - component: {fileID: 7050473227715088644}
   - component: {fileID: 1184870890812511310}
+  - component: {fileID: 7050473227715088644}
   - component: {fileID: 6481240857089759457}
   m_Layer: 8
   m_Name: Bandera Car
@@ -616,7 +615,7 @@ MonoBehaviour:
   _groungLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &6277271959628823376
+--- !u!114 &1184870890812511310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,13 +624,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6277271959628823360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c22ccb8f79372498f682c2499862d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  _carCollector: {fileID: 6277271959628823380}
-  _itemCollectSound: {fileID: 8300000, guid: ba1d62ab7a9a92e4db00a88a2427a2b3, type: 3}
-  _fuelCollectSound: {fileID: 8300000, guid: ab45ca128fb93c64483bf5743e773f85, type: 3}
+  _mover: {fileID: 6277271959628823361}
+  _maxEgineSoundVolume: 0.2
+  _audioSource: {fileID: 6481240857089759457}
+  _egineSound: {fileID: 8300000, guid: bb85dc3cb30379d499519763b6348121, type: 3}
 --- !u!114 &7050473227715088644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,23 +650,6 @@ MonoBehaviour:
   _carTank: {fileID: 6277271959628823371}
   _carDistanceCounter: {fileID: 6277271959628823381}
   _carDeath: {fileID: 6277271959628823383}
-  _carSound: {fileID: 6277271959628823376}
---- !u!114 &1184870890812511310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6277271959628823360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mover: {fileID: 6277271959628823361}
-  _maxEgineSoundVolume: 0.2
-  _audioSource: {fileID: 6481240857089759457}
-  _egineSound: {fileID: 8300000, guid: bb85dc3cb30379d499519763b6348121, type: 3}
 --- !u!82 &6481240857089759457
 AudioSource:
   m_ObjectHideFlags: 0

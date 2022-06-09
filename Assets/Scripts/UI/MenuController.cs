@@ -1,187 +1,120 @@
-using System.Collections.Generic;
+using System;
 using General;
-using Items.Save;
+using Save;
 using UI.Changers;
 using UI.Changers.CarChanger;
 using UI.Changers.CarPropertyTuner;
-using UI.Changers.LevelChanger;
+using UI.Changers.MapChanger;
 using UnityEngine;
 
 namespace UI {
     
-    public class MenuController : MonoBehaviour {
+    public class MenuController {
 
-        [SerializeField] private MenuView _menuView;
+        private readonly MenuView _menuView;
         
         private Canvas _activeCanvas;
 
-        private MapsChanger _mapsChanger;
-        private CarChanger _carChanger;
-        private CarPropertiesChanger _propertiesChanger;
+        private readonly MapsChanger _mapsChanger;
+        private readonly CarChanger _carChanger;
+        private readonly CarPropertiesChanger _propertiesChanger;
 
-        private MapsModel _mapsModel;
-        private CarsModel _carsModel;
-        private Dictionary<CarType, CarPropertySettings> _propertySettingses;
-        private CarPropertySettings _currentPropertySettings;
+        public MenuController(MenuView menuView, MapsChanger mapsChanger, CarChanger carChanger, CarPropertiesChanger propertiesChanger) {
+            _menuView = menuView;
+            _mapsChanger = mapsChanger;
+            _carChanger = carChanger;
+            _propertiesChanger = propertiesChanger;
+        }
 
-        private ISaveSystem<MenuSaveData> _saveSystem;
-
-        private int _currentMapIndex;
-        private int _currentCarIndex;
-        
-        private void Start() {
-            _saveSystem = new MenuPlayerPrefsSystem();
-            _propertySettingses = new Dictionary<CarType, CarPropertySettings>();
+        public void Init() {
             _menuView.OnPlayClick += OnPlayClicked;
-            foreach (var button in _menuView.SwichButtons) {
+            foreach (var button in _menuView.SwitchButtons) {
                 button.OnButtonClick += OnChangerButtonClick;
             }
-            
-            LoadState();
-            TryToLoadLeverProgresData();
-            
-            _mapsModel = new MapsModel(_menuView.MapsStorage);
-            _mapsModel.LoadModel();
-            _carsModel = new CarsModel(_menuView.CarsStorage);
-            _carsModel.LoadModel();
-            
-            _mapsChanger = new MapsChanger(
-                _menuView.ChangerItemPrefab,
-                _mapsModel,
-                _menuView.LevelsScroller,
-                _menuView.BuyMessageBox, 
-                _menuView.CurrencyBox);
-            _mapsChanger.Init(_currentMapIndex);
-            
-            _carChanger = new CarChanger(
-                _menuView.ChangerItemPrefab,
-                _carsModel,
-                _menuView.CarsScroller, 
-                _menuView.BuyMessageBox,
-                _menuView.CurrencyBox);
-            _carChanger.Init(_currentCarIndex);
-            
-            _currentPropertySettings = new CarPropertySettings(CarTypeByIndex(_currentCarIndex));
-            _propertySettingses.Add(CarTypeByIndex(_currentCarIndex), _currentPropertySettings);
-            
-            _propertiesChanger = new CarPropertiesChanger(
-                _menuView.CarTunerBoxViews, 
-                _currentPropertySettings,
-                _menuView.BuyMessageBox,
-                _menuView.CurrencyBox);
-            _propertiesChanger.Init((int)CarTypeByIndex(_currentCarIndex));
-            
             _mapsChanger.OnMapChanged += MapChangedHandler;
+            _mapsChanger.OnMapBuy += BuyCarOrMap;
+            _carChanger.OnCarBuy += BuyCarOrMap;
             _carChanger.OnCarChanged += CarChangedHandler;
             _activeCanvas = _menuView.LevelsCanvas;
             _activeCanvas.enabled = true;
             _propertiesChanger.OnPointsChanged += PointsChangedHandler;
-            _carChanger.OnCarBuy += BuyCamOrMapChanger;
-            _mapsChanger.OnMapBuy += BuyCamOrMapChanger;
+            _propertiesChanger.OnUpgradeBought += OnUpgradeBoughtHandler;
         }
-
-        private void BuyCamOrMapChanger() {
-            _menuView.UIAudioSource.PlayOneShot(_menuView.BuySound);
-        }
-
-        private void PointsChangedHandler() {
-            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
-        }
-
-        private void OnDestroy() {
-            SaveState();
+        
+        public void Dispose() {
             _menuView.OnPlayClick -= OnPlayClicked;
             _mapsChanger.OnMapChanged -= MapChangedHandler;
             _carChanger.OnCarChanged -= CarChangedHandler;
             _propertiesChanger.OnPointsChanged -= PointsChangedHandler;
-            _carChanger.OnCarBuy -= BuyCamOrMapChanger;
-            _mapsChanger.OnMapBuy -= BuyCamOrMapChanger;
-            foreach (var button in _menuView.SwichButtons) {
+            _propertiesChanger.OnUpgradeBought -= OnUpgradeBoughtHandler;
+            _carChanger.OnCarBuy -= BuyCarOrMap;
+            _mapsChanger.OnMapBuy -= BuyCarOrMap;
+            foreach (var button in _menuView.SwitchButtons) {
                 button.OnButtonClick -= OnChangerButtonClick;
             }
-            _mapsChanger.Dispose();
-            _carChanger.Dispose();
-            _propertiesChanger.Dispose();
+        }
+        
+        public void SaveState() {
+            var saveData = new MenuSaveData {
+                CoinsAmount =  _menuView.CurrencyBox.CurrentCoins,
+                DiamondsAmount = _menuView.CurrencyBox.CurrentDiamonds,
+                ChosenCarType = _carChanger.CurrentCarType,
+                ChosenMapType = _mapsChanger.CurrentMapType
+            };
+            PlayerPrefsSaver.MenuSaveData.Set(saveData);
         }
 
-        private void OnChangerButtonClick(ChangerSwichButtonType type) {
+        public void LoadState() {
+            var saveData = PlayerPrefsSaver.MenuSaveData.Get();
+            _menuView.CurrencyBox.AddCoins(saveData.CoinsAmount);
+            _menuView.CurrencyBox.AddDiamonds(saveData.DiamondsAmount);
+            TryToLoadLevelProgressData();
+        }
+
+        private void OnChangerButtonClick(ChangerSwitchButtonType type) {
             _activeCanvas.enabled = false;
             _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
             
             switch (type) {
-                case ChangerSwichButtonType.Levels:
+                case ChangerSwitchButtonType.Levels:
                     _menuView.LevelsCanvas.enabled = true;
                     _activeCanvas = _menuView.LevelsCanvas;
                     break;
-                case ChangerSwichButtonType.Cars:
+                case ChangerSwitchButtonType.Cars:
                     _menuView.CarsCanvas.enabled = true;
                     _activeCanvas = _menuView.CarsCanvas;
                     break;
-                case ChangerSwichButtonType.Tune:
+                case ChangerSwitchButtonType.Tune:
                     _menuView.TuneCanvas.enabled = true;
                     _activeCanvas = _menuView.TuneCanvas;
                     break;
+                case ChangerSwitchButtonType.None:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
         }
         
-        private void MapChangedHandler(int index) {
-            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
-            _currentMapIndex = index;
-        }
+        private void OnUpgradeBoughtHandler() => _menuView.UIAudioSource.PlayOneShot(_menuView.BuySound);
         
-        private void CarChangedHandler(int index) {
-            _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
-            _currentCarIndex = index;
-            
-            _currentPropertySettings.SaveState();
-            if (_propertySettingses.TryGetValue(CarTypeByIndex(index), out var sett)) {
-                _currentPropertySettings = sett;
-            } else {
-                CarPropertySettings settings = new CarPropertySettings(CarTypeByIndex(index));
-                _propertySettingses.Add(CarTypeByIndex(index), settings);
-                _currentPropertySettings = settings;
-            }
-            
-            _propertiesChanger.ChangeCarPropertySettings(_currentPropertySettings);
-        }
-
-        private CarType CarTypeByIndex(int index) {
-            return _carsModel.GetDescriptorAt(index).CarType;
-        }
+        private void BuyCarOrMap() => _menuView.UIAudioSource.PlayOneShot(_menuView.BuySound);
         
-        private void SaveState() {
-            MenuSaveData saveData = new MenuSaveData();
-            saveData.CoinsAmount = _menuView.CurrencyBox.CurrentCoins;
-            saveData.DiamantsAmount = _menuView.CurrencyBox.CurrentDiamonts;
-            saveData.ChosenMapIndex = _currentMapIndex;
-            saveData.ChosenCarIndex = _currentCarIndex;
-            _saveSystem.SaveData(saveData);
-            
-            _mapsModel.SaveModel();
-            _carsModel.SaveModel();
-            _currentPropertySettings.SaveState();
-        }
-
-        private void LoadState() {
-            MenuSaveData saveData = _saveSystem.LoadData();
-            _menuView.CurrencyBox.AddCoins(saveData.CoinsAmount);
-            _menuView.CurrencyBox.AddDiamonts(saveData.DiamantsAmount);
-            _currentMapIndex = saveData.ChosenMapIndex;
-            _currentCarIndex = saveData.ChosenCarIndex;
-        }
+        private void PointsChangedHandler() => _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
+        
+        private void MapChangedHandler(int index) => _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
+        
+        private void CarChangedHandler(int index) => _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
         
         private void OnPlayClicked() {
             _menuView.UIAudioSource.PlayOneShot(_menuView.ClickSound);
-            SaveState();
             SceneSwitcher.LoadScene(SceneSwitcher.GAME_SCENE_KEY);
         }
 
-        private void TryToLoadLeverProgresData() {
-            LevelSaveData saveData = (new LevelPlayerPrefsSystem()).LoadData();
-            if (saveData == null) return;
-
+        private void TryToLoadLevelProgressData() {
+            var saveData = PlayerPrefsSaver.LevelSaveData.Get();
             _menuView.CurrencyBox.AddCoins(saveData.CoinsAmount);
-            _menuView.CurrencyBox.AddDiamonts(saveData.DiamontsAmount);
+            _menuView.CurrencyBox.AddDiamonds(saveData.DiamondsAmount);
+            PlayerPrefsSaver.LevelSaveData.Delete();
         }
         
     }

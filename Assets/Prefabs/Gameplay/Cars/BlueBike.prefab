@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 6820757802373860596}
   - component: {fileID: 4588872777523754669}
   - component: {fileID: 5956798008998594973}
-  - component: {fileID: 1311167274568736110}
+  - component: {fileID: 3579372633100059497}
   - component: {fileID: 7877620598544903529}
   - component: {fileID: 1521051933013940392}
   - component: {fileID: 7019398895541669854}
@@ -471,7 +471,6 @@ GameObject:
   - component: {fileID: 1837133932804997865}
   - component: {fileID: 7805366857554986100}
   - component: {fileID: 3053028825069187276}
-  - component: {fileID: 3579372633100059497}
   m_Layer: 0
   m_Name: BlueBike
   m_TagString: Untagged
@@ -575,7 +574,7 @@ MonoBehaviour:
   _groungLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &1311167274568736110
+--- !u!114 &3579372633100059497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -584,13 +583,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8397707364448700671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c22ccb8f79372498f682c2499862d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  _carCollector: {fileID: 4588872777523754669}
-  _itemCollectSound: {fileID: 8300000, guid: ba1d62ab7a9a92e4db00a88a2427a2b3, type: 3}
-  _fuelCollectSound: {fileID: 8300000, guid: ab45ca128fb93c64483bf5743e773f85, type: 3}
+  _mover: {fileID: 773225241221634001}
+  _maxEgineSoundVolume: 1
+  _audioSource: {fileID: 3053028825069187276}
+  _egineSound: {fileID: 8300000, guid: d683e2ecea3907246ac0b182b28f6e42, type: 3}
 --- !u!114 &7877620598544903529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +609,6 @@ MonoBehaviour:
   _carTank: {fileID: 9034028096169611221}
   _carDistanceCounter: {fileID: 6820757802373860596}
   _carDeath: {fileID: 5956798008998594973}
-  _carSound: {fileID: 1311167274568736110}
 --- !u!50 &1521051933013940392
 Rigidbody2D:
   serializedVersion: 4
@@ -820,22 +818,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3579372633100059497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8397707364448700671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mover: {fileID: 773225241221634001}
-  _maxEgineSoundVolume: 1
-  _audioSource: {fileID: 3053028825069187276}
-  _egineSound: {fileID: 8300000, guid: d683e2ecea3907246ac0b182b28f6e42, type: 3}
 --- !u!1 &8397707364571870342
 GameObject:
   m_ObjectHideFlags: 0

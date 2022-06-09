@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Gameplay.Car {
     
-    public class UnicycleMover : MonoBehaviour, IMover, IResetable {
+    public class UnicycleMover : MonoBehaviour, IMover, IResettable {
         
         [SerializeField] private Rigidbody2D _wheel;
         [SerializeField] private Rigidbody2D _carRigidbody;
@@ -14,8 +14,8 @@ namespace Gameplay.Car {
         private float _targetSpeed;
         private bool _canMove = true;
 
-        public bool IsMoveing { get; private set; }
-        public float CurrentEgineSpeed { get; private set; }
+        public bool IsMoving { get; private set; }
+        public float CurrentEngineSpeed { get; private set; }
         public float MaxSpeed => _edgineForce;
         
         private void Start() => GameReset.Register(this);
@@ -24,11 +24,11 @@ namespace Gameplay.Car {
         private void FixedUpdate() {
             if (!_canMove) return;
             
-            if (IsMoveing) {
+            if (IsMoving) {
                 _wheel.AddTorque(-_targetSpeed, ForceMode2D.Force);
                 
-                if (CurrentEgineSpeed <= _edgineForce) {
-                    CurrentEgineSpeed += SPEEDUP_STEP;
+                if (CurrentEngineSpeed <= _edgineForce) {
+                    CurrentEngineSpeed += SPEEDUP_STEP;
                 }
             }
             
@@ -42,23 +42,23 @@ namespace Gameplay.Car {
 
         public void MoveRight() {
             if (!_canMove) return;
-            IsMoveing = true;
+            IsMoving = true;
             _targetSpeed = (_edgineForce);
         }
 
         public void MoveLeft() {
             if (!_canMove) return;
-            IsMoveing = true;
+            IsMoving = true;
             _targetSpeed = -(_edgineForce);
         }
 
-        public void StopMoveing() {
-            IsMoveing = false;
+        public void StopMoving() {
+            IsMoving = false;
         }
 
         public void SetMovementAbility(bool isAble) => _canMove = isAble;
         
-        public void SetEdgineForce(float value) {
+        public void SetEngineForce(float value) {
             _edgineForce = value;
         }
 
@@ -68,7 +68,7 @@ namespace Gameplay.Car {
             _wheel.angularVelocity = 0;
             _targetSpeed = 0;
             _canMove = true;
-            IsMoveing = false;
+            IsMoving = false;
         }
         
     }

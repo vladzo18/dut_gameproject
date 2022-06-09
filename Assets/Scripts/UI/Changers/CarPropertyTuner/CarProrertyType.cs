@@ -3,7 +3,7 @@
     public enum CarProrertyType {
         None = 0,
         FuelCapacity = 1,
-        EdgineForce = 2
+        EngineForce = 2
     }
     
 }

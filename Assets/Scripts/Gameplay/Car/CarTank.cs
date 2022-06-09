@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Gameplay.Car {
     
-    public class CarTank : MonoBehaviour, IResetable {
+    public class CarTank : MonoBehaviour, IResettable {
 
         [SerializeField] private CarCollector _carCollector;
         [SerializeField] private MonoBehaviour _carMover;
@@ -13,8 +13,9 @@ namespace Gameplay.Car {
         [SerializeField, Range(0.5f, 2f)] private float _fuelDecreaseStep;
         [SerializeField, Range(0.005f, 0.05f)] private float _fuelDecreaseingSpeed;
 
+        private Coroutine _fuelСonsumptionCoroutine;
         private IMover _mover;
-        private bool isFuelEmpty;
+        private bool _isFuelEmpty;
 
         public float CurrentFuelAmount { get; private set; }
         public float FuelMaxAmount => _fuelMaxAmount;
@@ -32,29 +33,39 @@ namespace Gameplay.Car {
             _carCollector.OnFuelCollect += OnFuelTake;
             
             CurrentFuelAmount = FuelMaxAmount;
-            StartCoroutine(FuelСonsumptionRoutine());
+            _fuelСonsumptionCoroutine = StartCoroutine(FuelСonsumptionRoutine());
         }
 
         private void OnDestroy() {
             _carCollector.OnFuelCollect -= OnFuelTake;
+            StopCoroutine(_fuelСonsumptionCoroutine);
             GameReset.Unregister(this);
+        }
+        
+        public void Reset() {
+            CurrentFuelAmount = FuelMaxAmount;
+            OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
+        }
+
+        public void SetFuelMaxAmount(float value) {
+            _fuelMaxAmount = value;
         }
         
         private IEnumerator FuelСonsumptionRoutine() {
             OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
             
             while (true) {
-                yield return new WaitUntil(() => _mover.IsMoveing);
+                yield return new WaitUntil(() => _mover.IsMoving);
                 
                 if (CurrentFuelAmount > 0) {
                     float nextFuelAmount = CurrentFuelAmount - _fuelDecreaseStep;
                     CurrentFuelAmount = nextFuelAmount >= 0 ? nextFuelAmount : 0;
                     OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
                 } else {
-                    if (!isFuelEmpty) {
+                    if (!_isFuelEmpty) {
                         _mover.SetMovementAbility(false);
                         OnEmptyFuelTank?.Invoke();
-                        isFuelEmpty = true;
+                        _isFuelEmpty = true;
                     }
                 }
                 
@@ -69,7 +80,7 @@ namespace Gameplay.Car {
                 CurrentFuelAmount += amount;
             }
             _mover.SetMovementAbility(true);
-            isFuelEmpty = false;
+            _isFuelEmpty = false;
             OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
         }
         
@@ -79,15 +90,6 @@ namespace Gameplay.Car {
             }
         }
 
-        public void Reset() {
-            CurrentFuelAmount = FuelMaxAmount;
-            OnFuelAmountChanged?.Invoke(CurrentFuelAmount);
-        }
-
-        public void SetFuelMaxAmount(float value) {
-            _fuelMaxAmount = value;
-        }
-        
     }
 
 }

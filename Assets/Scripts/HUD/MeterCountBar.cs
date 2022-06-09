@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace HUD {
     
-    public class MeterCountBar : MonoBehaviour, IResetable {
+    public class MeterCountBar : MonoBehaviour, IResettable {
         
         [SerializeField] private TMP_Text _text;
         

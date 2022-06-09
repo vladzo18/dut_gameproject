@@ -5,7 +5,7 @@ namespace UI.Changers.CarPropertyTuner {
     [Serializable]
     public class CarPropertySetting {
 
-        public CarProrertyType CarProrertyType { get; set; }
+        public CarProrertyType CarPropertyType { get; set; }
         public int Value { get; set; }
         public int ValueBorder { get; set; }
 

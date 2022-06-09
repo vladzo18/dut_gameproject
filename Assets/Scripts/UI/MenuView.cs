@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UI.Changers;
 using UI.Changers.CarChanger;
 using UI.Changers.CarPropertyTuner;
-using UI.Changers.LevelChanger;
+using UI.Changers.MapChanger;
+using UI.Changers.Scroller;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,16 +14,16 @@ namespace UI {
         
         [Header("Buttons")]
         [SerializeField] private Button _playButton;
-        [SerializeField] private List<ChangerSwichButton> _swichButtons;
+        [SerializeField] private List<ChangerSwitchButton> switchButtons;
         [Header("CurrencyBox")]
         [SerializeField] private CurrencyBox _currencyBox;
         [Header("Level Changer")]
         [SerializeField] private Canvas _levelsCanvas;
-        [SerializeField] private SnapScroller _levelsScroller;
+        [SerializeField] private CustomScroller _levelsScroller;
         [SerializeField] private MapsStorage _mapsStorage;
         [Header("Car Changer")]
         [SerializeField] private Canvas _carsCanvas;
-        [SerializeField] private SnapScroller _carsScroller;
+        [SerializeField] private CustomScroller _carsScroller;
         [SerializeField] private CarsStorage _carsStorage;
         [Header("Car Tuner")]
         [SerializeField] private Canvas _tuneCanvas;
@@ -37,14 +38,14 @@ namespace UI {
 
         public event Action OnPlayClick;
         
-        public IEnumerable<ChangerSwichButton> SwichButtons => _swichButtons;
+        public IEnumerable<ChangerSwitchButton> SwitchButtons => switchButtons;
         public IEnumerable<CarTunerBoxView> CarTunerBoxViews => _carTunerBoxViews;
         public Canvas LevelsCanvas => _levelsCanvas;
         public Canvas CarsCanvas => _carsCanvas;
         public Canvas TuneCanvas => _tuneCanvas;
-        public SnapScroller LevelsScroller => _levelsScroller;
+        public CustomScroller LevelsScroller => _levelsScroller;
         public MapsStorage MapsStorage => _mapsStorage;
-        public SnapScroller CarsScroller => _carsScroller;
+        public CustomScroller CarsScroller => _carsScroller;
         public CarsStorage CarsStorage => _carsStorage;
         public ChangerItemView ChangerItemPrefab => _changerItemPrefab;
         public BuyMessageBox BuyMessageBox => buyMessageBox;

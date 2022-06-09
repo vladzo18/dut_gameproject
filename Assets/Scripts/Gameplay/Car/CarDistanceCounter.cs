@@ -9,7 +9,7 @@ namespace Gameplay.Car {
         
         private const int METERS_DIVIDER = 2;
         
-        public int MeterCount { get; set; }
+        public int MeterCount { get; private set; }
         public event Action OnMeterCountChanged;
         
         private void Update() {

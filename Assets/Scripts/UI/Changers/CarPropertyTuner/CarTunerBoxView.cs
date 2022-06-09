@@ -16,8 +16,8 @@ namespace UI.Changers.CarPropertyTuner {
         [SerializeField] private UpgradeButton _upgradeUpButton;
         [SerializeField] private UpgradeButton _upgradeDownButton;
 
-        public event Action OnUpgradeUpCick;
-        public event Action OnUpgradeDownCick;
+        public event Action OnUpgradeUpClick;
+        public event Action OnUpgradeDownClick;
         public event Action OnUpgradeBuy;
 
         private void Start() {
@@ -44,8 +44,8 @@ namespace UI.Changers.CarPropertyTuner {
             return _boxItems[BoxItemsCount - (index + 1)];
         }
 
-        private void UpgradeHandler() => OnUpgradeUpCick?.Invoke();
-        private void DisupgradeHandler() => OnUpgradeDownCick?.Invoke();
+        private void UpgradeHandler() => OnUpgradeUpClick?.Invoke();
+        private void DisupgradeHandler() => OnUpgradeDownClick?.Invoke();
 
         public void OnPointerDown(PointerEventData eventData) {
             OnUpgradeBuy?.Invoke();

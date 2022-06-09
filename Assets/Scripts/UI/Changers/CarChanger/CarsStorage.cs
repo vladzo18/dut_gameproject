@@ -10,7 +10,7 @@ namespace UI.Changers.CarChanger {
 
         public IEnumerable<CarStorageDescriptor> CarDescriptors => _carDescriptors;
         public CarStorageDescriptor ElementByIndex(int index) => _carDescriptors[index];
-        public int CarCount => _carDescriptors.Count;
+        public CarStorageDescriptor ElementByType(CarType carType) => _carDescriptors.Find(cd => cd.CarType == carType);
         
     }
 }

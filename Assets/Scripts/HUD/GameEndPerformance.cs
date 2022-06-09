@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using General;
-using Items.Save;
+using Save;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -21,7 +21,7 @@ namespace HUD {
         public void ShowGameEndWindow(LevelSaveData saveData) {
             _gameEndCanvas.enabled = true;
             _coinsPerform.SetPerformBox(saveData.CoinsAmount);
-            _diamontsPerform.SetPerformBox(saveData.DiamontsAmount);
+            _diamontsPerform.SetPerformBox(saveData.DiamondsAmount);
             _metersPerform.SetPerformBox(saveData.DrivenMeters);
             StartCoroutine(ShowPerformBoxesRoutine());
         }
@@ -47,5 +47,5 @@ namespace HUD {
         }
              
     }
-         
+    
 }  

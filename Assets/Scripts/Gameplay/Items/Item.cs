@@ -1,4 +1,3 @@
-using Items;
 using UnityEngine;
 
 namespace Gameplay.Items {
@@ -9,6 +8,7 @@ namespace Gameplay.Items {
         [SerializeField] private float _itemAmount;
         [SerializeField] private Animator _animator;
         [SerializeField] private Collider2D _collider;
+        [SerializeField] private AudioSource _takeItemAudioSource;
 
         private const string TAKE_ANIMATION_KEY = "Take";
 
@@ -17,6 +17,7 @@ namespace Gameplay.Items {
 
         public void Take() {
             _collider.enabled = false;
+            _takeItemAudioSource.Play();
             _animator.Play(TAKE_ANIMATION_KEY);
             Invoke(nameof(Determinate), 0.5f);
         }

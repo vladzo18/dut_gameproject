@@ -9,8 +9,8 @@ namespace Gameplay.Car {
 
         public event Action<float> OnFuelCollect;
         public event Action<float> OnCoinCollect;
-        public event Action<float> OnDiamontCollect;
-        public event Action<ItemType> OnItemColect;
+        public event Action<float> OnDiamondCollect;
+        public event Action<ItemType> OnItemCollect;
         
         private void OnTriggerEnter2D(Collider2D collider) {
             var item = collider.GetComponent<Item>();
@@ -23,12 +23,16 @@ namespace Gameplay.Car {
                    case ItemType.Coin:
                        OnCoinCollect?.Invoke(item.ItemAmount);
                        break;
-                   case ItemType.Diamant:
-                       OnDiamontCollect?.Invoke(item.ItemAmount);
+                   case ItemType.Diamond:
+                       OnDiamondCollect?.Invoke(item.ItemAmount);
                        break;
+                   case ItemType.None:
+                       break;
+                   default:
+                       throw new ArgumentOutOfRangeException();
                 }
                 
-                OnItemColect?.Invoke(item.ItemType);
+                OnItemCollect?.Invoke(item.ItemType);
                 item.Take();
             }
         }

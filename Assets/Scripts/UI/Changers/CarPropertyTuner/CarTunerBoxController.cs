@@ -28,14 +28,14 @@ namespace UI.Changers.CarPropertyTuner {
 
         public void Init() {
             UpdateView();
-            _tunerBoxView.OnUpgradeDownCick += OnUpgradeDown;
-            _tunerBoxView.OnUpgradeUpCick += OnUpgradeUp;
+            _tunerBoxView.OnUpgradeDownClick += OnUpgradeDown;
+            _tunerBoxView.OnUpgradeUpClick += OnUpgradeUp;
             _tunerBoxView.OnUpgradeBuy += OnUpgradeBuyHandler;
         }
 
         public void Dispose() {
-            _tunerBoxView.OnUpgradeDownCick -= OnUpgradeDown;
-            _tunerBoxView.OnUpgradeUpCick -= OnUpgradeUp;
+            _tunerBoxView.OnUpgradeDownClick -= OnUpgradeDown;
+            _tunerBoxView.OnUpgradeUpClick -= OnUpgradeUp;
             _tunerBoxView.OnUpgradeBuy -= OnUpgradeBuyHandler;
         }
 

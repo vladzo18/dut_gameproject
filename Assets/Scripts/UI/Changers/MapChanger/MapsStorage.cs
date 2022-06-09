@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace UI.Changers.LevelChanger {
+namespace UI.Changers.MapChanger {
     
     [CreateAssetMenu(fileName = "MapsStorage", menuName = "Storages/MapsStorage")]
     public class MapsStorage : ScriptableObject {
@@ -10,7 +10,7 @@ namespace UI.Changers.LevelChanger {
 
         public IEnumerable<MapStorageDescriptor> MapDescriptors => _mapDescriptors;
         public MapStorageDescriptor ElementByIndex(int index) => _mapDescriptors[index];
-        public int MapCount => _mapDescriptors.Count;
+        public MapStorageDescriptor ElementByType(MapType type) => _mapDescriptors.Find(d => d.Type == type);
 
     }
     

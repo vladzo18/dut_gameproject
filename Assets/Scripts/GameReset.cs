@@ -2,16 +2,16 @@
 
 namespace General {
     
-    public class GameReset {
+    public static class GameReset {
 
-        private static List<IResetable> _resetables = new List<IResetable>();
+        private static List<IResettable> _resetables = new List<IResettable>();
 
-        public static void Register(IResetable resetable) {
-            _resetables.Add(resetable);
+        public static void Register(IResettable resettable) {
+            _resetables.Add(resettable);
         }
 
-        public static void Unregister(IResetable resetable) {
-            _resetables.Remove(resetable);
+        public static void Unregister(IResettable resettable) {
+            _resetables.Remove(resettable);
         }
 
         public static void Reset() {

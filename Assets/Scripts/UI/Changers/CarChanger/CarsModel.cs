@@ -1,66 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using Items.Save;
-using UI.Changers.CarChanger;
+using Save;
 
-namespace UI.Changers.LevelChanger {
+namespace UI.Changers.CarChanger {
     
     public class CarsModel {
         
-        private List<CarModelItem> _carStorageDescriptors;
-        private CarsStorage _storage;
+        private readonly CarsStorage _storage;
+        private readonly ObjectPref<State> _objectPref;
         
-        private BinarySaveSystem _binarySaveSystem;
+        private State _modelState;
 
         public event Action OnModelChanged;
         
-        public int ItemsCount => _carStorageDescriptors.Count;
+        public int ItemsCount => _modelState.carsAvailability.Count;
+        public CarType CurrentCarType => _modelState.currentCarType;
         
         public CarsModel(CarsStorage storage) {
-            _carStorageDescriptors = new List<CarModelItem>();
-            _binarySaveSystem = new BinarySaveSystem(nameof(CarsModel));
+            _modelState = new State();
             _storage = storage;
 
             foreach (var mapDescriptor in _storage.CarDescriptors) {
-                CarModelItem item = new CarModelItem();
-                item.CarStorageDescriptor = mapDescriptor.CarType;
-                if (mapDescriptor.CarCost == 0) {
-                    item.isAvaliable = true;
-                }
-                _carStorageDescriptors.Add(item);
+                _modelState.carsAvailability.Add(mapDescriptor.CarCost == 0);
             }
+            _objectPref = new ObjectPref<State>(nameof(CarsModel), _modelState);
         }
 
-        public CarStorageDescriptor GetDescriptorAt(int index) {
-            return _storage.ElementByIndex(index);
-        }
-
-        public bool GetAvaliabilityStatusAt(int index) {
-            return _carStorageDescriptors[index].isAvaliable;
-        }
-
-        public void SetAvaliabilityStatusAt(int index, bool status) {
-            _carStorageDescriptors[index].isAvaliable = status;
+        public CarStorageDescriptor GetDescriptorAt(int index) => _storage.ElementByIndex(index);
+        
+        public bool GetAvailabilityStatusAt(int index) => _modelState.carsAvailability[index];
+        
+        public void SetAvailabilityStatusAt(int index, bool status) {
+            _modelState.carsAvailability[index] = status;
             OnModelChanged?.Invoke();
         }
 
-        public void SaveModel() {
-            _binarySaveSystem.Save(_carStorageDescriptors);
+        public void SetCurrentCarType(CarType carType) => _modelState.currentCarType = carType;
+
+        public void SaveModel() => _objectPref.Set(_modelState);
+        
+        public void LoadModel() {
+            var loadedState = _objectPref.Get();
+            if (loadedState == null) return;
+            _modelState = loadedState;
+            OnModelChanged?.Invoke();
         }
 
-        public void LoadModel() {
-            List<CarModelItem> list = _binarySaveSystem.Load<List<CarModelItem>>();
-            if (list == null) return;
-            for (int i = 0; i < list.Count; i++) {
-                SetAvaliabilityStatusAt(i, list[i].isAvaliable);
-            }
+        [Serializable]
+        private class State {
+            public List<bool> carsAvailability = new List<bool>();
+            public CarType currentCarType = CarType.RedCar;
         }
         
-        [Serializable]
-        private class CarModelItem {
-            public CarType CarStorageDescriptor;
-            public bool isAvaliable;
-        }
     }
     
 }

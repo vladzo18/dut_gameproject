@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using UI.Changers.LevelChanger;
-using UnityEngine;
+using UI.Changers.Scroller;
+using Object = UnityEngine.Object;
 
 namespace UI.Changers.CarChanger {
     
@@ -9,19 +9,24 @@ namespace UI.Changers.CarChanger {
 
         private readonly ChangerItemView _view;
         private readonly CarsModel _model;
-        private readonly SnapScroller _carsScroller;
+        private readonly CustomScroller _carsScroller;
         private readonly BuyMessageBox _buyMessageBox;
         private readonly CurrencyBox _currencyBox;
         
-        private List<ChangerItemView> _changerItemViews;
-        private Dictionary<ScrollerPanel, int> _changerDataIndexes;
+        private readonly List<ChangerItemView> _changerItemViews;
+        private readonly Dictionary<ScrollerPanel, int> _changerIndexes;
+        private readonly Dictionary<CarType, ScrollerPanel> _carTypes;
+        
         private int _messageBoxCarIndex;
         
         public event Action<int> OnCarChanged;
         public event Action OnCarBuy;
 
-        public CarChanger(ChangerItemView view, CarsModel model, SnapScroller scroller, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
-            _changerDataIndexes = new Dictionary<ScrollerPanel, int>();
+        public CarType CurrentCarType => _model.CurrentCarType;
+
+        public CarChanger(ChangerItemView view, CarsModel model, CustomScroller scroller, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
+            _changerIndexes = new Dictionary<ScrollerPanel, int>();
+            _carTypes = new Dictionary<CarType, ScrollerPanel>();
             _changerItemViews = new List<ChangerItemView>();
             _view = view;
             _model = model;
@@ -30,23 +35,26 @@ namespace UI.Changers.CarChanger {
             _currencyBox = currencyBox;
         }
 
-        public void Init(int focusPanelIndex) {
+        public void Init() {
+            _model.LoadModel();
+            
             _carsScroller.AddPanels(_model.ItemsCount);
 
             for (int i = 0; i < _model.ItemsCount; i++) {
-                ChangerItemView view =  GameObject.Instantiate(_view, _carsScroller.GetPanelAt(i).Rect);
+                ChangerItemView view =  Object.Instantiate(_view, _carsScroller.GetPanelAt(i).Rect);
                 view.SetBodyImage(_model.GetDescriptorAt(i).CarImage);
                 view.SetHeadText(_model.GetDescriptorAt(i).CarName);
                 view.SetItemPrice(_model.GetDescriptorAt(i).CarCost.ToString());
-                view.SetLockedBoxActivity(!_model.GetAvaliabilityStatusAt(i));
+                view.SetLockedBoxActivity(!_model.GetAvailabilityStatusAt(i));
                 _carsScroller.GetPanelAt(i).OnPanelClick += OnCarClick;
                 
-                _changerDataIndexes.Add(_carsScroller.GetPanelAt(i), i);
+                _changerIndexes.Add(_carsScroller.GetPanelAt(i), i);
+                _carTypes.Add(_model.GetDescriptorAt(i).CarType, _carsScroller.GetPanelAt(i));
                 _changerItemViews.Add(view);
             }
             
-            _carsScroller.SetFocusAtPanel(focusPanelIndex);
-
+            _carsScroller.SetFocusAtPanel(_changerIndexes[_carTypes[_model.CurrentCarType]]);
+            
             _buyMessageBox.OnClose += OnCloseBuyMessageBoxHandler;
             _model.OnModelChanged += UpdateView;
             _carsScroller.OnContentChanged += SelectCar;
@@ -57,6 +65,7 @@ namespace UI.Changers.CarChanger {
         }
         
         public void Dispose() {
+            _model.SaveModel();
             for (int i = 0; i < _model.ItemsCount; i++) {
                 _carsScroller.GetPanelAt(i).OnPanelClick -= OnCarClick;
             }
@@ -68,10 +77,10 @@ namespace UI.Changers.CarChanger {
         
         private void OnCarClick(ScrollerPanel panel) {
             if (_carsScroller.IsScrolling || _carsScroller.ActivePanel != panel) return;
-            if (_model.GetAvaliabilityStatusAt(_changerDataIndexes[panel])) return;
+            if (_model.GetAvailabilityStatusAt(_changerIndexes[panel])) return;
             
-            CarStorageDescriptor descr = _model.GetDescriptorAt(_changerDataIndexes[panel]);
-            _messageBoxCarIndex = _changerDataIndexes[panel];
+            CarStorageDescriptor descr = _model.GetDescriptorAt(_changerIndexes[panel]);
+            _messageBoxCarIndex = _changerIndexes[panel];
            
             _buyMessageBox.SetImage(descr.CarImage);
             _buyMessageBox.SetPrice(descr.CarCost.ToString());
@@ -83,24 +92,25 @@ namespace UI.Changers.CarChanger {
         }
 
         private void OnBuyButtonCar(int price) {
-            if (_currencyBox.TryTakeCoins(price)) {
-                _model.SetAvaliabilityStatusAt(_messageBoxCarIndex, true);
-                _buyMessageBox.HideMessageBox();
-                OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.GetPanelAt(_messageBoxCarIndex)]);
-                OnCarBuy?.Invoke();
-                _buyMessageBox.OnBuyButtonClick -= OnBuyButtonCar;
-            }
+            if (!_currencyBox.TryTakeCoins(price)) return;
+            _model.SetAvailabilityStatusAt(_messageBoxCarIndex, true);
+            _buyMessageBox.HideMessageBox();
+            _model.SetCurrentCarType(_model.GetDescriptorAt(_changerIndexes[_carsScroller.ActivePanel]).CarType);
+            OnCarChanged?.Invoke(_changerIndexes[_carsScroller.GetPanelAt(_messageBoxCarIndex)]);
+            OnCarBuy?.Invoke();
+            _buyMessageBox.OnBuyButtonClick -= OnBuyButtonCar;
         }
 
         private void UpdateView() {
             for (int i = 0; i < _model.ItemsCount; i++) {
-                _changerItemViews[i].SetLockedBoxActivity(!_model.GetAvaliabilityStatusAt(i));
+                _changerItemViews[i].SetLockedBoxActivity(!_model.GetAvailabilityStatusAt(i));
             }
         }
         
         private void SelectCar() {
-            if (!_model.GetAvaliabilityStatusAt(_changerDataIndexes[_carsScroller.ActivePanel])) return;
-            OnCarChanged.Invoke(_changerDataIndexes[_carsScroller.ActivePanel]);
+            if (!_model.GetAvailabilityStatusAt(_changerIndexes[_carsScroller.ActivePanel])) return;
+            _model.SetCurrentCarType(_model.GetDescriptorAt(_changerIndexes[_carsScroller.ActivePanel]).CarType);
+            OnCarChanged?.Invoke(_changerIndexes[_carsScroller.ActivePanel]);
         }
         
     }

@@ -246,8 +246,8 @@ GameObject:
   - component: {fileID: 8448318056742621398}
   - component: {fileID: 6465922758020701077}
   - component: {fileID: 3478856082009743332}
-  - component: {fileID: 1651967213738850886}
   - component: {fileID: 3338219757272774594}
+  - component: {fileID: 1425254608809547163}
   - component: {fileID: 5713353778098968472}
   - component: {fileID: 6018257014562765488}
   - component: {fileID: 7972985175365587611}
@@ -256,7 +256,6 @@ GameObject:
   - component: {fileID: 7036701400094414934}
   - component: {fileID: 2717422715138963116}
   - component: {fileID: 3367543921383901534}
-  - component: {fileID: 1425254608809547163}
   m_Layer: 0
   m_Name: Racing Car
   m_TagString: Untagged
@@ -341,22 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8828b4ff7d3ea5f44b249696341da89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1651967213738850886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850514022162153457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c22ccb8f79372498f682c2499862d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  _carCollector: {fileID: 3478856082009743332}
-  _itemCollectSound: {fileID: 8300000, guid: ba1d62ab7a9a92e4db00a88a2427a2b3, type: 3}
-  _fuelCollectSound: {fileID: 8300000, guid: ab45ca128fb93c64483bf5743e773f85, type: 3}
 --- !u!114 &3338219757272774594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +359,22 @@ MonoBehaviour:
   _groungLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1425254608809547163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850514022162153457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mover: {fileID: 6273486485211637839}
+  _maxEgineSoundVolume: 0.15
+  _audioSource: {fileID: 3367543921383901534}
+  _egineSound: {fileID: 8300000, guid: 0c7221a7b91955e48afef3932203551d, type: 3}
 --- !u!114 &5713353778098968472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,7 +394,6 @@ MonoBehaviour:
   _carTank: {fileID: 6465922758020701077}
   _carDistanceCounter: {fileID: 8448318056742621398}
   _carDeath: {fileID: 3338219757272774594}
-  _carSound: {fileID: 1651967213738850886}
 --- !u!61 &6018257014562765488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -631,22 +629,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1425254608809547163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850514022162153457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mover: {fileID: 6273486485211637839}
-  _maxEgineSoundVolume: 0.15
-  _audioSource: {fileID: 3367543921383901534}
-  _egineSound: {fileID: 8300000, guid: 0c7221a7b91955e48afef3932203551d, type: 3}
 --- !u!1 &1850514022354145214
 GameObject:
   m_ObjectHideFlags: 0

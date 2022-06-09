@@ -261,10 +261,9 @@ GameObject:
   - component: {fileID: 5418065460181040206}
   - component: {fileID: 1534149797500800025}
   - component: {fileID: 2131959303317956416}
-  - component: {fileID: 1405081727191546128}
+  - component: {fileID: 19499830827871077}
   - component: {fileID: 4752180144492182768}
   - component: {fileID: 6194172239421563028}
-  - component: {fileID: 19499830827871077}
   m_Layer: 0
   m_Name: GreenBus
   m_TagString: Untagged
@@ -513,7 +512,7 @@ MonoBehaviour:
   _groungLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &1405081727191546128
+--- !u!114 &19499830827871077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,13 +521,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 972515521975327479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c22ccb8f79372498f682c2499862d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  _carCollector: {fileID: 2317326799446481245}
-  _itemCollectSound: {fileID: 8300000, guid: ba1d62ab7a9a92e4db00a88a2427a2b3, type: 3}
-  _fuelCollectSound: {fileID: 8300000, guid: ab45ca128fb93c64483bf5743e773f85, type: 3}
+  _mover: {fileID: 5271712691224233763}
+  _maxEgineSoundVolume: 0.35
+  _audioSource: {fileID: 6194172239421563028}
+  _egineSound: {fileID: 8300000, guid: 7312ad01ae78e804aaf525be4900165a, type: 3}
 --- !u!114 &4752180144492182768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +547,6 @@ MonoBehaviour:
   _carTank: {fileID: 1534149797500800025}
   _carDistanceCounter: {fileID: 5418065460181040206}
   _carDeath: {fileID: 2131959303317956416}
-  _carSound: {fileID: 1405081727191546128}
 --- !u!82 &6194172239421563028
 AudioSource:
   m_ObjectHideFlags: 0
@@ -645,22 +643,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &19499830827871077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972515521975327479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mover: {fileID: 5271712691224233763}
-  _maxEgineSoundVolume: 0.35
-  _audioSource: {fileID: 6194172239421563028}
-  _egineSound: {fileID: 8300000, guid: 7312ad01ae78e804aaf525be4900165a, type: 3}
 --- !u!1 &9161661390872529498
 GameObject:
   m_ObjectHideFlags: 0

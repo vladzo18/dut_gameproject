@@ -1,7 +1,7 @@
-using System.IO;
 using General;
 using UI;
-using UI.Changers.LevelChanger;
+using UI.Changers.CarChanger;
+using UI.Changers.MapChanger;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -67,11 +67,11 @@ namespace Editor {
                 return;
             }
             
-           string MapsModelPath = $"{Application.persistentDataPath}/{nameof(MapsModel)}.sv";
-           
-           if (File.Exists(MapsModelPath)) {
-              File.Delete(MapsModelPath);
+           if (PlayerPrefs.HasKey(nameof(MapsModel))) {
+              PlayerPrefs.DeleteKey(nameof(MapsModel));
               this.ShowNotification(new GUIContent("Finished!"));
+           } else {
+               this.ShowNotification(new GUIContent("Already deleted!"));
            }
         }
         
@@ -81,11 +81,11 @@ namespace Editor {
                 return;
             }
             
-            string CarsModelPath = $"{Application.persistentDataPath}/{nameof(CarsModel)}.sv";
-           
-            if (File.Exists(CarsModelPath)) {
-                File.Delete(CarsModelPath);
+            if (PlayerPrefs.HasKey(nameof(CarsModel))) {
+                PlayerPrefs.DeleteKey(nameof(CarsModel));
                 this.ShowNotification(new GUIContent("Finished!"));
+            } else {
+                this.ShowNotification(new GUIContent("Already deleted!"));
             }
         }
         

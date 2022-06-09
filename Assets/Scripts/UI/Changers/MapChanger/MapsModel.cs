@@ -1,65 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
-using Items.Save;
+using Save;
 
-namespace UI.Changers.LevelChanger {
+namespace UI.Changers.MapChanger {
     
     public class MapsModel {
         
-        private List<MapModelItem> _mapStorageDescriptors;
-        private MapsStorage _storage;
+        private readonly MapsStorage _storage;
+        private readonly ObjectPref<State> _objectPref;
         
-        private BinarySaveSystem _binarySaveSystem;
+        private State _modelState;
 
         public event Action OnModelChanged;
         
-        public int ItemsCount => _mapStorageDescriptors.Count;
+        public int ItemsCount => _modelState.carsAvailability.Count;
+        public MapType CurrentMapType => _modelState.currentMapType;
         
         public MapsModel(MapsStorage storage) {
-            _mapStorageDescriptors = new List<MapModelItem>();
-            _binarySaveSystem = new BinarySaveSystem(nameof(MapsModel));
+            _modelState = new State();
             _storage = storage;
 
             foreach (var mapDescriptor in _storage.MapDescriptors) {
-                MapModelItem item = new MapModelItem();
-                item.MapStorageDescriptor = mapDescriptor.Type;
-                if (mapDescriptor.MapCost == 0) {
-                    item.isAvaliable = true;
-                }
-                _mapStorageDescriptors.Add(item);
+                _modelState.carsAvailability.Add(mapDescriptor.MapCost == 0);
             }
+            _objectPref = new ObjectPref<State>(nameof(MapsModel), _modelState);
         }
 
         public MapStorageDescriptor GetDescriptorAt(int index) {
             return _storage.ElementByIndex(index);
         }
 
-        public bool GetAvaliabilityStatusAt(int index) {
-            return _mapStorageDescriptors[index].isAvaliable;
+        public bool GetAvailabilityStatusAt(int index) {
+            return _modelState.carsAvailability[index];
         }
 
-        public void SetAvaliabilityStatusAt(int index, bool status) {
-            _mapStorageDescriptors[index].isAvaliable = status;
+        public void SetAvailabilityStatusAt(int index, bool status) {
+            _modelState.carsAvailability[index] = status;
             OnModelChanged?.Invoke();
         }
 
-        public void SaveModel() {
-            _binarySaveSystem.Save(_mapStorageDescriptors);
-        }
+        public void SetCurrentMapType(MapType mapType) => _modelState.currentMapType = mapType;
+
+        public void SaveModel() => _objectPref.Set(_modelState);
 
         public void LoadModel() {
-            List<MapModelItem> list = _binarySaveSystem.Load<List<MapModelItem>>();
-            if (list == null) return;
-            for (int i = 0; i < list.Count; i++) {
-                SetAvaliabilityStatusAt(i, list[i].isAvaliable);
-            }
+            var loadedState = _objectPref.Get();
+            if (loadedState == null) return;
+            _modelState = loadedState;
+            OnModelChanged?.Invoke();
         }
         
         [Serializable]
-        private class MapModelItem {
-            public MapType MapStorageDescriptor;
-            public bool isAvaliable;
+        private class State {
+            public List<bool> carsAvailability = new List<bool>();
+            public MapType currentMapType = MapType.Countryside;
         }
+        
     }
     
 }

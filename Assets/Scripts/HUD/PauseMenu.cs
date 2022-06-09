@@ -20,23 +20,23 @@ namespace HUD {
         private void Start() {
             _pauseButton.onClick.AddListener(() => {
                 _pauseWindow.enabled = true;
-                PauseProvider.ApplyPause();
+                Time.timeScale = 0f;
                 _audioSource.PlayOneShot(_clickSound);
             });
             _resumeButton.onClick.AddListener(() => {
                 _pauseWindow.enabled = false;
-                PauseProvider.RevokePause();
+                Time.timeScale = 1f;
                 _audioSource.PlayOneShot(_clickSound);
             });
             _restartButton.onClick.AddListener(() => {
-                PauseProvider.RevokePause();
+                Time.timeScale = 1f;
                 _audioSource.PlayOneShot(_clickSound);
                 GameReset.Reset();
                 _pauseWindow.enabled = false;
             });
             _exitButton.onClick.AddListener(() => {
                 _audioSource.PlayOneShot(_clickSound);
-                PauseProvider.RevokePause();
+                Time.timeScale = 1f;
                 OnGameExit?.Invoke();
                 SceneSwitcher.LoadScene(SceneSwitcher.MENU_SCENE_KEY);
             });

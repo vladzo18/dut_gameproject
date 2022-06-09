@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.U2D;
 
-namespace UI.Changers.LevelChanger {
+namespace UI.Changers.MapChanger {
     
     [Serializable]
     public class MapStorageDescriptor {

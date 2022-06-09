@@ -12,7 +12,6 @@ namespace Gameplay.Car {
         [SerializeField] private CarTank _carTank;
         [SerializeField] private CarDistanceCounter _carDistanceCounter;
         [SerializeField] private CarDeath _carDeath;
-        [SerializeField] private CarSound _carSound;
 
         public CarType Type => _type;
         public Transform CarBodyTransform => _carBodyTransform;
@@ -21,7 +20,6 @@ namespace Gameplay.Car {
         public CarTank CarTank => _carTank;
         public CarDistanceCounter CarDistanceCounter => _carDistanceCounter;
         public CarDeath CarDeath => _carDeath;
-        public CarSound CarSound => _carSound;
 
         private void OnValidate() {
             if (!(_carMover is IMover)) {

@@ -22,12 +22,12 @@ namespace Gameplay {
             if (descriptor == null) return;
 
             int fuelValue = propertySettings.GetSettingByType(CarProrertyType.FuelCapacity).Value;
-            float fuelCapasity = Mathf.Lerp(descriptor.MINFuelCapasity, descriptor.MAXFuelCapasity, fuelValue / 10.0f);
-            _carEntity.CarTank.SetFuelMaxAmount(fuelCapasity);
+            float fuelCapacity = Mathf.Lerp(descriptor.MINFuelCapacity, descriptor.MAXFuelCapacity, fuelValue / 10.0f);
+            _carEntity.CarTank.SetFuelMaxAmount(fuelCapacity);
             
-            int edgineValue = propertySettings.GetSettingByType(CarProrertyType.EdgineForce).Value;
-            float edgineForce = Mathf.Lerp(descriptor.MINEdgineForce, descriptor.MAXEdgineForce, edgineValue / 10.0f);
-            _carEntity.CarMover.SetEdgineForce(edgineForce);
+            int engineValue = propertySettings.GetSettingByType(CarProrertyType.EngineForce).Value;
+            float engineForce = Mathf.Lerp(descriptor.MINEngineForce, descriptor.MAXEngineForce, engineValue / 10.0f);
+            _carEntity.CarMover.SetEngineForce(engineForce);
         }
 
     }

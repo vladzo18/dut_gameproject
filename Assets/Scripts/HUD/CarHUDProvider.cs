@@ -1,10 +1,10 @@
 ﻿using Gameplay.Car;
-using Items.Save;
+using Save;
 using UnityEngine;
 
 namespace HUD {
     
-    public class CarHUDProvider : MonoBehaviour {
+    public class CarHudProvider : MonoBehaviour {
 
         [SerializeField] private CurrencyBox _currencyBox;
         [SerializeField] private FuelBar _fuelBar;
@@ -19,13 +19,13 @@ namespace HUD {
         public void SetCarEntity(CarEntity entity) {
             _carEntity = entity;
             _carEntityWasSetted = true;
-            BindWitnCarEntity();
+            BindWithCarEntity();
             _pauseMenu.OnGameExit += GameExitHandler;
         }
         
         private void Start() {
             if (!_carEntityWasSetted) {
-                BindWitnCarEntity();
+                BindWithCarEntity();
                 _pauseMenu.OnGameExit += GameExitHandler;
             }
         }
@@ -37,9 +37,9 @@ namespace HUD {
             }
         }
         
-        private void BindWitnCarEntity () {
+        private void BindWithCarEntity () {
             _carEntity.CarCollector.OnCoinCollect += CoinCollectHandler;
-            _carEntity.CarCollector.OnDiamontCollect += DiamontsCollectHandler;
+            _carEntity.CarCollector.OnDiamondCollect += DiamondsCollectHandler;
             _carEntity.CarDistanceCounter.OnMeterCountChanged += MeterCountChangedHandler;
             
             _carEntity.CarTank.OnFuelAmountChanged += FuelAmountChangedHandler;
@@ -51,32 +51,33 @@ namespace HUD {
 
         private void DisposeCarEntityBinding() {
             _carEntity.CarCollector.OnCoinCollect -= CoinCollectHandler;
-            _carEntity.CarCollector.OnDiamontCollect -= DiamontsCollectHandler;
+            _carEntity.CarCollector.OnDiamondCollect -= DiamondsCollectHandler;
             _carEntity.CarDistanceCounter.OnMeterCountChanged -= MeterCountChangedHandler;
             _carEntity.CarTank.OnFuelAmountChanged -= FuelAmountChangedHandler;
             _carEntity.CarDeath.OnCarDeath -= CarDeathHandler;
         }
 
         private void CoinCollectHandler(float value) => _currencyBox.AddCoins(value);
-        private void DiamontsCollectHandler(float value) => _currencyBox.AddDiamants(value);
+        private void DiamondsCollectHandler(float value) => _currencyBox.AddDiamonds(value);
         private void MeterCountChangedHandler() => _meterCountBar.SetMeters(_carEntity.CarDistanceCounter.MeterCount);
         private void FuelAmountChangedHandler(float value) => _fuelBar.SetFuelValue(value);
         
         private void CarDeathHandler() {
-            LevelSaveData saveData = SaveAndGetLevelProgres();
+            var saveData = SaveAndGetLevelProgress();
             _gameEndPerformance.ShowGameEndWindow(saveData);
         }
         
         private void GameExitHandler() {
-            SaveAndGetLevelProgres();
+            SaveAndGetLevelProgress();
         }
         
-        private LevelSaveData SaveAndGetLevelProgres() {
-            LevelSaveData saveData = new LevelSaveData();
-            saveData.CoinsAmount = _currencyBox.CoinsAmount;
-            saveData.DiamontsAmount = _currencyBox.DiamontsAmount;
-            saveData.DrivenMeters = _meterCountBar.CurrentMetersCount;
-            (new LevelPlayerPrefsSystem()).SaveData(saveData);
+        private LevelSaveData SaveAndGetLevelProgress() {
+            var saveData = new LevelSaveData {
+                CoinsAmount = _currencyBox.CoinsAmount,
+                DiamondsAmount = _currencyBox.DiamondsAmount,
+                DrivenMeters = _meterCountBar.CurrentMetersCount
+            };
+            PlayerPrefsSaver.LevelSaveData.Set(saveData);
             return saveData;
         }
     }

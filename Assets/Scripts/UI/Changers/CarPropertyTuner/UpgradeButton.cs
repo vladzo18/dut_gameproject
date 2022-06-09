@@ -8,22 +8,22 @@ namespace UI.Changers.CarPropertyTuner {
     public class UpgradeButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
         [SerializeField] private Image _image;
-        [SerializeField] private Sprite _puttedButton;
+        [SerializeField] private Sprite _pressedButton;
 
-        private Sprite _unputtedButton;
+        private Sprite _notPressedButton;
         
         public event Action OnUpgradeButtonClick;
         
         private void Start() {
-            _unputtedButton = _image.sprite;
+            _notPressedButton = _image.sprite;
         }
         
         public void OnPointerDown(PointerEventData eventData) {
            OnUpgradeButtonClick?.Invoke();
-           _image.sprite = _puttedButton;
+           _image.sprite = _pressedButton;
         }
 
-        public void OnPointerUp(PointerEventData eventData) => _image.sprite = _unputtedButton;
+        public void OnPointerUp(PointerEventData eventData) => _image.sprite = _notPressedButton;
         
     }
     

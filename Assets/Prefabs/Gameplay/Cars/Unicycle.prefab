@@ -365,11 +365,10 @@ GameObject:
   - component: {fileID: 4050566993538464260}
   - component: {fileID: -8735810162255189596}
   - component: {fileID: 8424288143583083412}
-  - component: {fileID: 5475672235643221650}
   - component: {fileID: -2313170042934298280}
+  - component: {fileID: 1075848885138280051}
   - component: {fileID: 3127688195488161149}
   - component: {fileID: 2973954250435373459}
-  - component: {fileID: 1075848885138280051}
   - component: {fileID: 7889942612558290359}
   m_Layer: 0
   m_Name: Unicycle
@@ -563,22 +562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveingObjectTransform: {fileID: 709156079386804440}
---- !u!114 &5475672235643221650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4050566993538464268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c22ccb8f79372498f682c2499862d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  _carCollector: {fileID: 4050566993538464260}
-  _itemCollectSound: {fileID: 8300000, guid: ba1d62ab7a9a92e4db00a88a2427a2b3, type: 3}
-  _fuelCollectSound: {fileID: 8300000, guid: ab45ca128fb93c64483bf5743e773f85, type: 3}
 --- !u!114 &-2313170042934298280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +581,22 @@ MonoBehaviour:
   _groungLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1075848885138280051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4050566993538464268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mover: {fileID: 3668836905083836862}
+  _maxEgineSoundVolume: 0.3
+  _audioSource: {fileID: 7889942612558290359}
+  _egineSound: {fileID: 8300000, guid: f50dedb336c7a3e4094bca36afd0e21a, type: 3}
 --- !u!114 &3127688195488161149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +616,6 @@ MonoBehaviour:
   _carTank: {fileID: -8735810162255189596}
   _carDistanceCounter: {fileID: 8424288143583083412}
   _carDeath: {fileID: -2313170042934298280}
-  _carSound: {fileID: 5475672235643221650}
 --- !u!255 &2973954250435373459
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -636,22 +634,6 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0.3970082, y: 0.009878295}
   m_DampingRatio: 0.9
   m_Frequency: 2
---- !u!114 &1075848885138280051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4050566993538464268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10936305532d438fa714c89dca80eac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mover: {fileID: 3668836905083836862}
-  _maxEgineSoundVolume: 0.3
-  _audioSource: {fileID: 7889942612558290359}
-  _egineSound: {fileID: 8300000, guid: f50dedb336c7a3e4094bca36afd0e21a, type: 3}
 --- !u!82 &7889942612558290359
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace UI.Changers.CarPropertyTuner {
     
@@ -10,11 +9,13 @@ namespace UI.Changers.CarPropertyTuner {
         private readonly BuyMessageBox _buyMessageBox;
         private readonly CurrencyBox _currencyBox;
         
+        private readonly List<CarTunerBoxController> _tunerBoxControllers;
+        
         private CarPropertySettings _propertySettings;
-        private List<CarTunerBoxController> _tunerBoxControllers;
         private CarTunerBoxController _buyOperableController;
 
         public event Action OnPointsChanged;
+        public event Action OnUpgradeBought;
         
         public CarPropertiesChanger(IEnumerable<CarTunerBoxView> carTunerBoxViews, CarPropertySettings settings, BuyMessageBox buyMessageBox, CurrencyBox currencyBox) {
             _tunerBoxControllers = new List<CarTunerBoxController>();
@@ -26,11 +27,11 @@ namespace UI.Changers.CarPropertyTuner {
 
         public void ChangeCarPropertySettings(CarPropertySettings settings) {
             _propertySettings = settings;
-            bool isLoadedSetings = _propertySettings.TryLoadState();
+            bool isLoadedSettings = _propertySettings.TryLoadState();
             
             int counter = 0;
             foreach (var view in _carTunerBoxViews) {
-                if (isLoadedSetings) {
+                if (isLoadedSettings) {
                     CarPropertySetting setting = _propertySettings.GetSettingByType(view.Type);
                     _tunerBoxControllers[counter].ChangeCarPropertySetting(setting);
                 } else {
@@ -42,12 +43,12 @@ namespace UI.Changers.CarPropertyTuner {
             }
         }
 
-        public void Init(int saveIndex) {
-            bool isLoadedSetings = _propertySettings.TryLoadState();
+        public void Init() {
+            bool isLoadedSettings = _propertySettings.TryLoadState();
                 
             foreach (var boxView in _carTunerBoxViews) {
-                CarPropertySetting setting = new CarPropertySetting();
-                if (!isLoadedSetings) {
+                CarPropertySetting setting;
+                if (!isLoadedSettings) {
                     setting = _propertySettings.AddSetting(boxView.Type);
                 } else {
                     setting = _propertySettings.GetSettingByType(boxView.Type);
@@ -55,47 +56,47 @@ namespace UI.Changers.CarPropertyTuner {
               
                 CarTunerBoxController controller = new CarTunerBoxController(boxView, setting);
                 controller.Init();
-                controller.OnBuyUpgrade += OnBuyUpgradeHandler;
                 _tunerBoxControllers.Add(controller);
-                boxView.OnUpgradeDownCick += PointsChangedClickHandler;
-                boxView.OnUpgradeUpCick += PointsChangedClickHandler;
-                _buyMessageBox.OnClose += OnClloceHandler;
+                controller.OnBuyUpgrade += OnBuyUpgradeHandler;
+                boxView.OnUpgradeDownClick += PointsChangedClickHandler;
+                boxView.OnUpgradeUpClick += PointsChangedClickHandler;
+                _buyMessageBox.OnClose += OnCloseMSBoxHandler;
             }
         }
-
+        
+        public void Dispose() {
+            _propertySettings.SaveState();
+            
+            foreach (var boxController in _tunerBoxControllers) {
+               boxController.Dispose();
+               boxController.OnBuyUpgrade -= OnBuyUpgradeHandler;
+            }
+            foreach (var boxView in _carTunerBoxViews) {
+                boxView.OnUpgradeDownClick -= PointsChangedClickHandler;
+                boxView.OnUpgradeUpClick -= PointsChangedClickHandler;
+            }
+            _buyMessageBox.OnClose -= OnCloseMSBoxHandler;
+        }
+        
+        private void OnBuyButtonClickHandler(int price) {
+            if (!_currencyBox.TryTakeCoins(price)) return;
+            _buyOperableController.IncreaseUpgradeAbility();
+            _buyMessageBox.HideMessageBox();
+            OnUpgradeBought?.Invoke();
+        }
+        
         private void OnBuyUpgradeHandler(CarTunerBoxController controller) {
             _buyOperableController = controller;
             _buyMessageBox.ShowMessageBox();
             _buyMessageBox.Clear();
             _buyMessageBox.SetTitle("Upgrade Car Property");
             _buyMessageBox.SetPrice(controller.UpgradePrice.ToString());
-            _buyMessageBox.OnBuyButtonClick += OnBuyButtonClicHandler;
+            _buyMessageBox.OnBuyButtonClick += OnBuyButtonClickHandler;
         }
-
-        private void OnClloceHandler() {
-            _buyMessageBox.OnBuyButtonClick -= OnBuyButtonClicHandler;
-        }
-
-        private void OnBuyButtonClicHandler(int price) {
-            if (_currencyBox.TryTakeCoins(price)) {
-                _buyOperableController.IncreaseUpgradeAbility();
-                _buyMessageBox.HideMessageBox();
-            }
-        }
-
-        public void Dispose() {
-            foreach (var boxController in _tunerBoxControllers) {
-               boxController.Dispose();
-               boxController.OnBuyUpgrade -= OnBuyUpgradeHandler;
-            }
-            foreach (var boxView in _carTunerBoxViews) {
-                boxView.OnUpgradeDownCick -= PointsChangedClickHandler;
-                boxView.OnUpgradeUpCick -= PointsChangedClickHandler;
-            }
-            _buyMessageBox.OnClose -= OnClloceHandler;
-        }
-
+        
         private void PointsChangedClickHandler() => OnPointsChanged?.Invoke();
+        
+        private void OnCloseMSBoxHandler() =>_buyMessageBox.OnBuyButtonClick -= OnBuyButtonClickHandler;
 
     }
     

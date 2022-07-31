@@ -1,0 +1,13 @@
+.root {
+    background-color: lightsteelblue;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+Button {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: #04c6db;
+    background-color: rgb(59, 59, 59);
+}
+
